@@ -1,0 +1,26 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Water land",
+            "bold": true
+        },
+        "description": {
+            "text": "Be careful. There's a drowned over there.",
+            "color": "dark_gray"
+        },
+        "icon": {
+            "item": "minecraft:prismarine"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "dungeon": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "dungeons:5stage/root"
+}

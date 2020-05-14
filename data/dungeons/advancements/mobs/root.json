@@ -1,0 +1,24 @@
+{
+    "display": {
+        "title": {
+            "text": "Overworld",
+            "color": "gold"
+        },
+        "description": {
+            "text": "aaa"
+        },
+        "icon": {
+            "item": "minecraft:spawner"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true,
+        "background": "minecraft:textures/block/nether_bricks.png"
+    },
+    "criteria": {
+        "dungeon": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

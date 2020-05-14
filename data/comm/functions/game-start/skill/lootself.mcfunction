@@ -1,0 +1,1 @@
+execute at @e[tag=modify-head] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run loot replace entity @s weapon.mainhand mine ~ 15 ~ minecraft:stick{drop_contents:true}

@@ -1,0 +1,1 @@
+#execute as @e[tag=Pierce] run data modify @s PierceLevel set value 99b

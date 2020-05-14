@@ -1,0 +1,25 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "좀비"
+        },
+        "description": {
+            "text": "그는 다가와서.. 떄린다",
+            "color": "dark_gray"
+        },
+        "icon": {
+            "item": "minecraft:zombie_head"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "mob": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "dungeons:mobs/stage-1"
+}

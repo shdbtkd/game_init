@@ -1,0 +1,15 @@
+{
+    "values":[
+        "#minecraft:air_block",
+        "#minecraft:buttons",
+        "minecraft:grass",
+        "#minecraft:flowers",
+        "#minecraft:climbable",
+        "#minecraft:carpets",
+        "#minecraft:rails",
+        "#minecraft:carpets",
+        "#minecraft:fire",
+        "#minecraft:banners",
+        "#minecraft:doors"
+    ]
+}

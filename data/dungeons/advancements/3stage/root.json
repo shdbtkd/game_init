@@ -1,0 +1,24 @@
+{
+    "display": {
+        "title": {
+            "text": "Cave",
+            "color": "gold"
+        },
+        "description": {
+            "text": "aaa"
+        },
+        "icon": {
+            "item": "minecraft:cracked_stone_bricks"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true,
+        "background": "minecraft:textures/block/stone_bricks.png"
+    },
+    "criteria": {
+        "dungeon": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

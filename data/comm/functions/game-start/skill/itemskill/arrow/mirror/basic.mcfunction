@@ -1,0 +1,1 @@
+execute if data entity @s {inGround:1b} run function comm:game-start/skill/itemskill/arrow/mirror/active

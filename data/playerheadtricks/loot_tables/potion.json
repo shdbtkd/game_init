@@ -1,0 +1,101 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"치유의 물약\",\"bold\":true,\"italic\":false}'},item:1b, potion:0b, showname:1b,Potion:\"minecraft:healing\"}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"흡수의 포션\",\"bold\":true,\"italic\":false}'},item:1b, potion:0b, showname:1b,CustomPotionEffects:[{Id:22b,Amplifier:0b,Duration:199980}],CustomPotionColor:16772961}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"투명화 물약\",\"bold\":true,\"italic\":false}'}, item:1b, potion:0b, showname:1b, CustomPotionEffects: [{ Id: 14b, Amplifier: 0b, Duration: 600 }], CustomPotionColor: 9551359}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"힘의 물약\",\"bold\":true,\"italic\":false}'}, item:1b, potion:0b, showname:1b, CustomPotionEffects: [{ Id: 5b, Amplifier: 0b, Duration: 500 }], CustomPotionColor:14221312}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"힘의 물약\",\"bold\":true,\"italic\":false}'}, item:1b, potion:0b, showname:1b, CustomPotionEffects: [{ Id: 5b, Amplifier: 0b, Duration: 400 }], CustomPotionColor:14221312}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"힘의 물약\",\"bold\":true,\"italic\":false}'}, item:1b, potion:0b, showname:1b, CustomPotionEffects: [{ Id: 5b, Amplifier: 1b, Duration: 200 }], CustomPotionColor:14221312}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"고통의 물약\",\"bold\":true,\"italic\":false}'},item:1b, potion:0b, showname:1b,Potion:\"minecraft:harming\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

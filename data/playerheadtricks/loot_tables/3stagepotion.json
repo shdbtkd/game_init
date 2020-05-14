@@ -1,0 +1,127 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { 
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count":1 
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"재생의 물약\",\"bold\":true,\"italic\":false}'},item:1b, potion:0b, showname:1b,CustomPotionEffects:[{Id:10b,Amplifier:0b,Duration:100}],CustomPotionColor:16735972}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"흡수의 물약\",\"bold\":true,\"italic\":false}'},item:1b, potion:0b, showname:1b,CustomPotionEffects:[{Id:22b,Amplifier:1b,Duration:199980,ShowParticles:0b}],CustomPotionColor:16772961}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"투명화 물약\",\"bold\":true,\"italic\":false}'}, item:1b, potion:0b, showname:1b, CustomPotionEffects: [{ Id: 14b, Amplifier: 0b, Duration: 600 }], CustomPotionColor: 9551359}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"힘의 물약\",\"bold\":true,\"italic\":false}'}, item:1b, potion:0b, showname:1b, CustomPotionEffects: [{ Id: 5b, Amplifier: 0b, Duration: 400 }], CustomPotionColor:14221312}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"힘의 물약\",\"bold\":true,\"italic\":false}'}, item:1b, potion:0b, showname:1b, CustomPotionEffects: [{ Id: 5b, Amplifier: 1b, Duration: 200 }], CustomPotionColor:14221312}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count":1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"독 물약\",\"bold\":true,\"italic\":false}'},item:1b, potion:0b, showname:1b,CustomPotionEffects:[{Id:19b,Amplifier:0b,Duration:100}],CustomPotionColor:4553269}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count":1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"독 물약\",\"bold\":true,\"italic\":false}'},item:1b, potion:0b, showname:1b,CustomPotionEffects:[{Id:19b,Amplifier:1b,Duration:100}],CustomPotionColor:4553269}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"저항의 물약\",\"bold\":true,\"italic\":false}'},item:1b, potion:0b, showname:1b,CustomPotionEffects:[{Id:11b,Amplifier:0b,Duration:400}],CustomPotionColor:5134202}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"저항의 물약\",\"bold\":true,\"italic\":false}'},item:1b, potion:0b, showname:1b,CustomPotionEffects:[{Id:11b,Amplifier:1b,Duration:300}],CustomPotionColor:5134202}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

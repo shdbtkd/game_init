@@ -1,0 +1,25 @@
+{
+  "display": {
+    "title": {
+      "text": "Overworld",
+      "bold": true
+    },
+    "description": {
+      "text": "오버월드에서 처음",
+      "color": "dark_gray"
+    },
+    "icon": {
+      "item": "minecraft:grass_block"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+"criteria": {
+    "dungeon": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "dungeons:mobs/root"
+}
