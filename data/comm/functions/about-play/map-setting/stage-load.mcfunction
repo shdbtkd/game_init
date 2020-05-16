@@ -181,7 +181,7 @@
 	
 	execute if score start map_lod matches 1 run scoreboard players set start map_lod 2
 
-	# execute if score start map_lod matches 2 as @e[tag=map-all] at @s run function comm:about-play/map-setting/load/base-set
+	execute if score start map_lod matches 2 as @e[tag=map-all] at @s run function comm:about-play/map-setting/load/base-set
 
 	execute if score start map_lod matches 2 run scoreboard players set start map_lod 3
 	#---------- tester ----------#
