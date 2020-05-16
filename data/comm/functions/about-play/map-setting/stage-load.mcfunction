@@ -180,10 +180,13 @@
 
 	
 	execute if score start map_lod matches 1 run scoreboard players set start map_lod 2
-
 	execute if score start map_lod matches 2 as @e[tag=map-all] at @s run function comm:about-play/map-setting/load/base-set
 
 	execute if score start map_lod matches 2 run scoreboard players set start map_lod 3
+	execute if score start map_lod matches 3 as @e[tag=loader,tag=!event,tag=!loaded,sort=random,limit=1] at @s run function comm:about-play/map-setting/load/generic_stage-type-filter
+	execute if score start map_lod matches 3 run schedule function comm:about-play/map-setting/load/schedule/battle-return 10t
+	execute if score start map_lod matches 3 run scoreboard players set start map_lod 4
+	
 	#---------- tester ----------#
 	#			어디에서? 특정 조건을 만족하지못하면 여기로 돌아옴
 	#			tester, time 스코어 초기화
@@ -204,8 +207,6 @@
 	#---------- tester ----------#
 
 	# execute if score start map_lod matches 2 run scoreboard players set start map_lod 3
-
-	execute if score start map_lod matches 3 run kill @e[tag=center-loader]
 
 	#---------- loader ----------#
 	#			loader 소환
@@ -236,58 +237,8 @@
 	#---------- loader ----------#
 	# execute if score start map_lod matches 3 run scoreboard players set start map_lod 4
 
-	#---------- start 4 ----------#
-	execute if score start map_lod matches 4 if score count-loader map_lod >= min-battle map_lod run scoreboard players set start map_lod 5
-	execute if score start map_lod matches 4 run scoreboard players set start map_lod 2
+	#---------- start 4 ----------
 
-	execute if score start map_lod matches 5 if score count-loader map_lod < min-battle map_lod run scoreboard players set start map_lod 2
-
-
-	execute if score start map_lod matches 5 run scoreboard players add time map_lod 1
-
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. if score count-loader map_lod > max-battle map_lod at @e[tag=center] as @e[tag=loader,sort=furthest,limit=1] run kill @s
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. if score count-loader map_lod > max-battle map_lod at @e[tag=center] as @e[tag=loader,sort=furthest,limit=1] run kill @s
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. if score count-loader map_lod > max-battle map_lod at @e[tag=center] as @e[tag=loader,sort=furthest,limit=1] run kill @s
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. if score count-loader map_lod > max-battle map_lod at @e[tag=center] as @e[tag=loader,sort=furthest,limit=1] run kill @s
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. if score count-loader map_lod > max-battle map_lod at @e[tag=center] as @e[tag=loader,sort=furthest,limit=1] run kill @s
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. if score count-loader map_lod > max-battle map_lod at @e[tag=center] as @e[tag=loader,sort=furthest,limit=1] run kill @s
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. run fill 96 50 -960 192 50 -768 minecraft:red_concrete replace minecraft:gray_concrete
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. run fill -48 50 -960 48 50 -768 minecraft:red_concrete replace minecraft:gray_concrete
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. run fill -192 50 -960 -96 50 -768 minecraft:red_concrete replace minecraft:gray_concrete
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. run fill 192 50 -752 96 50 -672 minecraft:red_concrete replace minecraft:gray_concrete
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. run fill 48 50 -768 -48 50 -672 minecraft:red_concrete replace minecraft:gray_concrete
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. run fill -96 50 -672 -192 50 -768 minecraft:red_concrete replace minecraft:gray_concrete
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. run setblock 0 50 -816 minecraft:gray_concrete
-	execute if score start map_lod matches 5 if score time map_lod matches 20.. run scoreboard players set start map_lod 6
-
-	execute if score start map_lod matches 6 run kill @e[tag=tester]
-	execute if score start map_lod matches 6 at @e[tag=loader] if block ~ ~-1 ~48 minecraft:red_concrete run summon minecraft:armor_stand ~ ~ ~48 {Tags:["tester"]}
-	execute if score start map_lod matches 6 at @e[tag=loader] if block ~ ~-1 ~-48 minecraft:red_concrete run summon minecraft:armor_stand ~ ~ ~-48 {Tags:["tester"]}
-	execute if score start map_lod matches 6 at @e[tag=loader] if block ~48 ~-1 ~ minecraft:red_concrete run summon minecraft:armor_stand ~48 ~ ~ {Tags:["tester"]}
-	execute if score start map_lod matches 6 at @e[tag=loader] if block ~-48 ~-1 ~ minecraft:red_concrete run summon minecraft:armor_stand ~-48 ~ ~ {Tags:["tester"]}
-
-	execute if score start map_lod matches 6 at @e[tag=center] as @e[tag=tester,sort=furthest,limit=1] at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["boss","map-all"],NoGravity:1b}
-	execute if score start map_lod matches 6 at @e[tag=boss] as @e[tag=tester,distance=..1] run kill @s
-	execute if score start map_lod matches 6 at @e[tag=tester,sort=random,limit=3] run summon minecraft:armor_stand ~ ~ ~ {Tags:["map-all","event"],NoGravity:1b}
-	execute if score start map_lod matches 6 at @e[tag=loader] as @e[tag=tester,distance=..1] run kill @s
-	execute if score start map_lod matches 6 if score count-event map_lod < min-event map_lod at @e[tag=tester,sort=random,limit=1] run summon minecraft:armor_stand ~ ~ ~ {Tags:["map-all","event","loader"],NoGravity:1b}
-	execute if score start map_lod matches 6 at @e[tag=loader] as @e[tag=tester,distance=..1] run kill @s
-	execute if score start map_lod matches 6 if score count-event map_lod < min-event map_lod at @e[tag=tester,sort=random,limit=1] run summon minecraft:armor_stand ~ ~ ~ {Tags:["map-all","event","loader"],NoGravity:1b}
-	execute if score start map_lod matches 6 at @e[tag=loader] as @e[tag=tester,distance=..1] run kill @s
-	execute if score start map_lod matches 6 if score count-event map_lod < min-event map_lod at @e[tag=tester,sort=random,limit=1] run summon minecraft:armor_stand ~ ~ ~ {Tags:["map-all","event","loader"],NoGravity:1b}
-	execute if score start map_lod matches 6 at @e[tag=loader] as @e[tag=tester,distance=..1] run kill @s
-	execute if score start map_lod matches 6 if score count-event map_lod < min-event map_lod at @e[tag=tester,sort=random,limit=1] run summon minecraft:armor_stand ~ ~ ~ {Tags:["map-all","event","loader"],NoGravity:1b}
-	execute if score start map_lod matches 6 at @e[tag=loader] as @e[tag=tester,distance=..1] run kill @s
-	execute if score start map_lod matches 6 at @e[tag=tester,sort=random,limit=1] run summon minecraft:armor_stand ~ ~ ~ {Tags:["map-all","hide","not-appear"],NoGravity:1b}
-	execute if score start map_lod matches 6 at @e[tag=loader] as @e[tag=tester,distance=..1] run kill @s
-	execute if score start map_lod matches 6 at @e[tag=tester,sort=random,limit=1] run summon minecraft:armor_stand ~ ~ ~ {Tags:["map-all","hide","not-appear"],NoGravity:1b}
-	execute if score start map_lod matches 6 at @e[tag=loader] as @e[tag=tester,distance=..1] run kill @s
-	execute if score start map_lod matches 6 at @e[tag=tester,sort=random,limit=1] if predicate pred:50 run summon minecraft:armor_stand ~ ~ ~ {Tags:["map-all","hide","not-appear"],NoGravity:1b}
-	execute if score start map_lod matches 6 at @e[tag=loader] as @e[tag=tester,distance=..1] run kill @s
-	execute if score start map_lod matches 6 at @e[tag=tester,sort=random,limit=1] if predicate pred:50 run summon minecraft:armor_stand ~ ~ ~ {Tags:["map-all","hide","not-appear"],NoGravity:1b}
-	execute if score start map_lod matches 6 at @e[tag=loader] as @e[tag=tester,distance=..1] run kill @s
-
-	execute if score start map_lod matches 6 run kill @e[tag=tester]
 
 	# 기존의 event_room 생성
 	# execute if score start map_lod matches 6 if score count map_lod matches 5.. as @e[tag=loader,tag=!event,sort=random,limit=1] at @s run tag @s add event
@@ -306,8 +257,6 @@
 
 	#execute if score start map_lod matches 6 as @e[tag=event] at @s run tag @s remove loader
 	#execute if score start map_lod matches 6 as @e[tag=event] at @s run tp ~ ~2 ~
-
-	execute if score start map_lod matches 6 run scoreboard players set start map_lod 7
 
 
 	execute if score start map_lod matches 7 run scoreboard players set time map_lod 0

@@ -5,7 +5,6 @@ execute at @e[tag=map-all] as @e[tag=tester,distance=..1] run kill @s
 
 execute store result score count map_lod if entity @e[type=minecraft:armor_stand,tag=loader]
 execute store result score count-loader map_lod if entity @e[type=minecraft:armor_stand,tag=loader,tag=!event]
-execute store result score count-big map_lod if entity @e[type=minecraft:armor_stand,tag=loader,tag=big]
 execute store result score count-end-load map_lod if entity @e[type=minecraft:armor_stand,tag=loader,tag=!event,tag=loaded]
 execute store result score count-hide map_lod if entity @e[type=minecraft:armor_stand,tag=hide]
 execute store result score count-event map_lod if entity @e[tag=event,type=minecraft:armor_stand]
