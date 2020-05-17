@@ -6,7 +6,6 @@ execute if score @p stage matches 2 as @s at @s if score @s stage-road_count mat
 execute if score @p stage matches 2 as @s at @s if score @s stage-road_count matches 2 run function comm:about-play/map-setting/load/desert/desert_event-2_way
 execute if score @p stage matches 2 as @s at @s if score @s stage-road_count matches 1 run function comm:about-play/map-setting/load/desert/desert_event-1_way
 
-tellraw @p {"nbt":"Items","block":"0 12 -26"}
 data remove block 0 12 -26 Items
 setblock ~-16 62 ~-16 minecraft:redstone_block
 tag @s add end-event

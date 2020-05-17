@@ -9,7 +9,6 @@ execute if score @p stage matches 2 at @s if score @s stage-road_count matches 2
 execute if score @p stage matches 2 at @s if score @s stage-road_count matches 1 run function comm:about-play/map-setting/load/desert/desert_1-1_way
 
 setblock ~-16 60 ~-16 minecraft:structure_block{name:"generic_stage_selector-battle",posY:5,mode:"LOAD"} replace
-tellraw @p {"nbt":"Items","block":"0 12 -26"}
 data remove block 0 12 -26 Items
 setblock ~-16 62 ~-16 minecraft:redstone_block
 setblock ~-16 59 ~-16 minecraft:redstone_block

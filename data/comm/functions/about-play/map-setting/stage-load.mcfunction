@@ -186,6 +186,10 @@
 	execute if score start map_lod matches 3 as @e[tag=loader,tag=!event,tag=!loaded,sort=random,limit=1] at @s run function comm:about-play/map-setting/load/generic_stage-type-filter
 	execute if score start map_lod matches 3 run schedule function comm:about-play/map-setting/load/schedule/battle-return 10t
 	execute if score start map_lod matches 3 run scoreboard players set start map_lod 4
+
+	execute if score start map_lod matches 5 as @e[tag=loader,tag=event,tag=!end-event,sort=random,limit=1] at @s run function comm:about-play/map-setting/load/event-set
+	execute if score start map_lod matches 5 run schedule function comm:about-play/map-setting/load/schedule/event-return 10t
+	execute if score start map_lod matches 5 run scoreboard players set start map_lod 6
 	
 	#---------- tester ----------#
 	#			어디에서? 특정 조건을 만족하지못하면 여기로 돌아옴
@@ -259,13 +263,13 @@
 	#execute if score start map_lod matches 6 as @e[tag=event] at @s run tp ~ ~2 ~
 
 
-	execute if score start map_lod matches 7 run scoreboard players set time map_lod 0
+	# execute if score start map_lod matches 7 run scoreboard players set time map_lod 0
 
 	
 
 	# execute if score start map_lod matches 7 as @e[tag=map-all] at @s run function comm:about-play/map-setting/load/base-set
 
-	execute if score start map_lod matches 7 run scoreboard players set start map_lod 8
+	# execute if score start map_lod matches 7 run scoreboard players set start map_lod 8
 
 	#-393 71 1186
 
