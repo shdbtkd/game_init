@@ -6,8 +6,8 @@ execute as @a[gamemode=!spectator,tag=mapload] at @s unless block ~ 65 ~ minecra
 #---------- mapload ----------#
 
 #---------- play now ----------#
-execute as @a[gamemode=!spectator] at @s if block ~ 66 ~ minecraft:red_terracotta run tag @s add play-now
-execute as @a[gamemode=!spectator] at @s unless block ~ 66 ~ minecraft:red_terracotta run tag @s remove play-now
+execute as @a[gamemode=!spectator] at @s if block ~ 67 ~ minecraft:black_terracotta run tag @s add play-now
+execute as @a[gamemode=!spectator] at @s unless block ~ 67 ~ minecraft:black_terracotta run tag @s remove play-now
 execute as @a[gamemode=spectator] run tag @s remove play-now
 #---------- play now ----------#
 

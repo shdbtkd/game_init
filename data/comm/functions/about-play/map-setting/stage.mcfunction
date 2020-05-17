@@ -187,42 +187,12 @@
 
 		execute if score play-now stage matches 1.. at @a[tag=play-now] as @e[tag=map-all,limit=1,sort=nearest] if entity @s[tag=!event,tag=!center,tag=!boss] run tag @s add now-play
 
-		# 시간
 		execute if entity @e[tag=now-play,tag=!complete] if score time stage matches ..100 run scoreboard players add time stage 1
-
-		# 시작
-		execute as @e[tag=now-play,tag=!complete] at @s if score time stage matches 60 run summon armor_stand ~-0.5 69.5 ~-0.5 {Tags:["close-add"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-		execute as @e[tag=now-play,tag=!complete] at @s if score player stage = play-now stage if score time stage matches ..59 run summon armor_stand ~-0.5 69.5 ~-0.5 {Tags:["close-add"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-		execute as @e[tag=now-play,tag=!complete] at @s if score player stage = play-now stage if score time stage matches ..59 run scoreboard players set time stage 61
-
-		execute as @e[tag=now-play,tag=!complete] at @s if score time stage matches 1.. run fill ~15 64 ~15 ~-16 64 ~-16 minecraft:redstone_block replace air
-		execute as @e[tag=now-play,tag=!complete] at @s if score time stage matches 60..62 as @e[tag=door-hori,scores={door=1..},limit=1,sort=nearest,distance=..27] at @s run summon armor_stand ~2 72 ~ {Tags:["player-teleporter"],Invisible:1b}
-		execute as @e[tag=now-play,tag=!complete] at @s if score time stage matches 60..62 as @e[tag=door-hori,scores={door=1..},limit=1,sort=nearest,distance=..27] at @s run summon armor_stand ~-2 72 ~ {Tags:["player-teleporter"],Invisible:1b}
-
-		execute as @e[tag=now-play,tag=!complete] at @s if score time stage matches 60..62 as @e[tag=door-vert,scores={door=1..},limit=1,sort=nearest,distance=..27] at @s run summon armor_stand ~ 72 ~2 {Tags:["player-teleporter"],Invisible:1b}
-		execute as @e[tag=now-play,tag=!complete] at @s if score time stage matches 60..62 as @e[tag=door-vert,scores={door=1..},limit=1,sort=nearest,distance=..27] at @s run summon armor_stand ~ 72 ~-2 {Tags:["player-teleporter"],Invisible:1b}
-		execute as @e[tag=player-teleporter] at @s unless block ~ 68 ~ minecraft:red_terracotta run kill @s
-		# execute as @e[tag=now-play,tag=!complete] at @s if score time stage matches 60..62 run summon armor_stand ~-10 72 ~-0.5 {Tags:["player-teleporter"],Invisible:1b}
-
-		# execute as @e[tag=now-play,tag=!complete] at @s if score time stage matches 60..62 run summon armor_stand ~-0.5 72 ~10 {Tags:["player-teleporter"],Invisible:1b}
-		# execute as @e[tag=now-play,tag=!complete] at @s if score time stage matches 60..62 run summon armor_stand ~-0.5 72 ~-10 {Tags:["player-teleporter"],Invisible:1b}
-
-		execute as @e[tag=now-play,tag=!complete] at @s if score time stage matches 60..62 if score player stage > out-player stage as @a[tag=!play-now,scores={stage=1..}] at @s at @e[tag=player-teleporter,sort=nearest] run tp ~ ~ ~
-		execute as @e[tag=now-play,tag=!complete] at @s if score time stage matches 60..62 if score player stage > out-player stage as @a[tag=!play-now,scores={stage=1..}] at @s anchored eyes at @s run tp @s ~ ~ ~ facing entity @e[team=red,limit=1,sort=nearest] eyes
-		execute as @e[tag=now-play,tag=!complete] at @s if score time stage matches 60..62 run kill @e[tag=player-teleporter]
-		execute as @a[gamemode=!spectator] at @s if score time stage matches 62 at @e[tag=close,limit=1,sort=nearest] run playsound minecraft:block.grindstone.use master @s ~ ~ ~ 4 0
-		execute as @a[gamemode=!spectator] at @s if score time stage matches 62 at @e[tag=close,limit=1,sort=nearest] run playsound minecraft:entity.player.attack.knockback master @a ~ ~ ~ 5 0
-		execute as @a[gamemode=!spectator] at @s if score time stage matches 62 run schedule function comm:about-play/map-setting/sound/doorlocked 8t
-
-		# 끝
-
-		execute if score time stage matches 100.. if score red stage matches ..0 as @e[tag=now-play,tag=!complete,tag=!now-end] run tag @s add complete
-
-		execute if score time stage matches 100.. if score red stage matches ..0 as @e[tag=now-play,tag=complete,tag=!now-end] at @s run tag @e[tag=close-add,limit=1,sort=nearest] add clear-add
-		execute if score time stage matches 100.. if score red stage matches ..0 as @e[tag=now-play,tag=complete,tag=!now-end] at @s run tag @e[tag=close-add,limit=1,sort=nearest] remove close-add
-		execute if score time stage matches 100.. if score red stage matches ..0 as @e[tag=now-play,tag=complete,tag=!now-end] run scoreboard players set time stage 102
-
-		execute if score time stage matches 100.. if score red stage matches ..0 as @e[tag=now-play,tag=complete,tag=!now-end] at @s run function comm:about-play/map-setting/stage-complete
+		execute as @e[tag=now-play,tag=!complete] if score time stage matches ..60 at @s run function comm:about-play/map-setting/play/lock
+		execute as @e[tag=now-play,tag=!complete] if score time stage matches 62 at @s run function comm:about-play/map-setting/play/teleport
+		execute as @e[tag=now-play,tag=!complete] if score time stage matches 62 at @s run function comm:about-play/map-setting/play/sound
+		execute as @e[tag=now-play,tag=!complete] if score time stage matches 100.. at @s run function comm:about-play/map-setting/play/complete
+		# 시간
 
 ########### summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Small:1b}  effect give @e[tag=map-all,limit=1,sort=nearest] minecraft:glowing
 

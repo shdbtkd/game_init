@@ -12,7 +12,8 @@ kill @e[tag=out-nd3]
 xp set @a 0 levels
 scoreboard players set time stage 0
 scoreboard players set start map_lod 0
-function comm:about-play/map-setting/stage-load
+function comm:about-play/map-setting/load/clear_stage
+execute as @e[type=minecraft:item] if data entity @s Item.tag{ basicitem: 1b } run kill @s
 data merge block -3 11 -17 {Items:[{Slot:0b,id:"minecraft:black_concrete",Count:1b},{Slot:1b,id:"minecraft:black_concrete",Count:1b},{Slot:2b,id:"minecraft:black_concrete",Count:1b},{Slot:3b,id:"minecraft:black_concrete",Count:1b},{Slot:4b,id:"minecraft:black_concrete",Count:1b}]}
 data merge block -3 11 -20 {Items:[{Slot:0b,id:"minecraft:black_concrete",Count:1b},{Slot:1b,id:"minecraft:black_concrete",Count:1b},{Slot:2b,id:"minecraft:black_concrete",Count:1b},{Slot:3b,id:"minecraft:black_concrete",Count:1b},{Slot:4b,id:"minecraft:black_concrete",Count:1b}]}
 data merge block -3 11 -23 {Items:[{Slot:0b,id:"minecraft:black_concrete",Count:1b},{Slot:1b,id:"minecraft:black_concrete",Count:1b},{Slot:2b,id:"minecraft:black_concrete",Count:1b},{Slot:3b,id:"minecraft:black_concrete",Count:1b},{Slot:4b,id:"minecraft:black_concrete",Count:1b}]}

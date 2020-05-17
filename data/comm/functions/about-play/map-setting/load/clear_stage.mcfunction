@@ -33,18 +33,23 @@ execute if score @p stage matches 12..14 run scoreboard players set min-event ma
 execute as @e[tag=map-all] at @s run setblock ~-16 60 ~-16 air
 execute as @e[tag=map-all] at @s run setblock ~-16 59 ~-16 air
 
+execute as @e[tag=map-all,tag=boss] at @s run data modify block ~-16 61 ~-16 name set value "generic_stage_clear-boss"
+execute as @e[tag=map-all,tag=boss] at @s run setblock ~-16 60 ~-16 minecraft:redstone_block
+
+function comm:about-play/map-setting/load/schedule/loading_other
+
 execute as @e[tag=loader] at @s run data merge block ~-16 61 ~-16 {name:"basic-air",posY:0,posX:0,posZ:0,rotation:"NONE",mirror:"NONE",mode:"LOAD"}
 execute as @e[tag=loader] at @s if block ~-16 62 ~-16 minecraft:structure_block run setblock ~-16 62 ~-16 minecraft:redstone_block destroy
 execute as @e[tag=end-event] at @s run data merge block ~-16 61 ~-16 {name:"basic-air",posY:0,posX:0,posZ:0,rotation:"NONE",mirror:"NONE",mode:"LOAD"}
 execute as @e[tag=end-event] at @s if block ~-16 62 ~-16 minecraft:structure_block run setblock ~-16 62 ~-16 minecraft:redstone_block destroy
-execute as @e[tag=boss] at @s run data merge block ~-16 61 ~-16 {name:"basic-ai",posY:0,posX:0,posZ:0,rotation:"NONE",mirror:"NONE",mode:"LOAD"}
+execute as @e[tag=boss] at @s run data merge block ~-16 61 ~-16 {name:"basic-air",posY:-3,posX:0,posZ:0,rotation:"NONE",mirror:"NONE",mode:"LOAD",powered: 0b}
 execute as @e[tag=boss] at @s if block ~-16 62 ~-16 minecraft:structure_block run setblock ~-16 62 ~-16 minecraft:redstone_block destroy
 execute as @e[tag=center] at @s run data merge block ~-16 61 ~-16 {name:"basic-air",posY:0,posX:0,posZ:0,rotation:"NONE",mirror:"NONE",mode:"LOAD"}
-execute as @e[tag=map-all] at @s[tag=!big] unless block ~ ~-1 ~48 minecraft:red_concrete unless block ~ ~-1 ~48 minecraft:air run data merge block ~-16 61 ~16 {name:"road-vert-air",posY:0,posX:0,posZ:0,rotation:"NONE",mirror:"NONE",mode:"LOAD"}
-execute as @e[tag=map-all] at @s[tag=!big] unless block ~48 ~-1 ~ minecraft:red_concrete unless block ~48 ~-1 ~ minecraft:air run data merge block ~16 61 ~-16 {name:"road-hori-air",posY:0,posX:0,posZ:0,rotation:"NONE",mirror:"NONE",mode:"LOAD"}
+execute as @e[tag=map-all] at @s unless block ~ ~-1 ~48 minecraft:red_concrete unless block ~ ~-1 ~48 minecraft:air run data merge block ~-16 61 ~16 {name:"road-vert-air",posY:0,posX:0,posZ:0,rotation:"NONE",mirror:"NONE",mode:"LOAD"}
+execute as @e[tag=map-all] at @s unless block ~48 ~-1 ~ minecraft:red_concrete unless block ~48 ~-1 ~ minecraft:air run data merge block ~16 61 ~-16 {name:"road-hori-air",posY:0,posX:0,posZ:0,rotation:"NONE",mirror:"NONE",mode:"LOAD"}
 execute as @e[tag=map-all] at @s if block ~-16 61 ~-16 minecraft:structure_block run setblock ~-16 62 ~-16 minecraft:redstone_block destroy
-execute as @e[tag=map-all] at @s[tag=!big] if block ~-16 61 ~16 minecraft:structure_block unless block ~ ~-1 ~48 minecraft:red_concrete unless block ~ ~-1 ~48 minecraft:air run setblock ~-16 62 ~16 minecraft:redstone_block destroy
-execute as @e[tag=map-all] at @s[tag=!big] if block ~16 61 ~-16 minecraft:structure_block unless block ~48 ~-1 ~ minecraft:red_concrete unless block ~48 ~-1 ~ air run setblock ~16 62 ~-16 minecraft:redstone_block destroy
+execute as @e[tag=map-all] at @s if block ~-16 61 ~16 minecraft:structure_block unless block ~ ~-1 ~48 minecraft:red_concrete unless block ~ ~-1 ~48 minecraft:air run setblock ~-16 62 ~16 minecraft:redstone_block destroy
+execute as @e[tag=map-all] at @s if block ~16 61 ~-16 minecraft:structure_block unless block ~48 ~-1 ~ minecraft:red_concrete unless block ~48 ~-1 ~ air run setblock ~16 62 ~-16 minecraft:redstone_block destroy
 
 # execute as @e[tag=loaded] at @s run setblock ~-16 62 ~-16 minecraft:air
 # execute as @e[tag=end-event] at @s run setblock ~-16 62 ~-16 minecraft:air

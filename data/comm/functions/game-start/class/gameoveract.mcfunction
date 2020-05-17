@@ -1,4 +1,5 @@
 tp @a 0 16 0
+spawnpoint @a 0 16 0
 xp set @a 0 points
 xp set @a 0 levels
 scoreboard players set @a stage 0

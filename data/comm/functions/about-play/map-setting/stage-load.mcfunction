@@ -159,16 +159,16 @@
 	execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=furthest,limit=1] at @s run function comm:about-play/map-setting/load/stage/summon_boss
 	execute if score start map_lod matches 1 run function comm:about-play/map-setting/load/generic_count
 	execute if score start map_lod matches 1 run kill @e[tag=tester]
-	execute if score start map_lod matches 1 as @e[tag=map-all,tag=!center,scores={stage-road_count=..3},sort=random,limit=1] at @s run function comm:about-play/map-setting/load/stage/sub_road
+	execute if score start map_lod matches 1 as @e[tag=map-all,tag=loader,tag=!event,scores={stage-road_count=..3},sort=random,limit=1] at @s run function comm:about-play/map-setting/load/stage/sub_road
 	execute if score start map_lod matches 1 run function comm:about-play/map-setting/load/generic_count
 	execute if score start map_lod matches 1 run kill @e[tag=tester]
-	execute if score start map_lod matches 1 as @e[tag=map-all,tag=!event,scores={stage-road_count=..3}] at @s run function comm:about-play/map-setting/load/stage/summon_tester
+	execute if score start map_lod matches 1 as @e[tag=map-all,tag=!event,tag=loader,scores={stage-road_count=..3}] at @s run function comm:about-play/map-setting/load/stage/summon_tester
 	execute if score start map_lod matches 1 at @e[tag=tester,sort=random,limit=1] if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_event
 	execute if score start map_lod matches 1 at @e[tag=tester,sort=random,limit=1] if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_event
 	execute if score start map_lod matches 1 run kill @e[tag=tester]
 	#			event
 	#			boss, hide
-	execute if score start map_lod matches 1 as @e[tag=map-all,tag=!event,scores={stage-road_count=..3}] at @s run function comm:about-play/map-setting/load/stage/summon_tester
+	execute if score start map_lod matches 1 as @e[tag=map-all,tag=!event,tag=!boss,scores={stage-road_count=..3}] at @s run function comm:about-play/map-setting/load/stage/summon_tester
 	execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] at @s if predicate pred:50 run function comm:about-play/map-setting/load/stage/summon_hide
 	execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] at @s if predicate pred:50 run function comm:about-play/map-setting/load/stage/summon_hide
 	execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] at @s if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_hide
@@ -190,6 +190,10 @@
 	execute if score start map_lod matches 5 as @e[tag=loader,tag=event,tag=!end-event,sort=random,limit=1] at @s run function comm:about-play/map-setting/load/event-set
 	execute if score start map_lod matches 5 run schedule function comm:about-play/map-setting/load/schedule/event-return 10t
 	execute if score start map_lod matches 5 run scoreboard players set start map_lod 6
+
+	execute if score start map_lod matches 7 run schedule function comm:about-play/map-setting/load/generic_boss-type-filter 10t
+	execute if score start map_lod matches 7 run schedule function comm:about-play/map-setting/load/schedule/loading_other 20t
+	execute if score start map_lod matches 7 run scoreboard players set start map_lod 8
 	
 	#---------- tester ----------#
 	#			어디에서? 특정 조건을 만족하지못하면 여기로 돌아옴
@@ -442,10 +446,10 @@
 
 ### 문열기 ###
 
-	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!big] at @s if block ~ ~-1 ~48 minecraft:gray_concrete run summon armor_stand ~-.5 71 ~15 {Tags:["door-vert"],Invisible:1b,Invulnerable:1b,Small:1b}
-	execute if score start map_lod matches 13 as @e[tag=map-all] at @s if block ~ ~-1 ~-48 minecraft:gray_concrete run summon armor_stand ~-.5 71 ~-16 {Tags:["door-vert"],Invisible:1b,Invulnerable:1b,Small:1b}
-	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!big] at @s if block ~48 ~-1 ~ minecraft:gray_concrete run summon armor_stand ~15 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
-	execute if score start map_lod matches 13 as @e[tag=map-all] at @s if block ~-48 ~-1 ~ minecraft:gray_concrete run summon armor_stand ~-16 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
+	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~ ~-1 ~48 minecraft:gray_concrete run summon armor_stand ~-.5 71 ~15 {Tags:["door-vert"],Invisible:1b,Invulnerable:1b,Small:1b}
+	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~ ~-1 ~-48 minecraft:gray_concrete run summon armor_stand ~-.5 71 ~-16 {Tags:["door-vert"],Invisible:1b,Invulnerable:1b,Small:1b}
+	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~48 ~-1 ~ minecraft:gray_concrete run summon armor_stand ~15 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
+	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~-48 ~-1 ~ minecraft:gray_concrete run summon armor_stand ~-16 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
 
 	### 문 없에기 ###
 
@@ -466,10 +470,10 @@
 
 	execute if score start map_lod matches 13 as @e[tag=center] at @s run summon armor_stand ~-0.5 69.5 ~-0.5 {Tags:["clear-add"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
 	execute if score start map_lod matches 13 as @e[tag=event,tag=!boss-event] at @s run summon armor_stand ~-0.5 69.5 ~-0.5 {Tags:["clear-add"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-	execute if score start map_lod matches 13 as @e[tag=map-all] at @s if entity @s unless block ~ ~-1 ~48 gray_concrete run fill ~1 71 ~14 ~-2 74 ~14 minecraft:nether_brick_fence[east= true,west= true] keep
-	execute if score start map_lod matches 13 as @e[tag=map-all] at @s if entity @s unless block ~ ~-1 ~-48 gray_concrete run fill ~1 71 ~-15 ~-2 74 ~-15 minecraft:nether_brick_fence[east= true,west= true] keep
-	execute if score start map_lod matches 13 as @e[tag=map-all] at @s if entity @s unless block ~48 ~-1 ~ gray_concrete run fill ~14 71 ~1 ~14 74 ~-2 minecraft:nether_brick_fence[south= true,north= true] keep
-	execute if score start map_lod matches 13 as @e[tag=map-all] at @s if entity @s unless block ~-48 ~-1 ~ gray_concrete run fill ~-15 71 ~1 ~-15 74 ~-2 minecraft:nether_brick_fence[south= true,north= true] keep
+	# execute if score start map_lod matches 13 as @e[tag=map-all] at @s if entity @s unless block ~ ~-1 ~48 gray_concrete run fill ~1 71 ~14 ~-2 74 ~14 minecraft:nether_brick_fence[east= true,west= true] keep
+	# execute if score start map_lod matches 13 as @e[tag=map-all] at @s if entity @s unless block ~ ~-1 ~-48 gray_concrete run fill ~1 71 ~-15 ~-2 74 ~-15 minecraft:nether_brick_fence[east= true,west= true] keep
+	# execute if score start map_lod matches 13 as @e[tag=map-all] at @s if entity @s unless block ~48 ~-1 ~ gray_concrete run fill ~14 71 ~1 ~14 74 ~-2 minecraft:nether_brick_fence[south= true,north= true] keep
+	# execute if score start map_lod matches 13 as @e[tag=map-all] at @s if entity @s unless block ~-48 ~-1 ~ gray_concrete run fill ~-15 71 ~1 ~-15 74 ~-2 minecraft:nether_brick_fence[south= true,north= true] keep
 	execute if score start map_lod matches 13 run scoreboard players set start map_lod 14
 
 	execute if score start map_lod matches 14 run spreadplayers 0.0 -816.0 2 1 true @a
