@@ -175,3 +175,5 @@ scoreboard objectives add owner-UUID_0 dummy
 scoreboard objectives add owner-UUID_1 dummy
 scoreboard objectives add owner-UUID_2 dummy
 scoreboard objectives add owner-UUID_3 dummy
+
+scoreboard objectives add slime-exist dummy

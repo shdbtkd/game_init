@@ -25,3 +25,4 @@ scoreboard players set boss map_lod 0
 scoreboard players set spawn boss-Jack-O 0
 # scoreboard players set boss-type map_lod 0
 kill @e[tag=player-teleporter]
+kill @e[type=minecraft:tnt]

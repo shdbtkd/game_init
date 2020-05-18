@@ -21,3 +21,5 @@ scoreboard players set @e[tag=nd2-itempos] class-index 5
 scoreboard players set @e[tag=nd3-itempos] class-index 6
 
 function comm:game-start/items/head-modify
+function comm:lobby-comm/setting/resetscore
+function comm:lobby-comm/setting/weapon

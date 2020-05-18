@@ -217,5 +217,5 @@ execute as @a[scores={out=3..}] at @s if score @s stage matches 1.. run scoreboa
 	###########
 ############
 
-execute if score start map_lod matches 1.. if score out-player stage = player stage if score time map_lod matches ..60 run scoreboard players add time map_lod 1
-execute if score start map_lod matches 1.. if score out-player stage = player stage if score time map_lod matches 60.. if score start map_lod matches ..20 run scoreboard players set start map_lod 20
+execute if score start map_lod matches 1.. if score out-player stage = player-all stage if score time map_lod matches ..60 run scoreboard players add time map_lod 1
+execute if score start map_lod matches 1.. if score out-player stage = player-all stage if score time map_lod matches 60.. if score start map_lod matches ..20 run scoreboard players set start map_lod 20

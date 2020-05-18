@@ -28,7 +28,7 @@ execute store result score play-now stage if entity @a[tag=play-now]
 execute store result score out-player stage if entity @a[team=blue,scores={out=2}]
 #	ready-player = 준비실에 있는 사람의 수
 execute store result score ready-player stage if entity @a[x=-8,y=50,z=-1008,dx=15,dy=15,dz=15]
-#	ready-player = "ready" 태그를 가지고 있는 사람의 수
+#	go-player = "ready" 태그를 가지고 있는 사람의 수
 execute store result score go-player stage if entity @a[tag=ready]
 #	red = red팀의 수
 execute store result score red stage if entity @e[team=red]

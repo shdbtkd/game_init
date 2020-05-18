@@ -16,7 +16,7 @@ function comm:game-start/class/item
 
 function comm:game-start/items/items-main
 
-function comm:game-start/mob/mob
+function comm:game-start/mob/basic
 function comm:game-start/mob/boss/event/1stage-a
 function comm:game-start/class/out
 execute if score start map_lod matches 20 run function comm:game-start/class/gameover
