@@ -1,6 +1,7 @@
 kill @e[tag=modify-head]
 
 scoreboard players add @a stage 1
+scoreboard players set next stage 3
 # scoreboard players set start map_lod 1
 # scoreboard players set next stage 0
 

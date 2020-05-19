@@ -11,4 +11,3 @@ execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=neare
 # give @p minecraft:acacia_boat{AttributeModifiers:[{AttributeName:"generic.maxHealth",Name:"generic.maxHealth",Amount:0,Operation:0,UUIDLeast:280606,UUIDMost:678220,Slot:"head"}]} 1
 # give @p minecraft:acacia_boat{AttributeModifiers:[{AttributeName:"generic.attackDamage",Name:"generic.attackDamage",Amount:1,Operation:0,UUIDLeast:280606,UUIDMost:678220,Slot:"head"}]} 1
 # give @p minecraft:acacia_boat{AttributeModifiers:[{AttributeName:"generic.movementSpeed",Name:"generic.movementSpeed",Amount:1,Operation:0,UUIDLeast:280606,UUIDMost:678220,Slot:"head"}]} 1
-say 11222131

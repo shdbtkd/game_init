@@ -15,7 +15,7 @@ execute as @e[tag=boxhere] at @s if block ~ ~-2 ~ minecraft:redstone_lamp[lit=tr
 
 execute as @e[type=minecraft:creeper] at @s if data entity @s {Fuse: 1s} run function comm:game-start/items/tnt/boom/checking
 
-execute as @e[team=red] at @s run function comm:game-start/mob/mob
+execute if entity @e[team=red] run function comm:game-start/mob/mob
 execute as @e[tag=slime-storage] run scoreboard players reset @s slime-exist
 execute as @e[tag=slime-storage] at @e[team=red,tag=slime] if score @e[team=red,tag=slime,distance=..0,limit=1,sort=nearest] slime_id-S = @s slime_id-I run scoreboard players add @s slime-exist 1
 execute as @e[tag=slime-storage] at @s unless score @s slime-exist matches 1.. run function comm:game-start/mob/upgrade/slime/now-spawn

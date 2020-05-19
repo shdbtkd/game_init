@@ -14,3 +14,5 @@ setblock ~-16 62 ~-16 minecraft:redstone_block
 setblock ~-16 59 ~-16 minecraft:redstone_block
 
 # execute as @e[tag=loader,tag=!event,tag=!loaded,sort=random,limit=1] at @s if score @p stage matches 2 at @s if score @s stage-road_count matches 3 run function comm:about-play/map-setting/load/desert/desert_1-3_way
+
+# data modify block -283 4 22 {} merge from block -283 4 24 Items[].tag.BlockEntityTag
