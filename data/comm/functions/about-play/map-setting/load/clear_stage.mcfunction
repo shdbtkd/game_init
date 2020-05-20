@@ -33,8 +33,8 @@ execute if score @p stage matches 12..14 run scoreboard players set min-event ma
 execute as @e[tag=map-all] at @s run setblock ~-16 60 ~-16 air
 execute as @e[tag=map-all] at @s run setblock ~-16 59 ~-16 air
 
-execute as @e[tag=map-all,tag=boss] at @s run data modify block ~-16 61 ~-16 name set value "generic_stage_clear-boss"
-execute as @e[tag=map-all,tag=boss] at @s run setblock ~-16 60 ~-16 minecraft:redstone_block
+execute as @e[tag=map-all,tag=boss] at @s run data modify block ~-16 60 ~-16 name set value "minecraft:generic_stage_clear-boss"
+execute as @e[tag=map-all,tag=boss] at @s run setblock ~-16 61 ~-16 minecraft:redstone_block
 
 function comm:about-play/map-setting/load/schedule/loading_other
 

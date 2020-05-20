@@ -1,18 +1,12 @@
 tag @s add loaded
 
-execute if score @p stage matches 2 run loot insert 0 12 -26 loot playerheadtricks:10stage
-execute if score @p stage matches 2 run loot insert 0 12 -26 loot playerheadtricks:2type
+execute if score @p stage matches 2 at @s run function comm:about-play/map-setting/load/type/desert/desert_battle
 
-execute if score @p stage matches 2 at @s if score @s stage-road_count matches 4 run function comm:about-play/map-setting/load/desert/desert_1-4_way
-execute if score @p stage matches 2 at @s if score @s stage-road_count matches 3 run function comm:about-play/map-setting/load/desert/desert_1-3_way
-execute if score @p stage matches 2 at @s if score @s stage-road_count matches 2 run function comm:about-play/map-setting/load/desert/desert_1-2_way
-execute if score @p stage matches 2 at @s if score @s stage-road_count matches 1 run function comm:about-play/map-setting/load/desert/desert_1-1_way
-
+execute at @s run setblock ~-16 61 ~-16 structure_block
+tellraw @p [{"nbt":"Items[0].tag.BlockEntityTag.name","block":"0 12 -26","color":"red"}, {"text":"  "}, {"nbt":"Items[0].Count","block":"0 12 -26","color":"aqua"}]
+data modify block ~-16 61 ~-16 {} merge from block 0 12 -26 Items[].tag.BlockEntityTag
+function comm:about-play/map-setting/load/generic/rotate_way-fillter
 setblock ~-16 60 ~-16 minecraft:structure_block{name:"generic_stage_selector-battle",posY:5,mode:"LOAD"} replace
 data remove block 0 12 -26 Items
 setblock ~-16 62 ~-16 minecraft:redstone_block
 setblock ~-16 59 ~-16 minecraft:redstone_block
-
-# execute as @e[tag=loader,tag=!event,tag=!loaded,sort=random,limit=1] at @s if score @p stage matches 2 at @s if score @s stage-road_count matches 3 run function comm:about-play/map-setting/load/desert/desert_1-3_way
-
-# data modify block -283 4 22 {} merge from block -283 4 24 Items[].tag.BlockEntityTag
