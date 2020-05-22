@@ -3,7 +3,8 @@ execute as @s[scores={mine-p=..0}] as @s[scores={mine-c=..0}] if entity @s[score
 #execute as @a[tag=nd2,scores={mine-p=..0}] as @s[scores={mine-c=..0}] if entity @s[scores={nd2-emmer-remove=1..}] run function comm:game-start/skill/attack/rd1
 
 execute if entity @e[tag=nd2trident] at @e[tag=modify-head] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run replaceitem block ~ 15 ~ container.0 air
-execute if entity @e[tag=nd2trident] at @e[tag=modify-head] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s[scores={emmer=..0}] class-index run replaceitem block ~ 15 ~ container.0 air
+execute if score @s emmer matches ..0 if data entity @s Inventory[{ Slot: 0b, id:"minecraft:trident" }] at @e[tag=modify-head] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run replaceitem block ~ 15 ~ container.0 air
+execute if score @s emmer matches ..0 if data entity @s Inventory[{ Slot: 0b, id:"minecraft:trident" }] run function comm:game-start/skill/lootself
 execute unless entity @e[tag=nd2trident] at @e[tag=modify-head] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s[scores={emmer=1..}] class-index run data modify block ~ 15 ~ Items append from storage minecraft:weapon active[4]
 execute if score R_tri D_tri matches 200.. at @e[tag=modify-head] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s[scores={emmer=1..}] class-index run data modify block ~ 15 ~ Items append from storage minecraft:weapon active[4]
 

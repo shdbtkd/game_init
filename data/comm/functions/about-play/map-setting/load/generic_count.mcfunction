@@ -13,11 +13,11 @@ execute store result score count-end-event map_lod if entity @e[tag=event,tag=en
 scoreboard players set @e[tag=map-all] stage-road_count 0
 scoreboard players add @e[tag=map-all] stage-road_count 0
 
-execute as @e[tag=map-all] at @s unless block ~48 ~-1 ~ minecraft:red_concrete unless block ~48 ~-1 ~ minecraft:blue_concrete unless block ~48 ~-1 ~ minecraft:air run scoreboard players add @s stage-road_count 1
-execute as @e[tag=map-all] at @s unless block ~48 ~-1 ~ minecraft:red_concrete unless block ~48 ~-1 ~ minecraft:blue_concrete unless block ~48 ~-1 ~ minecraft:air run scoreboard players add @s stage-road_Xplus 1
-execute as @e[tag=map-all] at @s unless block ~-48 ~-1 ~ minecraft:red_concrete unless block ~-48 ~-1 ~ minecraft:blue_concrete unless block ~-48 ~-1 ~ minecraft:air run scoreboard players add @s stage-road_count 1
-execute as @e[tag=map-all] at @s unless block ~-48 ~-1 ~ minecraft:red_concrete unless block ~-48 ~-1 ~ minecraft:blue_concrete unless block ~-48 ~-1 ~ minecraft:air run scoreboard players add @s stage-road_Xminu 1
-execute as @e[tag=map-all] at @s unless block ~ ~-1 ~48 minecraft:red_concrete unless block ~ ~-1 ~48 minecraft:blue_concrete unless block ~ ~-1 ~48 minecraft:air run scoreboard players add @s stage-road_count 1
-execute as @e[tag=map-all] at @s unless block ~ ~-1 ~48 minecraft:red_concrete unless block ~ ~-1 ~48 minecraft:blue_concrete unless block ~ ~-1 ~48 minecraft:air run scoreboard players add @s stage-road_Zplus 1
-execute as @e[tag=map-all] at @s unless block ~ ~-1 ~-48 minecraft:red_concrete unless block ~ ~-1 ~-48 minecraft:blue_concrete unless block ~ ~-1 ~-48 minecraft:air run scoreboard players add @s stage-road_count 1
-execute as @e[tag=map-all] at @s unless block ~ ~-1 ~-48 minecraft:red_concrete unless block ~ ~-1 ~-48 minecraft:blue_concrete unless block ~ ~-1 ~-48 minecraft:air run scoreboard players add @s stage-road_Zminu 1
+execute as @e[tag=map-all] at @s if block ~48 ~-1 ~ #minecraft:door_tracking run scoreboard players add @s stage-road_count 1
+execute as @e[tag=map-all] at @s if block ~48 ~-1 ~ #minecraft:door_tracking run scoreboard players add @s stage-road_Xplus 1
+execute as @e[tag=map-all] at @s if block ~-48 ~-1 ~ #minecraft:door_tracking run scoreboard players add @s stage-road_count 1
+execute as @e[tag=map-all] at @s if block ~-48 ~-1 ~ #minecraft:door_tracking run scoreboard players add @s stage-road_Xminu 1
+execute as @e[tag=map-all] at @s if block ~ ~-1 ~48 #minecraft:door_tracking run scoreboard players add @s stage-road_count 1
+execute as @e[tag=map-all] at @s if block ~ ~-1 ~48 #minecraft:door_tracking run scoreboard players add @s stage-road_Zplus 1
+execute as @e[tag=map-all] at @s if block ~ ~-1 ~-48 #minecraft:door_tracking run scoreboard players add @s stage-road_count 1
+execute as @e[tag=map-all] at @s if block ~ ~-1 ~-48 #minecraft:door_tracking run scoreboard players add @s stage-road_Zminu 1

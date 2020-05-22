@@ -1,20 +1,20 @@
 # execute as @e[team=red,scores={HP=1..},type=!minecraft:phantom,tag=!none-show] if entity @s[scores={red-size=..0}] run tp ~ 0 ~
 
 execute as @e[team=red,tag=!boss,tag=!none-show] store result score @s HP run data get entity @s Health
-execute as @e[team=red] if data entity @s Size store result score @s red-size run data get entity @s Size
-execute as @e[team=red,scores={HP=1..},tag=!not-small,tag=!not-big,tag=!common,type=!minecraft:phantom] if entity @s[scores={red-size=0..1}] run tag @s add not-big
-execute as @e[team=red,scores={HP=1..},tag=!not-small,tag=!not-big,tag=!common,type=!minecraft:phantom] if entity @s[scores={red-size=2..3}] run tag @s add common
-execute as @e[team=red,scores={HP=1..},tag=!not-small,tag=!not-big,tag=!common,type=!minecraft:phantom] if entity @s[scores={red-size=4}] run tag @s add not-small
-execute as @e[team=red,scores={HP=1..},tag=!not-small,tag=!not-big,tag=!common,type=!minecraft:phantom] if entity @s[scores={red-size=5..}] run tag @s add bigtype
-execute as @e[team=red,scores={HP=1..},tag=!not-small,tag=!not-big,tag=!common,type=minecraft:phantom] if entity @s[scores={red-size=0}] run tag @s add not-big
-execute as @e[team=red,scores={HP=1..},type=!minecraft:silverfish,type=!minecraft:spider,type=!minecraft:cave_spider,type=!minecraft:bee,type=!minecraft:endermite,type=!minecraft:phantom,type=!minecraft:vex,tag=!not-small] run tag @s add not-small
-execute as @e[team=red,scores={HP=1..},type=!minecraft:elder_guardian,type=!minecraft:ghast,type=!minecraft:iron_golem,type=!minecraft:polar_bear,type=!minecraft:ravager,tag=!not-big] run tag @s add not-big
-execute as @e[team=red,scores={HP=1..},tag=not-small,tag=not-big,tag=!common] run tag @s add common
-execute as @e[team=red,scores={HP=1..},tag=bigtype,tag=!common] at @s run function comm:game-start/mob/showhealth/bigtype
-execute as @e[team=red,scores={HP=1..},tag=not-small,tag=!common] at @s run function comm:game-start/mob/showhealth/notsmall
-execute as @e[team=red,scores={HP=1..},tag=common] at @s run function comm:game-start/mob/showhealth/common
-execute as @e[team=red,scores={HP=1..},tag=not-big,tag=!common] at @s run function comm:game-start/mob/showhealth/notbig
-
+#execute as @e[team=red] if data entity @s Size store result score @s red-size run data get entity @s Size
+#execute as @e[team=red,scores={HP=1..},tag=!not-small,tag=!not-big,tag=!common,type=!minecraft:phantom] if entity @s[scores={red-size=0..1}] run tag @s add not-big
+#execute as @e[team=red,scores={HP=1..},tag=!not-small,tag=!not-big,tag=!common,type=!minecraft:phantom] if entity @s[scores={red-size=2..3}] run tag @s add common
+#execute as @e[team=red,scores={HP=1..},tag=!not-small,tag=!not-big,tag=!common,type=!minecraft:phantom] if entity @s[scores={red-size=4}] run tag @s add not-small
+#execute as @e[team=red,scores={HP=1..},tag=!not-small,tag=!not-big,tag=!common,type=!minecraft:phantom] if entity @s[scores={red-size=5..}] run tag @s add bigtype
+#execute as @e[team=red,scores={HP=1..},tag=!not-small,tag=!not-big,tag=!common,type=minecraft:phantom] if entity @s[scores={red-size=0}] run tag @s add not-big
+#execute as @e[team=red,scores={HP=1..},type=!minecraft:silverfish,type=!minecraft:spider,type=!minecraft:cave_spider,type=!minecraft:bee,type=!minecraft:endermite,type=!minecraft:phantom,type=!minecraft:vex,tag=!not-small] run tag @s add not-small
+#execute as @e[team=red,scores={HP=1..},type=!minecraft:elder_guardian,type=!minecraft:ghast,type=!minecraft:iron_golem,type=!minecraft:polar_bear,type=!minecraft:ravager,tag=!not-big] run tag @s add not-big
+#execute as @e[team=red,scores={HP=1..},tag=not-small,tag=not-big,tag=!common] run tag @s add common
+#execute as @e[team=red,scores={HP=1..},tag=bigtype,tag=!common] at @s run function comm:game-start/mob/showhealth/bigtype
+#execute as @e[team=red,scores={HP=1..},tag=not-small,tag=!common] at @s run function comm:game-start/mob/showhealth/notsmall
+#execute as @e[team=red,scores={HP=1..},tag=common] at @s run function comm:game-start/mob/showhealth/common
+#execute as @e[team=red,scores={HP=1..},tag=not-big,tag=!common] at @s run function comm:game-start/mob/showhealth/notbig
+execute as @e[team=red,scores={HP=0..}] at @s run function comm:game-start/mob/showhealth/show
 execute as @a[scores={kill=1..}] at @s run function comm:game-start/mob/loot/generic
 
 execute as @e[tag=red-random] run scoreboard players add @s random 0

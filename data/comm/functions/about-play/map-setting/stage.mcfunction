@@ -157,11 +157,17 @@
 
 ###  ###
 
+	execute at @e[tag=clear-add-large] as @e[tag=door-hori,distance=..22] run tag @s add clear
+	execute at @e[tag=clear-add-large] as @e[tag=door-vert,distance=..22] run tag @s add clear
+	execute at @e[tag=clear-add-large] as @e[tag=door-hori,distance=..22] run tag @s remove close
+	execute at @e[tag=clear-add-large] as @e[tag=door-vert,distance=..22] run tag @s remove close
+	execute at @e[tag=close-add-large] as @e[tag=door-hori,distance=..22] run tag @s add close
+	execute at @e[tag=close-add-large] as @e[tag=door-vert,distance=..22] run tag @s add close
+
 	execute at @e[tag=clear-add] as @e[tag=door-hori,distance=..16] run tag @s add clear
 	execute at @e[tag=clear-add] as @e[tag=door-vert,distance=..16] run tag @s add clear
 	execute at @e[tag=clear-add] as @e[tag=door-hori,distance=..16] run tag @s remove close
 	execute at @e[tag=clear-add] as @e[tag=door-vert,distance=..16] run tag @s remove close
-
 	execute at @e[tag=close-add] as @e[tag=door-hori,distance=..16] run tag @s add close
 	execute at @e[tag=close-add] as @e[tag=door-vert,distance=..16] run tag @s add close
 
@@ -185,7 +191,7 @@
 
 	# 플래이
 
-		execute if score play-now stage matches 1.. at @a[tag=play-now] as @e[tag=map-all,limit=1,sort=nearest] if entity @s[tag=!event,tag=!center,tag=!boss] run tag @s add now-play
+		execute if score play-now stage matches 1.. at @a[tag=play-now] as @e[tag=map-all,limit=1,sort=nearest] if entity @s[tag=!event,tag=!center] run tag @s add now-play
 
 		execute if entity @e[tag=now-play,tag=!complete] if score time stage matches ..100 run scoreboard players add time stage 1
 		execute as @e[tag=now-play,tag=!complete] if score time stage matches ..60 at @s run function comm:about-play/map-setting/play/lock

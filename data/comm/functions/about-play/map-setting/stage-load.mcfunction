@@ -135,7 +135,7 @@
 	#			센터 소환
 	#			센터 주변에 확률적으로 loader 소환
 	execute if score start map_lod matches 1 run function comm:about-play/map-setting/load/generic_count
-	execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=furthest,limit=1] at @s run function comm:about-play/map-setting/load/stage/summon_loader
+	execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] at @s run function comm:about-play/map-setting/load/stage/summon_loader
 	execute if score start map_lod matches 1 at @e[tag=tester,sort=random,limit=1] if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_loader
 	execute if score start map_lod matches 1 at @e[tag=tester,sort=random,limit=1] if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_loader
 	execute if score start map_lod matches 1 at @e[tag=tester,sort=random,limit=1] if predicate pred:loot run function comm:about-play/map-setting/load/stage/summon_loader
@@ -446,10 +446,15 @@
 
 ### 문열기 ###
 
-	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~ ~-1 ~48 minecraft:gray_concrete run summon armor_stand ~-.5 71 ~15 {Tags:["door-vert"],Invisible:1b,Invulnerable:1b,Small:1b}
-	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~ ~-1 ~-48 minecraft:gray_concrete run summon armor_stand ~-.5 71 ~-16 {Tags:["door-vert"],Invisible:1b,Invulnerable:1b,Small:1b}
-	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~48 ~-1 ~ minecraft:gray_concrete run summon armor_stand ~15 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
-	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~-48 ~-1 ~ minecraft:gray_concrete run summon armor_stand ~-16 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
+	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~ ~-1 ~48 #minecraft:door_tracking run summon armor_stand ~-.5 71 ~15 {Tags:["door-vert"],Invisible:1b,Invulnerable:1b,Small:1b}
+	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~ ~-1 ~-48 #minecraft:door_tracking run summon armor_stand ~-.5 71 ~-16 {Tags:["door-vert"],Invisible:1b,Invulnerable:1b,Small:1b}
+	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~48 ~-1 ~ #minecraft:door_tracking run summon armor_stand ~15 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
+	execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~-48 ~-1 ~ #minecraft:door_tracking run summon armor_stand ~-16 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
+
+	execute if score start map_lod matches 13 as @e[tag=map-all,tag=boss] at @s if block ~ ~-1 ~48 #minecraft:door_tracking run summon armor_stand ~-.5 71 ~21 {Tags:["door-vert"],Invisible:1b,Invulnerable:1b,Small:1b}
+	execute if score start map_lod matches 13 as @e[tag=map-all,tag=boss] at @s if block ~ ~-1 ~-48 #minecraft:door_tracking run summon armor_stand ~-.5 71 ~-22 {Tags:["door-vert"],Invisible:1b,Invulnerable:1b,Small:1b}
+	execute if score start map_lod matches 13 as @e[tag=map-all,tag=boss] at @s if block ~48 ~-1 ~ #minecraft:door_tracking run summon armor_stand ~21 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
+	execute if score start map_lod matches 13 as @e[tag=map-all,tag=boss] at @s if block ~-48 ~-1 ~ #minecraft:door_tracking run summon armor_stand ~-22 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
 
 	### 문 없에기 ###
 
