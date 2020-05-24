@@ -2,6 +2,7 @@
 setworldspawn 0 16 0
 kill @e[team=red]
 scoreboard players set time stage 0
+scoreboard players set time map_lod 0
 
 # item selector
 kill @e[tag=item-selecter]

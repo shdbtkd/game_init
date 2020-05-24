@@ -14,8 +14,8 @@ execute as @e[type=minecraft:item,nbt={Item:{id:"minecraft:string"}}] run kill @
 execute as @e[type=minecraft:item,nbt={Item:{id:"minecraft:stone_button"}}] run kill @s
 execute as @e[type=minecraft:item,nbt={Item:{id:"minecraft:polished_andesite"}}] run kill @s
 
-execute as @e[limit=1000,type=minecraft:item,tag=!delay,tag=!select,scores={item-delay=0}] run data merge entity @s {PickupDelay:0}
-execute as @e[limit=1000,type=minecraft:item,tag=!delay,tag=!select] at @s run tp @s @p[distance=..3,sort=nearest,gamemode=!spectator]
+execute as @e[limit=1000,type=minecraft:item,tag=!delay,tag=!select,scores={item-delay=0},nbt=!{Item: {tag: { item: 1b } }}] run data merge entity @s {PickupDelay:0}
+execute as @e[limit=1000,type=minecraft:item,tag=!delay,tag=!select,nbt=!{Item: {tag: { item: 1b } }}] at @s run tp @s @p[distance=..3,sort=nearest,gamemode=!spectator]
 
 execute as @e[type=minecraft:item,tag=select] run data merge entity @s {PickupDelay:-1,Age:-32768}
 

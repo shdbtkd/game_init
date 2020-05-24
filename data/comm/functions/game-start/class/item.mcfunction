@@ -95,5 +95,5 @@ execute as @e[tag=item-selecter,tag=host] at @s unless score max-item item-rando
 execute as @e[tag=item-selecter,tag=load,tag=!end] store result score item-num item-random run data get entity @s Pos[2]
 execute as @e[tag=item-selecter,tag=load,tag=!end] run tag @s add end
 
-execute at @a[tag=event-now] as @e[tag=map-all,tag=event,sort=nearest,limit=1] if entity @s[tag=chest-event,tag=!end-active-event] run function comm:game-start/class/actevent-item
+execute at @a[tag=event-now] as @e[tag=map-all,tag=event,sort=nearest,limit=1] if entity @s[tag=!end-active-event,scores={event-type=1}] run function comm:game-start/class/actevent-item
 execute as @e[tag=item-random,scores={item-random=..0}] at @s run function comm:game-start/class/summon-item

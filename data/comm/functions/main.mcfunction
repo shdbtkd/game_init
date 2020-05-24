@@ -8,8 +8,7 @@ execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=neare
 ##############
 
 #function comm:about-play/map-setting/stage
-function comm:about-play/map-setting/boss-enter
-
+#function comm:about-play/map-setting/boss-enter
 
 function comm:game-start/class/class
 function comm:game-start/class/item

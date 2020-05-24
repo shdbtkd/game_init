@@ -73,8 +73,8 @@
 
 ### 아이템  ###
 
-	execute at @e[tag=modify-head] as @a[scores={item=2..}] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run loot replace entity @s inventory.0 mine ~ 12 ~ minecraft:stick{drop_contents:true}
-	execute at @e[tag=modify-head] as @a[scores={map=2..}] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run loot replace entity @s inventory.0 mine ~ 17 ~ minecraft:stick{drop_contents:true}
-	execute at @e[tag=modify-head] as @a[scores={stat=2..}] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run loot replace entity @s inventory.0 mine ~ 19 ~ minecraft:stick{drop_contents:true}
+	execute if score @p stage matches 1.. at @e[tag=modify-head] as @a[scores={item=2..}] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run loot replace entity @s inventory.0 mine ~ 12 ~ minecraft:stick{drop_contents:true}
+	execute if score @p stage matches 1.. at @e[tag=modify-head] as @a[scores={map=2..}] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run loot replace entity @s inventory.0 mine ~ 17 ~ minecraft:stick{drop_contents:true}
+	execute if score @p stage matches 1.. at @e[tag=modify-head] as @a[scores={stat=2..}] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run loot replace entity @s inventory.0 mine ~ 19 ~ minecraft:stick{drop_contents:true}
 
 #############

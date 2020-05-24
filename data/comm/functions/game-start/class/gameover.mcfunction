@@ -1,4 +1,4 @@
-tp @a 0.0 53 -1000.0
+tp @a -1.0 39 -816.0
 title @a times 0 60 0
 title @a title ["",{"text":"GAME OVER!","color":"red"}]
 gamemode adventure @a
@@ -30,5 +30,5 @@ scoreboard players set boss stage 0
 scoreboard players set boss map_lod 0
 scoreboard players set spawn boss-Jack-O 0
 # scoreboard players set boss-type map_lod 0
-kill @e[tag=player-teleporter]
 kill @e[type=minecraft:tnt]
+bossbar set minecraft:generic.bossbar visible false

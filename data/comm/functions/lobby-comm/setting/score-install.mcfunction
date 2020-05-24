@@ -39,6 +39,7 @@ scoreboard objectives add jump minecraft.custom:minecraft.jump
 #---------- 점프, 웅크림 달리기 ----------#
 
 #---------- 인게임 아이템 ----------#
+scoreboard objectives add pickup-delay dummy
 scoreboard objectives add emerald minecraft.picked_up:minecraft.emerald
 scoreboard objectives add drop-emerald minecraft.dropped:minecraft.emerald
 scoreboard objectives add U_undying minecraft.used:minecraft.totem_of_undying
@@ -121,6 +122,7 @@ scoreboard objectives add stage-road_Xplus dummy
 scoreboard objectives add stage-road_Xminu dummy
 scoreboard objectives add stage-road_Zplus dummy
 scoreboard objectives add stage-road_Zminu dummy
+scoreboard objectives add event-type dummy
 #---------- 맵 로드 ----------#
 
 #---------- 스텟 ----------#
@@ -177,3 +179,6 @@ scoreboard objectives add owner-UUID_2 dummy
 scoreboard objectives add owner-UUID_3 dummy
 
 scoreboard objectives add slime-exist dummy
+
+scoreboard objectives add boss-max_health dummy
+scoreboard objectives add boss-now_health dummy

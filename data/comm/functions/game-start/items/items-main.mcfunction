@@ -5,16 +5,18 @@
 # execute as @a at @s store result score @s item-index if data entity @s Inventory[].tag{item:1b}
 
 ### 아이템 줍기 ###
-
+    execute as @e[type=minecraft:item,nbt={Item: {tag: { item: 1b } }}] store result score @s pickup-delay run data get entity @s PickupDelay
     # 아이템
     execute as @e[type=item,tag=item] if data entity @s Item.tag{item:1b,basicitem:1b} if data entity @s {PickupDelay:-1s} at @s store result score @s count-itemplayer if entity @a[distance=..0.3]
     execute at @a as @e[type=item,tag=item,limit=1,sort=nearest] if data entity @s Item.tag{item:1b,basicitem:1b} if data entity @s {PickupDelay:-1s} at @s if score @s count-itemplayer matches 1 run function comm:game-start/items/item-get
     execute as @e[type=item,tag=item] if data entity @s Item.tag{item:1b,basicitem:1b} at @s unless entity @p[distance=..0.5] run data merge entity @s {PickupDelay:-1,Age:-32768}
 
     # 포션
-    execute as @e[type=item] if data entity @s Item.tag{potion: 1b} at @s unless entity @p[distance=..0.5] run data merge entity @s {PickupDelay:-1,Age:-32768}
-    execute as @e[type=item] if data entity @s Item.tag{potion: 1b} if data entity @s {PickupDelay:-1s} at @s store result score @s count-itemplayer if entity @a[distance=..0.7]
-    execute at @a as @e[type=item,limit=1,sort=nearest] if data entity @s Item.tag{item:1b,potion:1b} if data entity @s {PickupDelay:-1s} at @s if score @s count-itemplayer matches 1 if score @p pickup-potion matches ..0 run function comm:game-start/items/potion-get
+
+    execute at @a as @e[type=item,tag=!pickup-potion,scores={pickup-delay=..-1},limit=1,sort=nearest,distance=..0.5] if data entity @s Item.tag{potion: 1b} at @s if score @s count-itemplayer matches 1 if score @p[scores={use-potion=..0}] pickup-potion matches ..0 run function comm:game-start/items/potion-get
+    execute as @e[type=item,tag=!pickup-potion,scores={pickup-delay=..5}] if data entity @s Item.tag{potion: 1b} at @s run data merge entity @s {PickupDelay:-1,Age:-32768}
+    execute as @e[type=item,tag=!pickup-potion,scores={pickup-delay=..-1}] if data entity @s Item.tag{potion: 1b} at @s store result score @s count-itemplayer if entity @a[distance=..0.5]
+    
     #execute as @e[type=item] if data entity @s Item.tag{item:1b,potion:1b} at @s unless entity @p[scores={pickup-potion=..0},distance=..0.5] run data merge entity @s {PickupDelay:-1,Age:-32768}
     #execute as @e[type=item] if data entity @s Item.tag{item:1b,potion:1b} if data entity @s {PickupDelay:-1s} at @s if entity @p[scores={pickup-potion=..0},distance=..0.5] run data merge entity @s {PickupDelay:15,Age:-32768}
 
@@ -29,7 +31,7 @@
     execute as @a store result score @s inventory-potion if data entity @s Inventory[].tag{potion:1b}
     execute as @a store result score @s inventory-tnt run data get entity @s Inventory[{id:"minecraft:tnt"}].Count
     execute as @a store result score @s inventory-eme run data get entity @s Inventory[{id:"minecraft:emerald"}].Count
-    execute as @a store result score @s inventory-totem if data entity @s Inventory[{id:"minecraft:totem_of_undying"}]
+    # execute as @a store result score @s inventory-totem if data entity @s Inventory[{id:"minecraft:totem_of_undying"}]
     execute as @a store result score @s inventory-ammo run data get entity @s Inventory[{tag:{ammo:1b}}].Count
 
 ##############
@@ -88,9 +90,6 @@
     #execute as @a if data entity @s Inventory[{id: "minecraft:glass_bottle"}] run function comm:game-start/items/itemself
     clear @a minecraft:glass_bottle
     execute as @a[scores={use-potion=1..}] run function comm:game-start/items/itemuse
-    execute as @a[scores={use-potion=1..}] run function comm:game-start/items/itemself
-    execute as @a if data entity @s Inventory[{Slot:1b,id:"minecraft:potion"}] run replaceitem entity @s hotbar.1 air
-    execute as @s[scores={use-potion=1..}] at @e[tag=modify-head] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run replaceitem block ~ 21 ~ container.2 air
     execute as @a unless score @s pickup-potion = @s inventory-potion run function comm:game-start/items/itemself
     execute as @e[tag=boom] at @s run function comm:game-start/items/tnt/boom/fuse
     execute as @a[scores={d-tnt=1..}] at @s run function comm:game-start/items/tnt/summon
@@ -110,7 +109,7 @@
     # armor #
     execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index store result block ~ 15 ~ Items[{Slot: 5b}].tag.AttributeModifiers[{ AttributeName: "generic.armor" }].Amount int 1 run scoreboard players get @s armor-P
     # armor T #
-    execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index store result block ~ 15 ~ Items[{Slot: 5b}].tag.AttributeModifiers[{ AttributeName: "generic.armorToughness" }].Amount int 1 run scoreboard players get @s armor-T
+    execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index store result block ~ 15 ~ Items[{Slot: 5b}].tag.AttributeModifiers[{ AttributeName: "generic.armor_toughness" }].Amount int 1 run scoreboard players get @s armor-T
 
 ############
 

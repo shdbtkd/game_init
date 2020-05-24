@@ -11,6 +11,7 @@ kill @e[tag=clear]
 kill @e[tag=clear-add]
 kill @e[tag=close-add]
 kill @e[tag=boxhere]
+kill @e[tag=player-teleporter]
 
 fill 96 50 -960 192 50 -768 minecraft:gray_concrete replace minecraft:blue_concrete
 fill -48 50 -960 48 50 -768 minecraft:gray_concrete replace minecraft:blue_concrete

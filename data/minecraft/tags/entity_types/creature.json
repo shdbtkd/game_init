@@ -1,7 +1,14 @@
 {
     "values":[
         "#minecraft:raiders",
-        "minecraft:giant",
-        ""
+        "#minecraft:spiders",
+        "#minecraft:slimes",
+        "minecraft:piglin",
+        "minecraft:hoglin",
+        "minecraft:blaze",
+        "minecraft:creeper",
+        "minecraft:ghast",
+        "#minecraft:guardians",
+        "minecraft:giant"
     ]
 }
