@@ -10,5 +10,6 @@ execute as @e[tag=red-boss] unless score @s boss-max_health matches 0.. store re
 execute as @e[tag=red-boss] run scoreboard players operation result boss-max_health += @s boss-max_health
 execute store result bossbar minecraft:generic.bossbar max run scoreboard players get result boss-max_health
 execute as @e[tag=red-boss] run function comm:game-start/mob/boss/main/generic/set-modifiers
+scoreboard players set result boss-now_health 0
 execute as @e[tag=red-boss] run function comm:game-start/mob/boss/main/generic/set-value
 

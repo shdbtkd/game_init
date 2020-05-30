@@ -1,6 +1,10 @@
 execute as @e[tag=testmap] at @s if entity @e[distance=..1,tag=map-all,tag=!appear] run kill @s
 execute as @e[tag=testmap] at @s if block ~ ~-1 ~ minecraft:red_concrete run kill @s
 
+#   replaceitem block 3 12 -16 container.0 map{ to_kill: 1b, tab_item: 1b, tab_type_1:1b, CustomModelData:1}
+#   replaceitem block 3 12 -16 container.9 minecraft:knowledge_book{ to_kill: 1b, tab_item: 1b, tab_type_2:1b, CustomModelData:1}
+#   replaceitem block 3 12 -16 container.18 minecraft:iron_sword{ to_kill: 1b, tab_item: 1b, tab_type_3:1b, CustomModelData:1}
+
 execute at @e[tag=modify-head] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run loot replace block ~ 17 ~ container.0 mine ~ 25 ~ stick{drop_contents:true}
 execute at @e[tag=modify-head] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run replaceitem block ~ 17 ~ container.13 minecraft:white_stained_glass_pane{display:{Name:'{"text":" "}'}}
 

@@ -31,3 +31,4 @@ execute at @e[tag=modify-head] as @a[scores={stage=1..}] if score @e[distance=..
 
 # execute as @a[scores={stage=1..}] at @s[scores={out=1..}] run replaceitem entity @s armor.head air
 #execute as @a[scores={stage=1..}] unless data entity @s Inventory[{Slot:103b}] run function comm:game-start/skill/lootself
+

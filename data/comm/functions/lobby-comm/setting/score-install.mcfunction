@@ -182,3 +182,9 @@ scoreboard objectives add slime-exist dummy
 
 scoreboard objectives add boss-max_health dummy
 scoreboard objectives add boss-now_health dummy
+
+scoreboard objectives add inven_tab-info dummy
+scoreboard objectives add inven_tab-type dummy
+
+scoreboard objectives add room_type dummy
+scoreboard objectives add map_type dummy

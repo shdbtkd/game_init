@@ -17,15 +17,7 @@
 	gamerule announceAdvancements false
 	gamerule maxEntityCramming 1000
 
-
-#월드 스폰
-
-	
-
-
-###################
-
-data merge storage minecraft:rd-123 {rd1:{},rd2:{},rd3:{}}
+#data merge storage minecraft:rd-123 {rd1:{},rd2:{},rd3:{}}
 #data merge storage basic-weapon {rd1:{},rd2:{},rd3:{},nd1:{},nd2:{},nd3:{}}
 scoreboard players set ready-player stage 0
 scoreboard players set play-now stage 0

@@ -1,4 +1,5 @@
 #---------- mapload ----------#
+execute as @a[gamemode=!spectator,tag=mapload] at @s at @e[tag=map-all,tag=!not-appear] at @e[distance=..0,tag=center] at @s run function comm:about-play/arrow-setting/map/appear
 execute as @a[gamemode=!spectator,tag=!mapload] at @s if block ~ 65 ~ minecraft:purple_terracotta run function comm:about-play/arrow-setting/map/appear
 execute as @a[gamemode=!spectator,tag=!mapload] at @s if block ~ 65 ~ minecraft:purple_terracotta run tag @s add mapload
 execute as @a[gamemode=!spectator,tag=mapload] at @s unless block ~ 65 ~ minecraft:purple_terracotta run function comm:about-play/arrow-setting/map/appear

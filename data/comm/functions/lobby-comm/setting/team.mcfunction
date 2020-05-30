@@ -24,6 +24,8 @@
 
 
 ### 스코어 ###
+	team add count-player
+	team join count-player 죽은사람:
 
 	team join gray --*--
 	team join gray -***-
@@ -37,3 +39,29 @@
 	scoreboard players set -***- out 9
 	scoreboard players reset @a[team=blue] out
 ############
+
+team add box-t
+team add box-m
+team add box-b
+
+team modify box-t displayName {"text":"box-t","bold":"true"}
+team modify box-m displayName {"text":"box-m","bold":"true"}
+team modify box-m color gold
+team modify box-b displayName {"text":"box-b","bold":"true"}
+
+scoreboard players set ▨ out 7
+scoreboard players set ▩ out 6
+scoreboard players set ▧ out 5
+
+team join box-t ▨
+team join box-m ▩
+team join box-b ▧
+
+execute if score @a[limit=1] stage matches ..0 run team modify box-t prefix {"text":"     ▩ ▩ ","color":"white"}
+execute if score @a[limit=1] stage matches ..0 run team modify box-t suffix {"text":" ▩ ▩ ","color":"white"}
+
+execute if score @a[limit=1] stage matches ..0 run team modify box-m prefix {"text":"     ▩ ▩ ","color":"white"}
+execute if score @a[limit=1] stage matches ..0 run team modify box-m suffix {"text":" ▩ ▩ ","color":"white"}
+
+execute if score @a[limit=1] stage matches ..0 run team modify box-b prefix {"text":"     ▩ ▩ ","color":"white"}
+execute if score @a[limit=1] stage matches ..0 run team modify box-b suffix {"text":" ▩ ▩ ","color":"white"}

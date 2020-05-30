@@ -1,3 +1,4 @@
+scoreboard players add @a stage 0
 
 scoreboard players set @a[tag=rd1] max-hp -12
 scoreboard players set @a[tag=rd2] max-hp -12
@@ -7,10 +8,10 @@ scoreboard players set @a[tag=nd1] max-hp -6
 scoreboard players set @a[tag=nd2] max-hp -8
 scoreboard players set @a[tag=nd3] max-hp -6
 
-scoreboard players set @s emmer 0
-scoreboard players set @s emerald 0
-scoreboard players set @s undying 0
-scoreboard players set @s p-tnt 1
+scoreboard players set @a emmer 0
+scoreboard players set @a emerald 0
+scoreboard players set @a undying 0
+scoreboard players set @a p-tnt 1
 scoreboard players set @a max-ammo 3
 scoreboard players set @a attack-damage 0
 scoreboard players set @a movement-speed 0
@@ -19,6 +20,8 @@ scoreboard players set @a armor-T 0
 scoreboard players set @s max-ammo-time 60
 scoreboard players add @a mine-c 0
 scoreboard players add @a mine-p 0
+scoreboard players add @a pickup-potion 0
+scoreboard players add @a use-potion 0
 
 scoreboard players set @a rd1-emmer-remove 0
 scoreboard players set @a rd2-emmer-remove 0

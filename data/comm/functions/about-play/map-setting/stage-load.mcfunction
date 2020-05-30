@@ -239,9 +239,13 @@
 	# execute if score start map_lod matches 13 as @e[tag=map-all] at @s if entity @s unless block ~-48 ~-1 ~ gray_concrete run fill ~-15 71 ~1 ~-15 74 ~-2 minecraft:nether_brick_fence[south= true,north= true] keep
 	execute if score start map_lod matches 13 run scoreboard players set start map_lod 14
 
-	execute if score start map_lod matches 14 run spreadplayers 0.0 -816.0 2 1 true @a
+	# execute if score start map_lod matches 14 run spreadplayers 0.0 -816.0 2 1 false @a
+	execute if score start map_lod matches 14 run tp @a 0.0 80 -816.0
 	execute if score start map_lod matches 14 run title @a[gamemode=!spectator] times 0 10 0
 	execute if score start map_lod matches 14 run title @a[gamemode=!spectator] title {"text":""}
+	execute if score start map_lod matches 14 run function comm:about-play/map-setting/load/schedule/stage-type
+	# execute if score start map_lod matches 14 as @a run function comm:about-play/arrow-setting/map/appear
+	execute if score start map_lod matches 14 run gamerule fallDamage true
 	execute if score start map_lod matches 14 run scoreboard players set start map_lod 15
 ############
 

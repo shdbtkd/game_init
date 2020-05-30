@@ -4,8 +4,8 @@ execute as @e[team=!] store result score @s hurt run data get entity @s HurtTime
 execute anchored eyes as @e[tag=!none-show] at @s if score @s hurt matches 7.. run particle minecraft:block redstone_block ^ ^ ^ 0.1 0 0.1 01 5
 execute anchored feet as @e[tag=!none-show] at @s if score @s hurt matches 7.. run particle minecraft:block redstone_block ^ ^ ^ 0.1 0 0.1 01 5
 
-execute as @e[team=red,tag=!A] if entity @s[type=!minecraft:zombie,type=!#minecraft:skeletons,type=!minecraft:drowned,type=!minecraft:zombie_villager,type=!minecraft:zombified_piglin,type=!minecraft:husk,type=!minecraft:phantom] run tag @s add A
-execute as @e[team=red,tag=!A] run tag @s[tag=!U] add U
+#execute as @e[team=red,tag=!A] if entity @s[type=!minecraft:zombie,type=!#minecraft:skeletons,type=!minecraft:drowned,type=!minecraft:zombie_villager,type=!minecraft:zombified_piglin,type=!minecraft:husk,type=!minecraft:phantom] run tag @s add A
+#execute as @e[team=red,tag=!A] run tag @s[tag=!U] add U
 
 execute as @e[tag=box-random] at @s run function comm:game-start/mob/box/summon
 execute as @e[tag=boxhere,tag=locked] at @s run function comm:game-start/mob/box/testlock

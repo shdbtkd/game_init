@@ -8,7 +8,7 @@
 # 아이템 소환
 # 아이템에 추가되어야 하는 태그 item, delay
 # 아이템에 추가되어야 하는 커스텀 태그 item:1b, showname:1b, basicitem:1b, 아이템_이름:1b
-# 화상
+# 화살
 execute as @e[tag=item-random,scores={item-random=1}] at @s run summon item ~ ~1 ~ {Tags:["item","delay"],Item:{id:"minecraft:arrow",Count:1b,tag:{display:{Name:'{"text":"화살","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,arrow__1:1b}}}
 execute as @e[tag=item-random,scores={item-random=2}] at @s run summon item ~ ~1 ~ {Tags:["item","delay"],Item:{id:"minecraft:arrow",Count:1b,tag:{display:{Name:'{"text":"화살","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,arrow__2:1b}}}
 execute as @e[tag=item-random,scores={item-random=3}] at @s run summon item ~ ~1 ~ {Tags:["item","delay"],Item:{id:"minecraft:arrow",Count:1b,tag:{display:{Name:'{"text":"화살","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,arrow__3:1b}}}
@@ -50,3 +50,5 @@ execute as @e[tag=item-random,scores={item-random=1..}] at @s run setblock ~-1 ~
 execute as @e[tag=item-random,scores={item-random=1..}] at @s run setblock ~ ~ ~-1 minecraft:smooth_stone_slab
 # 죽이기
 execute as @e[tag=item-random,scores={item-random=1..}] run kill @s
+
+execute as @e[tag=item-random,scores={item-random=..0},limit=1] at @s run function comm:game-start/class/summon-item

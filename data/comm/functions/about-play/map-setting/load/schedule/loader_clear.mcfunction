@@ -7,11 +7,15 @@ kill @e[tag=hide]
 kill @e[tag=tester]
 kill @e[tag=door-vert]
 kill @e[tag=door-hori]
-kill @e[tag=clear]
-kill @e[tag=clear-add]
 kill @e[tag=close-add]
+kill @e[tag=clear-add]
+kill @e[tag=close-add-large]
+kill @e[tag=clear-add-large]
+kill @e[tag=door-hori]
+kill @e[tag=clear]
 kill @e[tag=boxhere]
 kill @e[tag=player-teleporter]
+kill @e[tag=door-control]
 
 fill 96 50 -960 192 50 -768 minecraft:gray_concrete replace minecraft:blue_concrete
 fill -48 50 -960 48 50 -768 minecraft:gray_concrete replace minecraft:blue_concrete
