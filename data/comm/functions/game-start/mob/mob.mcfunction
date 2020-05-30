@@ -64,3 +64,6 @@ execute as @e[tag=red-boss,scores={HP=..1000}] run function comm:game-start/mob/
 
 #------ 스파이더 조키 ------#
 # give _Rono minecraft:command_block{display:{Name:'{"text":"spider jockey","italic":false}'},BlockEntityTag:{Command: 'summon minecraft:spider ~ ~ ~ {Team:"red",Passengers:[{id:"minecraft:skeleton",Team:"red",Health:10f,Attributes:[{Name:generic.maxHealth,Base:10}],HandItems:[{id:"minecraft:bow",Count:1b},{}]}]}'}}
+
+#------ 터지는 크리퍼 ------#
+# summon minecraft:creeper ~ ~ ~ {powered:1b,Fuse:35,ignited:1b,Passengers:[{id:"minecraft:silverfish"}]}

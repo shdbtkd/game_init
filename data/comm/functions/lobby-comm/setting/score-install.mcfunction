@@ -188,3 +188,6 @@ scoreboard objectives add inven_tab-type dummy
 
 scoreboard objectives add room_type dummy
 scoreboard objectives add map_type dummy
+
+scoreboard objectives add price dummy
+scoreboard objectives add box-facing dummy

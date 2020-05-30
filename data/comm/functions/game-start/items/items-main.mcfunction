@@ -81,7 +81,7 @@
     execute as @a[scores={stage=1..}] unless score @s emmer = @s inventory-ammo run function comm:game-start/items/itemself
     execute as @a[scores={emerald=1..}] unless data entity @s Inventory[{ Slot:7b, id: "minecraft:emerald" }] run function comm:game-start/items/itemself
     execute as @a unless score @s p-tnt = @s inventory-tnt run function comm:game-start/items/itemself
-    execute as @a[scores={emerald=1..}] unless score @s emerald = @s inventory-eme run function comm:game-start/items/itemself
+    execute as @a[scores={emerald=..64}] unless score @s emerald = @s inventory-eme run function comm:game-start/items/itemself
     execute as @a[scores={d-tnt=1..}] run function comm:game-start/items/itemuse
     execute as @a unless score @s p-tnt = @s inventory-tnt run function comm:game-start/items/itemself
     execute as @a[scores={p-tnt=1..}] unless data entity @s Inventory[{id:"minecraft:tnt"}] run function comm:game-start/items/itemself

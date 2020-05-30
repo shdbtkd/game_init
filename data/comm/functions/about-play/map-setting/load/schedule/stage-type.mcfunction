@@ -63,6 +63,32 @@
 	execute if score @p stage matches 16 run scoreboard objectives modify out displayname {"text":" |||| STAGE [8] |||| ","bold":"true","color":"green"}
 	execute if score @p stage matches 17 run scoreboard objectives modify out displayname {"text":" |||| STAGE [8] |||| ","bold":"true","color":"green"}
 
+
+
+	execute if score @p stage matches 2 run scoreboard players set price-add price 0
+	execute if score @p stage matches 3 run scoreboard players set price-add price 0
+
+	execute if score @p stage matches 4 run scoreboard players set price-add price 2
+	execute if score @p stage matches 5 run scoreboard players set price-add price 2
+
+	execute if score @p stage matches 6 run scoreboard players set price-add price 3
+	execute if score @p stage matches 7 run scoreboard players set price-add price 3
+
+	execute if score @p stage matches 8 run scoreboard players set price-add price 6
+	execute if score @p stage matches 9 run scoreboard players set price-add price 6
+
+	execute if score @p stage matches 10 run scoreboard players set price-add price 8
+	execute if score @p stage matches 11 run scoreboard players set price-add price 8
+
+	execute if score @p stage matches 12 run scoreboard players set price-add price 9
+	execute if score @p stage matches 13 run scoreboard players set price-add price 9
+
+	execute if score @p stage matches 14 run scoreboard players set price-add price 13
+	execute if score @p stage matches 15 run scoreboard players set price-add price 13
+
+	execute if score @p stage matches 16 run scoreboard players set price-add price 14
+	execute if score @p stage matches 17 run scoreboard players set price-add price 14
+
 ##################
 
 #

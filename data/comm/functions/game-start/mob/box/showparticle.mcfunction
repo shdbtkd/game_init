@@ -1,1 +1,0 @@
-particle minecraft:item minecraft:emerald ~ ~ ~ 0 0 0 0.1 10

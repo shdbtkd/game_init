@@ -1,0 +1,1 @@
+execute if entity @s[tag=price_emerald] run function comm:game-start/mob/price/fillter/emerald

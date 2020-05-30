@@ -6,6 +6,7 @@ xp set @a 0 levels
 scoreboard players set @a stage 0
 clear @a
 scoreboard players reset @a out
+tag @a remove dead
 
 execute at @e[tag=modify-head] run data modify block ~ 12 ~ Items set from block 8 12 -31 Items
 execute at @e[tag=modify-head] run data modify block ~ 19 ~ Items set from block 8 12 -29 Items

@@ -22,9 +22,9 @@ execute as @a[gamemode=spectator] run tag @s remove event-now
 #	player-all = 모든 블루팀
 execute store result score player-all stage if entity @a[team=blue]
 #	player = 죽지않은 사람의 수
-execute as @a[team=blue] unless score @s out matches 1.. run tag @s add dead
-execute as @a[team=blue] if score @s out matches 1.. run tag @s remove dead
-execute store result score player stage if entity @a[team=blue,tag=dead]
+execute as @a[team=blue] if score @s out matches 1.. run tag @s add dead
+execute as @a[team=blue] unless score @s out matches 1.. run tag @s remove dead
+execute store result score player stage if entity @a[team=blue,tag=!dead]
 #	play-now = "play-now" 태그를 갖고 있는 사람의 수
 execute store result score play-now stage if entity @a[tag=play-now]
 #	out-player = "out"의 점수가 2보다 큰 사람 수
