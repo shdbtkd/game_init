@@ -6,7 +6,6 @@ execute if score ready-player stage matches 1.. if score ready-player stage = pl
 execute if score ready-player stage matches 1.. if score ready-player stage = player-all stage if entity @a[scores={stage=0}] if score next stage matches 1 run scoreboard players set next stage 2
 
 execute if score ready-player stage matches 1.. if score ready-player stage = player-all stage if score go-player stage = player-all stage if score next stage matches 2 run function comm:lobby-comm/ready/setstart
-execute if score ready-player stage matches 1.. if score ready-player stage = player-all stage if score go-player stage = player-all stage if score next stage matches 2 run say 1
 
 execute if score start map_lod matches 1..14 run function comm:about-play/map-setting/stage-load
 

@@ -1,14 +1,16 @@
 tag @s add active-event
 # 30%           chest
 execute if entity @s[scores={event-type=1..3}] at @s run function comm:game-start/class/event/chest/act
-# 20% // 50     shop
-execute if entity @s[scores={event-type=4..5}] at @s run function comm:game-start/class/event/shop/act
-# 20% // 70     boss
-execute if entity @s[scores={event-type=6..7}] at @s run function comm:game-start/class/event/boss/act
-# 20% // 90     enchant
-execute if entity @s[scores={event-type=8..9}] at @s run function comm:game-start/class/event/enchant/act
+# 30% // 60     shop
+execute if entity @s[scores={event-type=4..6}] at @s run function comm:game-start/class/event/shop/act
+# 20% // 70     enchant
+execute if entity @s[scores={event-type=7..9}] at @s run function comm:game-start/class/event/enchant/act
+# ||||||| 따로 빼야함
+# vvvvvvv
+# 20% // 90     boss
+#execute if entity @s[scores={event-type=9}] at @s run function comm:game-start/class/event/boss/act
 # 10% // 100    challenge
-execute if entity @s[scores={event-type=10}] at @s run function comm:game-start/class/event/challenge/act
+#execute if entity @s[scores={event-type=10}] at @s run function comm:game-start/class/event/challenge/act
 # 
 # execute as @e[tag=active-event,tag=!end-active-event,scores={event-type=1}] at @s run 
 # execute as @e[tag=active-event,tag=!end-active-event,scores={event-type=1}] at @s run 

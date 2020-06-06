@@ -1,0 +1,88 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-1_type-1_way-1_event\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-1_type-1_way-2_event\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-1_type-1_way-3_event\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-2_type-1_way-1_event\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-2_type-1_way-2_event\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-2_type-1_way-3_event\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -27,7 +27,8 @@ execute if score @p stage matches 12..13 run scoreboard players set max-battle m
 execute if score @p stage matches 14..14 run scoreboard players set min-battle map_lod 17
 execute if score @p stage matches 14..14 run scoreboard players set max-battle map_lod 20
 
-execute if score @p stage matches 2..7 run scoreboard players set min-event map_lod 2
+execute if score @p stage matches 2..3 run scoreboard players set min-event map_lod 1
+execute if score @p stage matches 4..7 run scoreboard players set min-event map_lod 2
 execute if score @p stage matches 8..11 run scoreboard players set min-event map_lod 3
 execute if score @p stage matches 12..14 run scoreboard players set min-event map_lod 4
 

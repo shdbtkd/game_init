@@ -191,3 +191,6 @@ scoreboard objectives add map_type dummy
 
 scoreboard objectives add price dummy
 scoreboard objectives add box-facing dummy
+
+scoreboard objectives add golden_apple minecraft.used:minecraft.golden_apple
+scoreboard objectives add enchanted_apple minecraft.used:minecraft.enchanted_golden_apple

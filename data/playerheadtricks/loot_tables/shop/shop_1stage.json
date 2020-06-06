@@ -1,0 +1,87 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"치유의 물약\",\"bold\":true,\"italic\":false}'},item:1b, potion:0b, showname:1b, shopitem:1b, Potion:\"minecraft:healing\"}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:tnt",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": { "min": 3, "max": 5 }
+            }, {
+              "function": "set_nbt",
+              "tag": "{display_item:1b, shopitem:1b}"
+            }, {
+              "function": "set_name",
+              "name": [
+                { "text": "TNT",
+                  "color": "yellow",
+                  "italic": true
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:tnt",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": { "min": 5, "max": 7 }
+            }, {
+              "function": "set_nbt",
+              "tag": "{display_item:1b, shopitem:1b}"
+            }, {
+              "function": "set_name",
+              "name": [
+                { "text": "TNT",
+                  "color": "yellow",
+                  "italic": true
+                }
+              ]
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:golden_apple",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },{
+              "function": "set_nbt",
+              "tag": "{item:1b, potion:1b, showname:1b, shopitem:1b}"
+            },{
+              "function": "set_name", "name": [
+                {
+                  "text": "황금사과",
+                  "color": "gold",
+                  "bold": true,
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

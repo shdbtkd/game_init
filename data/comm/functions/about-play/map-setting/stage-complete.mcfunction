@@ -42,3 +42,5 @@ execute if entity @s[tag=!now-end] if block ~-5 72 ~ air run tag @s add now-end
 execute if predicate pred:10 run tag @s add fake
 execute if entity @s[tag=!fake] as @e[tag=stage-reward] at @s run function comm:about-play/map-setting/reward/stage-reward
 execute if entity @s[tag=fake] as @e[tag=stage-reward] at @s run function comm:about-play/map-setting/reward/stage-fakereward
+
+execute if block ~ ~ ~ #minecraft:air_block if block ~ ~1 ~ #minecraft:air_block if block ~ ~2 ~ #minecraft:air_block if block ~ ~4 ~ #minecraft:air_block if block ~ ~5 ~ #minecraft:air_block 

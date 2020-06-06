@@ -1,6 +1,6 @@
 execute as @a run function comm:about-play/arrow-setting/inventory/checker
 
-execute as @e[tag=price] unless data entity @s { ItemRotation: 0b } at @s run function comm:game-start/mob/price/act
+execute as @e[tag=price] at @s run function comm:game-start/mob/price/basic
 
 execute as @a[scores={hurt=0}] at @s if data entity @s {OnGround: 1b} if block ~ ~ ~ #minecraft:can_death if block ~ ~1 ~ #minecraft:air_block unless block ~ ~-1 ~ #minecraft:none_hitbox-block run spawnpoint @s ~ ~ ~
 

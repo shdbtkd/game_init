@@ -28,7 +28,7 @@
 
 ### count ####
 
-    execute as @a store result score @s inventory-potion if data entity @s Inventory[].tag{potion:1b}
+    execute as @a store result score @s inventory-potion run data get entity @s Inventory[].tag{potion:1b}
     execute as @a store result score @s inventory-tnt run data get entity @s Inventory[{id:"minecraft:tnt"}].Count
     execute as @a store result score @s inventory-eme run data get entity @s Inventory[{id:"minecraft:emerald"}].Count
     # execute as @a store result score @s inventory-totem if data entity @s Inventory[{id:"minecraft:totem_of_undying"}]
@@ -113,13 +113,7 @@
 
 ############
 
-### UUID test ###
-
-    execute as @e[type=minecraft:potion] unless score @s owner-UUID_0 matches 0.. unless score @s owner-UUID_0 matches ..0 run function comm:game-start/skill/variable/owner-getter
-    execute as @a at @e[type=minecraft:potion] if score @s player-UUID_0 = @e[distance=..0,type=potion,limit=1,sort=nearest] owner-UUID_0 if score @s player-UUID_1 = @e[distance=..0,type=potion,limit=1,sort=nearest] owner-UUID_1 if score @s player-UUID_2 = @e[distance=..0,type=potion,limit=1,sort=nearest] owner-UUID_2 if score @s player-UUID_3 = @e[distance=..0,type=potion,limit=1,sort=nearest] owner-UUID_3 run scoreboard players add @s use-potion 1
-
-#################
-#    execute as @a[scores={stage=1..}] unless score @s emmer = @s inventory-ammo run say 1
 
 
 
+function comm:game-start/items/potion/inventory/use-check

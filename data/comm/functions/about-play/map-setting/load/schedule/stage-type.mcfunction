@@ -96,8 +96,8 @@ execute as @e[tag=map-all] if entity @s[tag=loader,tag=!event] run scoreboard pl
 
 execute as @e[tag=map-all] if entity @s[tag=boss] run scoreboard players set @s room_type 4
 execute as @e[tag=map-all] if entity @s[tag=loader,tag=event,scores={event-type=1..3}] run scoreboard players set @s room_type 5
-execute as @e[tag=map-all] if entity @s[tag=loader,tag=event,scores={event-type=4..5}] run scoreboard players set @s room_type 6
-execute as @e[tag=map-all] if entity @s[tag=loader,tag=event,scores={event-type=6..7}] run scoreboard players set @s room_type 7
+execute as @e[tag=map-all] if entity @s[tag=loader,tag=event,scores={event-type=4..6}] run scoreboard players set @s room_type 6
+execute as @e[tag=map-all] if entity @s[tag=loader,tag=event,scores={event-type=7}] run scoreboard players set @s room_type 7
 execute as @e[tag=map-all] if entity @s[tag=loader,tag=event,scores={event-type=8..9}] run scoreboard players set @s room_type 8
 execute as @e[tag=map-all] if entity @s[tag=loader,tag=event,scores={event-type=10}] run scoreboard players set @s room_type 9
 execute as @e[tag=map-all] if entity @s[tag=hide] run scoreboard players set @s room_type 10
