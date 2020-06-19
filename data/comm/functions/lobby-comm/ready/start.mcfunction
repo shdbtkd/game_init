@@ -8,18 +8,3 @@ execute if score ready-player stage matches 1.. if score ready-player stage = pl
 execute if score ready-player stage matches 1.. if score ready-player stage = player-all stage if score go-player stage = player-all stage if score next stage matches 2 run function comm:lobby-comm/ready/setstart
 
 execute if score start map_lod matches 1..14 run function comm:about-play/map-setting/stage-load
-
-#
-# ready 태그 추가하구
-# 게임 시작하게 만들기
-#
-#
-# ready player = 준비실 안에 있는 플래이어
-# go player = 게임시작을 누른 플레이어
-#
-#
-#
-#
-#
-#
-#

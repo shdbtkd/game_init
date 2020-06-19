@@ -1,7 +1,6 @@
 
 kill @e[tag=tester]
 function comm:about-play/map-setting/load/stage/summon_tester
-say 1
 execute if score count-event map_lod < min-event map_lod at @e[tag=center] at @e[tag=tester,sort=random,limit=1] run function comm:about-play/map-setting/load/stage/summon_event
 execute if score count-event map_lod < min-event map_lod at @e[tag=center] at @e[tag=tester,sort=random,limit=1] run function comm:about-play/map-setting/load/stage/summon_event
 execute if score count-event map_lod < min-event map_lod at @e[tag=center] at @e[tag=tester,sort=furthest,limit=1] run function comm:about-play/map-setting/load/stage/summon_event

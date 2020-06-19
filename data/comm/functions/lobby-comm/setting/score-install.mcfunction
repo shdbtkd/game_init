@@ -8,15 +8,13 @@ scoreboard objectives setdisplay list HP
 scoreboard objectives add item-delay dummy
 
 #---------- 렌덤 ----------#
-scoreboard objectives add random dummy
-scoreboard players set max-stage random 0
-scoreboard players set count-stage-armor random 0
 scoreboard objectives add item-random dummy
 #---------- 렌덤 ----------#
 
 #---------- 스테이지 ----------#
 scoreboard objectives add stage dummy
 scoreboard players add @a stage 0
+scoreboard objectives add next-stage dummy
 #---------- 스테이지 ----------#
 
 #---------- 애머 ----------#
@@ -32,11 +30,9 @@ scoreboard objectives add max-ammo dummy
 scoreboard objectives add max-ammo-time dummy
 #---------- 애머 ----------#
 
-#---------- 점프, 웅크림 달리기 ----------#
-scoreboard objectives add sprint minecraft.custom:minecraft.sprint_one_cm
-scoreboard objectives add sneak minecraft.custom:minecraft.sneak_time
+#---------- 점프 ----------#
 scoreboard objectives add jump minecraft.custom:minecraft.jump
-#---------- 점프, 웅크림 달리기 ----------#
+#---------- 점프 ----------#
 
 #---------- 인게임 아이템 ----------#
 scoreboard objectives add pickup-delay dummy
@@ -51,7 +47,7 @@ scoreboard objectives add p-tnt minecraft.picked_up:minecraft.tnt
 scoreboard objectives add tnt0 dummy
 scoreboard objectives add tnt1 dummy
 scoreboard objectives add tnt2 dummy
-scoreboard objectives add pickup-potion minecraft.picked_up:minecraft.potion
+scoreboard objectives add pickup-potion dummy
 scoreboard objectives add drop-potion minecraft.dropped:minecraft.potion
 scoreboard objectives add use-potion minecraft.used:minecraft.potion
 scoreboard objectives add inventory-potion dummy
@@ -138,11 +134,6 @@ scoreboard objectives add max-hp dummy
 
 #---------- 트리거 ----------#
 scoreboard objectives add help trigger
-scoreboard objectives add none trigger
-scoreboard objectives add map trigger
-scoreboard objectives add stat trigger
-scoreboard objectives add class trigger
-scoreboard objectives add item trigger
 scoreboard objectives add start trigger
 #---------- 트리거 ----------#
 
@@ -194,3 +185,19 @@ scoreboard objectives add box-facing dummy
 
 scoreboard objectives add golden_apple minecraft.used:minecraft.golden_apple
 scoreboard objectives add enchanted_apple minecraft.used:minecraft.enchanted_golden_apple
+
+
+
+scoreboard objectives add locked-box dummy
+
+scoreboard objectives add nd1sneak-motion0 dummy
+scoreboard objectives add nd1sneak-motion2 dummy
+scoreboard objectives add rd3sneak-motion0 dummy
+scoreboard objectives add rd3sneak-motion2 dummy
+
+scoreboard objectives add spawner-hurt dummy
+scoreboard objectives add spawner-motion0 dummy
+scoreboard objectives add spawner-motion1 dummy
+scoreboard objectives add spawner-motion2 dummy
+
+scoreboard objectives add potal_info dummy

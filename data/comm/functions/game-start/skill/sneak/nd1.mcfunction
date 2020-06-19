@@ -1,9 +1,9 @@
 
 execute as @a[tag=nd1] anchored eyes at @s run summon area_effect_cloud ^ ^ ^1 {Duration:-1,WaitTime:-2147483648,Tags:["c-nd1"],Age:-2147483648}
 execute as @a[tag=nd1] anchored eyes at @s run particle minecraft:explosion ^ ^ ^2 0.5 0.5 0.5 0 5
-execute as @a[tag=nd1] anchored eyes at @s run playsound minecraft:entity.player.attack.knockback master @a ~ ~ ~ 3 0
-execute as @a[tag=nd1] anchored eyes at @s run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 0.2 0
-execute as @a[tag=nd1] anchored eyes at @s run playsound minecraft:item.trident.throw master @a ~ ~ ~ 4 0
+execute as @a[tag=nd1] anchored eyes at @s run playsound minecraft:entity.player.attack.knockback player @a ~ ~ ~ 0.7 0
+execute as @a[tag=nd1] anchored eyes at @s run playsound minecraft:entity.generic.explode player @a ~ ~ ~ 0.2 0
+execute as @a[tag=nd1] anchored eyes at @s run playsound minecraft:item.trident.throw player @a ~ ~ ~ 4 0
 execute store result score @s nd1sneak-motion0 run data get entity @s Pos[0]
 execute store result score @s nd1sneak-motion1 run data get entity @s Pos[1]
 execute store result score @s nd1sneak-motion2 run data get entity @s Pos[2]

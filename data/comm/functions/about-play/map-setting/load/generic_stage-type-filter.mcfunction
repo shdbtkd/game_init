@@ -2,6 +2,8 @@ tag @s add loaded
 
 execute if score @p stage matches 2 at @s run function comm:about-play/map-setting/load/type/desert/level_1/desert_battle
 execute if score @p stage matches 3 at @s run function comm:about-play/map-setting/load/type/overworld/level_1/overworld_battle
+execute if score @p stage matches 4 at @s run function comm:about-play/map-setting/load/type/desert/level_2/desert_battle
+execute if score @p stage matches 5 at @s run function comm:about-play/map-setting/load/type/overworld/level_2/overworld_battle
 
 execute at @s run setblock ~-16 61 ~-16 structure_block
 tellraw @p [{"nbt":"Items[0].tag.BlockEntityTag.name","block":"0 12 -26","color":"red"}, {"text":"  "}, {"nbt":"Items[0].Count","block":"0 12 -26","color":"aqua"}]

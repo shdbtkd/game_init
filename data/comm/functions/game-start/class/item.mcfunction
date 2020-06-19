@@ -86,14 +86,13 @@
 	################
 ##############
 
-execute store result score count-item-armor item-random if entity @e[tag=item-selecter]
+# execute store result score count-item-armor item-random if entity @e[tag=item-selecter]
+# scoreboard players set max-item item-random 19
+# execute as @e[tag=item-selecter,tag=host] at @s unless score max-item item-random <= count-item-armor item-random run summon minecraft:armor_stand ~ ~ ~ {Tags:["item-selecter"]}
+# execute as @e[tag=item-selecter,tag=host] at @s unless score max-item item-random <= count-item-armor item-random run tp ^ ^ ^1
 
-scoreboard players set max-item item-random 19
-execute as @e[tag=item-selecter,tag=host] at @s unless score max-item item-random <= count-item-armor item-random run summon minecraft:armor_stand ~ ~ ~ {Tags:["item-selecter"]}
-execute as @e[tag=item-selecter,tag=host] at @s unless score max-item item-random <= count-item-armor item-random run tp ^ ^ ^1
-
-execute as @e[tag=item-selecter,tag=load,tag=!end] store result score item-num item-random run data get entity @s Pos[2]
-execute as @e[tag=item-selecter,tag=load,tag=!end] run tag @s add end
+# execute as @e[tag=item-selecter,tag=load,tag=!end] store result score item-num item-random run data get entity @s Pos[2]
+# execute as @e[tag=item-selecter,tag=load,tag=!end] run tag @s add end
 
 execute at @a[tag=event-now] as @e[tag=map-all,tag=event,sort=nearest,limit=1] if entity @s[tag=!active-event] run function comm:game-start/class/actevent-item
 

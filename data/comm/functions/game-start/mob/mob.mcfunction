@@ -23,7 +23,7 @@ execute as @e[tag=spawner] at @s run function comm:game-start/mob/upgrade/spawne
 # 슬라임
 execute as @e[tag=slime] at @s run function comm:game-start/mob/upgrade/slime/basic
 
-execute as @e[tag=red-boss,scores={HP=..1000}] run function comm:game-start/mob/boss/main/generic/death_event-filter
+execute as @e[tag=red-boss,scores={HP=..300}] run function comm:game-start/mob/boss/main/generic/death_event-filter
 
 # give _Rono minecraft:command_block{display:{Name:'{"text":"---","italic":false}'},BlockEntityTag:{Command: ''}}
 

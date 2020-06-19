@@ -1,0 +1,4 @@
+execute rotated 0 0 positioned ^ ^ ^48 unless block ~ ~-1 ~ #minecraft:load_tracking run summon armor_stand ~ ~ ~ { Tags:["potal-pos_selector","potal-pos_selector-top"], NoGravity:1b }
+execute rotated 90 0 positioned ^ ^ ^48 unless block ~ ~-1 ~ #minecraft:load_tracking run summon armor_stand ~ ~ ~ { Tags:["potal-pos_selector","potal-pos_selector-right"], NoGravity:1b }
+execute rotated 180 0 positioned ^ ^ ^48 unless block ~ ~-1 ~ #minecraft:load_tracking run summon armor_stand ~ ~ ~ { Tags:["potal-pos_selector","potal-pos_selector-bottom"], NoGravity:1b }
+execute rotated 270 0 positioned ^ ^ ^48 unless block ~ ~-1 ~ #minecraft:load_tracking run summon armor_stand ~ ~ ~ { Tags:["potal-pos_selector","potal-pos_selector-left"], NoGravity:1b }

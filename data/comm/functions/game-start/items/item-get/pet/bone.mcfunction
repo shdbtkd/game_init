@@ -7,3 +7,5 @@ execute if data entity @s Item.tag.Enchantments[{id:"minecraft:vanishing_curse",
 
 summon minecraft:wolf ~ ~ ~ {Tags:["getuuid"],Team:"blue",Invulnerable:1b}
 execute as @e[tag=getuuid,limit=1,sort=nearest] run function comm:game-start/items/item-get/pet/mergeuuid
+
+kill @e[tag=item-selector,tag=bone]

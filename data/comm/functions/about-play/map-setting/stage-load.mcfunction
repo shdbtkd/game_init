@@ -25,8 +25,6 @@
 #	- end		 	= stage 14	||| 8stage
 
 
-
-execute if score start map_lod matches ..1 run function comm:about-play/map-setting/load/clear_stage
 execute if score start map_lod matches ..1 run function comm:about-play/map-setting/load/clear_stage
 execute if score start map_lod matches 1.. run function comm:about-play/map-setting/load/generic_count
 
@@ -69,6 +67,14 @@ execute if score start map_lod matches 1 at @e[tag=tester,sort=random,limit=1] i
 execute if score start map_lod matches 1 at @e[tag=tester,sort=random,limit=1] if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_event
 execute if score start map_lod matches 1 run kill @e[tag=tester]
 #			event
+#			challenge
+execute if score start map_lod matches 1 as @e[tag=map-all,tag=!event,tag=!boss,scores={stage-road_count=..3}] at @s run function comm:about-play/map-setting/load/stage/summon_tester
+execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] at @s if predicate pred:50 run function comm:about-play/map-setting/load/stage/summon_event_boss
+execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] unless entity @e[tag=event_boss] at @s if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_challenge
+execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] unless entity @e[tag=challenge] at @s if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_event_boss
+execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] at @s if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_challenge/
+execute if score start map_lod matches 1 run kill @e[tag=tester]
+#			challenge
 #			boss, hide
 execute if score start map_lod matches 1 as @e[tag=map-all,tag=!event,tag=!boss,scores={stage-road_count=..3}] at @s run function comm:about-play/map-setting/load/stage/summon_tester
 execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] at @s if predicate pred:50 run function comm:about-play/map-setting/load/stage/summon_hide
@@ -111,10 +117,10 @@ execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if 
 execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~48 ~-1 ~ #minecraft:door_tracking run summon armor_stand ~15 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
 execute if score start map_lod matches 13 as @e[tag=map-all,tag=!boss] at @s if block ~-48 ~-1 ~ #minecraft:door_tracking run summon armor_stand ~-16 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
 
-execute if score start map_lod matches 13 as @e[tag=map-all,tag=boss] at @s if block ~ ~-1 ~48 #minecraft:door_tracking run summon armor_stand ~-.5 71 ~21 {Tags:["door-vert"],Invisible:1b,Invulnerable:1b,Small:1b}
-execute if score start map_lod matches 13 as @e[tag=map-all,tag=boss] at @s if block ~ ~-1 ~-48 #minecraft:door_tracking run summon armor_stand ~-.5 71 ~-22 {Tags:["door-vert"],Invisible:1b,Invulnerable:1b,Small:1b}
-execute if score start map_lod matches 13 as @e[tag=map-all,tag=boss] at @s if block ~48 ~-1 ~ #minecraft:door_tracking run summon armor_stand ~21 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
-execute if score start map_lod matches 13 as @e[tag=map-all,tag=boss] at @s if block ~-48 ~-1 ~ #minecraft:door_tracking run summon armor_stand ~-22 71 ~-0.5 {Tags:["door-hori"],Invisible:1b,Invulnerable:1b,Small:1b}
+execute if score start map_lod matches 13 as @e[tag=map-all,tag=boss] at @s if block ~ ~-1 ~48 #minecraft:door_tracking run summon armor_stand ~-.5 71 ~21 { Tags: ["door-vert","boss_door"], Invisible:1b, Invulnerable:1b, Small:1b }
+execute if score start map_lod matches 13 as @e[tag=map-all,tag=boss] at @s if block ~ ~-1 ~-48 #minecraft:door_tracking run summon armor_stand ~-.5 71 ~-22 { Tags: ["door-vert","boss_door"], Invisible:1b, Invulnerable:1b, Small:1b }
+execute if score start map_lod matches 13 as @e[tag=map-all,tag=boss] at @s if block ~48 ~-1 ~ #minecraft:door_tracking run summon armor_stand ~21 71 ~-0.5 { Tags: ["door-hori","boss_door"], Invisible:1b, Invulnerable:1b, Small:1b }
+execute if score start map_lod matches 13 as @e[tag=map-all,tag=boss] at @s if block ~-48 ~-1 ~ #minecraft:door_tracking run summon armor_stand ~-22 71 ~-0.5 { Tags: ["door-hori","boss_door"], Invisible:1b, Invulnerable:1b, Small:1b }
 
 ### 문 없에기 ###
 
@@ -142,7 +148,9 @@ execute if score start map_lod matches 13 as @e[tag=event,tag=!boss-event] at @s
 execute if score start map_lod matches 13 run scoreboard players set start map_lod 14
 
 # execute if score start map_lod matches 14 run spreadplayers 0.0 -816.0 2 1 false @a
-execute if score start map_lod matches 14 run tp @a 0.0 80 -816.0
+execute if score start map_lod matches 14 if score started stage matches 0 run tp @a 0.0 80 -816.0
+execute if score start map_lod matches 14 if score started stage matches 1 run spreadplayers 0.0 -816.0 2 1 false @a
+execute if score start map_lod matches 14 if score started stage matches 0 run scoreboard players set started stage 1
 execute if score start map_lod matches 14 run title @a[gamemode=!spectator] times 0 10 0
 execute if score start map_lod matches 14 run title @a[gamemode=!spectator] title {"text":""}
 execute if score start map_lod matches 14 run function comm:about-play/map-setting/load/schedule/stage-type

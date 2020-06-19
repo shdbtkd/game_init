@@ -1,2 +1,0 @@
-summon minecraft:item ~ ~ ~ {Tags:["delay"],Item:{id:"minecraft:potion",Count:1b,tag:{display:{Name:'{"text":"치유의 물약","color":"white","bold":true,"italic":false}'},item:1b,potion:1b,showname:1b,Potion:"minecraft:healing"}}}
-kill @s

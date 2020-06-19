@@ -39,9 +39,7 @@ execute store result score red stage if entity @e[team=red]
 execute as @a[tag=ready] unless entity @s[x=-8,y=38,z=-823,dx=15,dy=15,dz=15] run tag @s remove ready-end
 execute as @a[tag=ready] unless entity @s[x=-8,y=38,z=-823,dx=15,dy=15,dz=15] run tag @s remove ready
 #	"backlobby" 태그 컨트롤
-execute as @a[tag=backlobby] if entity @s[x=-8,y=38,z=-823,dx=15,dy=15,dz=15] run function comm:lobby-comm/ready/showready
-execute as @a[tag=backlobby] if entity @s[x=-8,y=38,z=-823,dx=15,dy=15,dz=15] run tag @s remove backlobby-end
-execute as @a[tag=backlobby] if entity @s[x=-8,y=38,z=-823,dx=15,dy=15,dz=15] run tag @s remove backlobby
+execute as @a[tag=backlobby,tag=backlobby-end] if entity @s[x=-8,y=38,z=-823,dx=15,dy=15,dz=15] run function comm:lobby-comm/ready/back-remove
 #	문을 열려고 하는 사람 수
 execute as @e[tag=door-vert] at @s unless score @s door = player stage store result score @s door if entity @a[gamemode=!spectator,distance=0..4]
 execute as @e[tag=door-hori] at @s unless score @s door = player stage store result score @s door if entity @a[gamemode=!spectator,distance=0..4]

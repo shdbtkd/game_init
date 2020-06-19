@@ -1,4 +1,5 @@
 scoreboard players add @a stage 0
+scoreboard players set started stage 0
 
 scoreboard players set @a[tag=rd1] max-hp -10
 scoreboard players set @a[tag=rd2] max-hp -10

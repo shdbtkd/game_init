@@ -5,8 +5,8 @@ scoreboard players set time stage 0
 scoreboard players set time map_lod 0
 
 # item selector
-kill @e[tag=item-selecter]
-summon minecraft:armor_stand -10 2 1 {Tags:["item-selecter","host"]}
+# kill @e[tag=item-selecter]
+# summon minecraft:armor_stand -10 2 1 {Tags:["item-selecter","host"]}
 # item selector
 
 execute if score @p stage matches 2..3 run scoreboard players set min-battle map_lod 5

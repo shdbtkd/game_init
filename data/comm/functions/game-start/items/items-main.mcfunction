@@ -31,7 +31,7 @@
     execute as @a store result score @s inventory-potion run data get entity @s Inventory[].tag{potion:1b}
     execute as @a store result score @s inventory-tnt run data get entity @s Inventory[{id:"minecraft:tnt"}].Count
     execute as @a store result score @s inventory-eme run data get entity @s Inventory[{id:"minecraft:emerald"}].Count
-    # execute as @a store result score @s inventory-totem if data entity @s Inventory[{id:"minecraft:totem_of_undying"}]
+    execute as @a store result score @s inventory-totem run data get entity @s Inventory[{id:"minecraft:totem_of_undying"}].tag.CustomModelData
     execute as @a store result score @s inventory-ammo run data get entity @s Inventory[{tag:{ammo:1b}}].Count
 
 ##############
@@ -74,25 +74,25 @@
 
 ### item use ###
 
-    # execute as @a[scores={undying=..0}] if data entity @s Inventory[{ Slot:1b }] run replaceitem entity @s hotbar.1 air
-    # execute as @a[scores={undying=1..}] unless score @s inventory-totem matches 1 run function comm:game-start/items/itemself
-    # execute as @a[scores={undying=..0}] unless score @s inventory-totem matches ..0 run function comm:game-start/items/itemself
+    execute as @a[scores={undying=..0}] if data entity @s Inventory[{ Slot:1b }] run replaceitem entity @s hotbar.1 air
+    execute as @a[scores={undying=1..}] unless data entity @s Inventory[{ Slot:1b, id:"minecraft:totem_of_undying" }] run function comm:game-start/items/itemself
+    execute as @a[scores={undying=..0}] if data entity @s Inventory[{ Slot:1b, id:"minecraft:totem_of_undying" }] run function comm:game-start/items/itemself
+    execute as @a unless score @s undying = @s inventory-totom run function comm:game-start/items/itemself
     execute if score @s pickup-potion matches 1.. unless data entity @s Inventory[{ Slot: 3b, tag: {potion:1b} }] run function comm:game-start/items/potion/inventory/delet
     execute as @a[scores={stage=1..}] unless score @s emmer = @s inventory-ammo run function comm:game-start/items/itemself
     execute as @a[scores={emerald=1..}] unless data entity @s Inventory[{ Slot:7b, id: "minecraft:emerald" }] run function comm:game-start/items/itemself
-    execute as @a unless score @s p-tnt = @s inventory-tnt run function comm:game-start/items/itemself
     execute as @a[scores={emerald=..64}] unless score @s emerald = @s inventory-eme run function comm:game-start/items/itemself
-    execute as @a[scores={d-tnt=1..}] run function comm:game-start/items/itemuse
     execute as @a unless score @s p-tnt = @s inventory-tnt run function comm:game-start/items/itemself
     execute as @a[scores={p-tnt=1..}] unless data entity @s Inventory[{id:"minecraft:tnt"}] run function comm:game-start/items/itemself
     execute as @a[scores={p-tnt=..0}] if data entity @s Inventory[{id:"minecraft:tnt"}] run function comm:game-start/items/itemself
     
-    #execute as @a if data entity @s Inventory[{id: "minecraft:glass_bottle"}] run function comm:game-start/items/itemself
+    execute as @a if data entity @s Inventory[{id: "minecraft:glass_bottle"}] run function comm:game-start/items/itemself
     clear @a minecraft:glass_bottle
     execute as @a[scores={use-potion=1..}] run function comm:game-start/items/itemuse
     execute as @a unless score @s pickup-potion = @s inventory-potion run function comm:game-start/items/itemself
     execute as @e[tag=boom] at @s run function comm:game-start/items/tnt/boom/fuse
-    execute as @a[scores={d-tnt=1..}] at @s run function comm:game-start/items/tnt/summon
+    execute as @a[scores={d-tnt=1..}] at @s unless predicate pred:sneak run function comm:game-start/items/tnt/summon
+    execute as @a[scores={d-tnt=1..}] at @s if predicate pred:sneak run function comm:game-start/items/tnt/drop
 
 ################
 

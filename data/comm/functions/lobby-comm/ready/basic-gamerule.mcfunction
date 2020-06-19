@@ -16,6 +16,8 @@
 	gamerule doLimitedCrafting true
 	gamerule announceAdvancements false
 	gamerule maxEntityCramming 1000
+#	gamerule reducedDebugInfo true
+#	gamerule sendCommandFeedback false
 
 #data merge storage minecraft:rd-123 {rd1:{},rd2:{},rd3:{}}
 #data merge storage basic-weapon {rd1:{},rd2:{},rd3:{},nd1:{},nd2:{},nd3:{}}
@@ -25,17 +27,5 @@ scoreboard players set time stage 0
 team modify blue seeFriendlyInvisibles false
 
 title @a times 0 60 0
-
-scoreboard objectives add locked-box dummy
-
-scoreboard objectives add nd1sneak-motion0 dummy
-scoreboard objectives add nd1sneak-motion2 dummy
-scoreboard objectives add rd3sneak-motion0 dummy
-scoreboard objectives add rd3sneak-motion2 dummy
-
-scoreboard objectives add spawner-hurt dummy
-scoreboard objectives add spawner-motion0 dummy
-scoreboard objectives add spawner-motion1 dummy
-scoreboard objectives add spawner-motion2 dummy
-
 scoreboard players add @a stage 0
+

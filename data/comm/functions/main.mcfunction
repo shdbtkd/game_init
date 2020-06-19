@@ -2,7 +2,7 @@ execute as @a run function comm:about-play/arrow-setting/inventory/checker
 
 execute as @e[tag=price] at @s run function comm:game-start/mob/price/basic
 
-execute as @a[scores={hurt=0}] at @s if data entity @s {OnGround: 1b} if block ~ ~ ~ #minecraft:can_death if block ~ ~1 ~ #minecraft:air_block unless block ~ ~-1 ~ #minecraft:none_hitbox-block run spawnpoint @s ~ ~ ~
+execute as @a[scores={hurt=0}] at @s align xz if data entity @s {OnGround: 1b} if block ~ ~ ~ #minecraft:can_death if block ~ ~1 ~ #minecraft:air_block unless block ~ ~-1 ~ #minecraft:none_hitbox-block run spawnpoint @s ~ ~ ~
 
 ### 인텝토리 ###
 function comm:game-start/skill/skill
@@ -18,7 +18,6 @@ function comm:game-start/class/item
 function comm:game-start/items/items-main
 
 function comm:game-start/mob/basic
-#function comm:game-start/mob/boss/event/1stage-a
 function comm:game-start/class/out
 execute if score start map_lod matches 20.. run function comm:game-start/class/gameover
 

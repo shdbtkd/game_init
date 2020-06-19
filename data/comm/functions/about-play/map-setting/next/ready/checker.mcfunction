@@ -1,0 +1,2 @@
+execute store result score count-next_player next-stage if entity @a[scores={next-stage=1..}]
+execute if score player stage = count-next_player next-stage run function comm:about-play/map-setting/next/ready/next

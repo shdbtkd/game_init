@@ -15,4 +15,4 @@ execute if score player stage matches 5 as @e[tag=item-random,limit=7,sort=rando
 execute if score player stage matches 6 as @e[tag=item-random,limit=7,sort=random] if predicate pred:10 run kill @s
 
 execute as @e[tag=item-random] run scoreboard players add @s item-random 0
-execute as @e[tag=item-random,scores={item-random=..0},limit=1] at @s run function comm:game-start/class/summon-item
+execute if entity @e[tag=item-random] run function comm:game-start/items/summon/selector/basic-result/act

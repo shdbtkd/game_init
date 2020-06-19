@@ -40,7 +40,7 @@ execute as @p run function comm:game-start/skill/lootself
 #---------- head index ----------#
 # 양동이, 뼈, 침대
 # 가시
-# 초월
+# 초월 ??
 #
 #
 #
