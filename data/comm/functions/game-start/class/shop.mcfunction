@@ -23,3 +23,4 @@ execute as @s[scores={emmer=1..}] store result block ~ 21 ~ Items[{ Slot: 7b, id
 execute as @s[scores={drop-potion=1..}] run replaceitem block ~ 21 ~ container.2 minecraft:air
 execute as @s[scores={drop-potion=1..}] run scoreboard players set @s drop-potion 0
 
+clear @s #dungeons:delet_list{ must_delet: 1b }
