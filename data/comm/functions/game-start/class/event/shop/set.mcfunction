@@ -6,10 +6,10 @@ tag @s remove unset-shop
 setblock ~ 71 ~ minecraft:smooth_stone_slab
 setblock ~ 72 ~ minecraft:glass
 
-summon minecraft:item_frame ~ ~ ~-1 {Tags:["price","price_emerald","price_shop","child-frame"], Facing:2b, Invisible:1b, Fixed:0b }
-summon minecraft:item_frame ~ ~ ~1 {Tags:["price","price_emerald","price_shop","child-frame"], Facing:3b, Invisible:1b, Fixed:0b }
-summon minecraft:item_frame ~-1 ~ ~ {Tags:["price","price_emerald","price_shop","child-frame"], Facing:4b, Invisible:1b, Fixed:0b }
-summon minecraft:item_frame ~1 ~ ~ {Tags:["price","price_emerald","price_shop","child-frame"], Facing:5b, Invisible:1b, Fixed:0b }
+summon minecraft:item_frame ~ ~ ~-1 {Tags:["price","price_emerald","price_shop","child-frame"], Facing:2b, Invisible:1b, Invulnerable:1b, Fixed:0b }
+summon minecraft:item_frame ~ ~ ~1 {Tags:["price","price_emerald","price_shop","child-frame"], Facing:3b, Invisible:1b, Invulnerable:1b, Fixed:0b }
+summon minecraft:item_frame ~-1 ~ ~ {Tags:["price","price_emerald","price_shop","child-frame"], Facing:4b, Invisible:1b, Invulnerable:1b, Fixed:0b }
+summon minecraft:item_frame ~1 ~ ~ {Tags:["price","price_emerald","price_shop","child-frame"], Facing:5b, Invisible:1b, Invulnerable:1b, Fixed:0b }
 
 execute if entity @s[tag=!expensive] run function comm:game-start/class/event/shop/item
 execute if entity @s[tag=expensive] run function comm:game-start/class/event/shop/expensive

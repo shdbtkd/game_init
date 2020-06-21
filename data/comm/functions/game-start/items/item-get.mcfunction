@@ -29,6 +29,7 @@ execute if data entity @s Item.tag{bone:1b} at @s run function comm:game-start/i
 
 #-------- enchant --------#
 execute if data entity @s Item.tag{looting:1b} at @s run function comm:game-start/items/item-get/enchant/loot
+execute if data entity @s Item.tag{protection:1b} at @s run function comm:game-start/items/item-get/enchant/protection
 #-------- enchant --------#
 
 data merge entity @s {PickupDelay:0,Age:-32768}

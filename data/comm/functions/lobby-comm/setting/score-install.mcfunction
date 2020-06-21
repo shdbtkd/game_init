@@ -132,6 +132,18 @@ scoreboard objectives add armor-T dummy
 scoreboard objectives add max-hp dummy
 #---------- 스텟 ----------#
 
+#---------- 인첸트 ----------#
+scoreboard objectives add player_level level
+scoreboard objectives add table-need_lvl dummy
+scoreboard objectives add table-show_lvl dummy
+scoreboard objectives add table-inventory dummy
+scoreboard objectives add table-lvl_upper dummy
+scoreboard objectives add table-lvl dummy
+scoreboard objectives add table-max dummy
+scoreboard objectives add enchant_up-cost dummy
+scoreboard objectives add enchant_up-lvl dummy
+#---------- 인첸트 ----------#
+
 #---------- 트리거 ----------#
 scoreboard objectives add help trigger
 scoreboard objectives add start trigger
