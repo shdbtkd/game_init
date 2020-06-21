@@ -1,76 +1,24 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "item",
-            "weight": 1,
-            "name": "minecraft:structure_block",
-            "functions": [
-              {
-                "function": "set_count",
-                "count": 1
-              }, {
-                "function": "set_nbt",
-                "tag": "{BlockEntityTag:{name:\"desertboss:desert-1_level-1_boss-all\",posX:15,posY:1,posZ:15,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
-              }
-            ]
-          }, {
-            "type": "item",
-            "weight": 1,
-            "name": "minecraft:structure_block",
-            "functions": [
-              {
-                "function": "set_count",
-                "count": 2
-              }, {
-                "function": "set_nbt",
-                "tag": "{BlockEntityTag:{name:\"desertboss:desert-1_level-2_boss-all\",posX:15,posY:1,posZ:15,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
-              }
-            ]
-          }, {
-            "type": "item",
-            "weight": 1,
-            "name": "minecraft:structure_block",
-            "functions": [
-              {
-                "function": "set_count",
-                "count": 3
-              }, {
-                "function": "set_nbt",
-                "tag": "{BlockEntityTag:{name:\"desertboss:desert-1_level-3_boss-all\",posX:15,posY:1,posZ:15,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
-              }
-            ]
-          }, {
-            "type": "item",
-            "weight": 1,
-            "name": "minecraft:structure_block",
-            "functions": [
-              {
-                "function": "set_count",
-                "count": 4
-              }, {
-                "function": "set_nbt",
-                "tag": "{BlockEntityTag:{name:\"desertboss:desert-1_level-4_boss-all\",posX:15,posY:1,posZ:15,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
-              }
-            ]
-          }, {
-            "type": "item",
-            "weight": 1,
-            "name": "minecraft:structure_block",
-            "functions": [
-              {
-                "function": "set_count",
-                "count": 5
-              }, {
-                "function": "set_nbt",
-                "tag": "{BlockEntityTag:{name:\"desertboss:desert-1_level-5_boss-all\",posX:15,posY:1,posZ:15,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"desertboss:desert-1_type-1_way-event_boss_1\",posX:15,posY:1,posZ:15,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
   

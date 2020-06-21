@@ -1,0 +1,1 @@
+execute if entity @s[tag=test] run function comm:game-start/mob/boss/event/generic/death_event/test

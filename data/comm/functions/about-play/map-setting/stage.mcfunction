@@ -79,8 +79,8 @@ execute as @e[tag=map-all,tag=clear] at @s
 
 execute if score play-now stage matches 1.. at @a[tag=play-now] as @e[tag=map-all,limit=1,sort=nearest] if entity @s[tag=!event,tag=!center] run tag @s add now-play
 
-execute if entity @e[tag=boss,tag=now-play] as @e[tag=red-boss] run scoreboard players set result boss-now_health 0
-execute if entity @e[tag=boss,tag=now-play] as @e[tag=red-boss] run function comm:game-start/mob/boss/main/generic/set-value
+execute as @e[tag=red-boss] run scoreboard players set result boss-now_health 0
+execute as @e[tag=red-boss] run function comm:game-start/mob/boss/main/generic/set-value
 execute if entity @e[tag=now-play,tag=!complete] if score time stage matches ..100 run scoreboard players add time stage 1
 execute as @e[tag=now-play,tag=!complete] if score time stage matches ..60 at @s run function comm:about-play/map-setting/play/lock
 execute as @e[tag=now-play,tag=!complete] if score time stage matches 62 at @s run function comm:about-play/map-setting/play/teleport

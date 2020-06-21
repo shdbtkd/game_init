@@ -27,13 +27,13 @@
 #
 #
 #
+#   
 #
 #
 #
 #
 #
-#
-kill @e[tag=itme-selector]
+kill @e[tag=item-selector]
 
 summon minecraft:armor_stand ~ ~ ~ {ArmorItems:[{},{},{},{id:"minecraft:arrow",Count:1b,tag:{display:{Name:'{"text":"화살","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,arrow__1:1b}}], Tags:["item-selector","basic-item_selector","arrow__1"]}
 summon minecraft:armor_stand ~ ~ ~1 {ArmorItems:[{},{},{},{id:"minecraft:arrow",Count:1b,tag:{display:{Name:'{"text":"화살","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,arrow__2:1b}}], Tags:["item-selector","basic-item_selector","arrow__2"]}
@@ -47,7 +47,7 @@ summon minecraft:armor_stand ~ ~ ~8 {ArmorItems:[{},{},{},{id:"minecraft:pumpkin
 summon minecraft:armor_stand ~ ~ ~9 {ArmorItems:[{},{},{},{id:"minecraft:cake",Count:1b,tag:{display:{Name:'{"text":"케이크","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,cake:1b}}], Tags:["item-selector","basic-item_selector","cake"]}
 summon minecraft:armor_stand ~ ~ ~10 {ArmorItems:[{},{},{},{id:"minecraft:flint",Count:1b,tag:{display:{Name:'{"text":"부싯돌","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,flint:1b}}], Tags:["item-selector","basic-item_selector","flint"]}
 summon minecraft:armor_stand ~ ~ ~11 {ArmorItems:[{},{},{},{id:"minecraft:ender_eye",Count:1b,tag:{display:{Name:'{"text":"엔더의 눈","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,ender_eye:1b}}], Tags:["item-selector","basic-item_selector","ender_eye"]}
-summon minecraft:armor_stand ~ ~ ~12 {ArmorItems:[{},{},{},{id:"minecraft:enchanted_book",Count:1b,tag:{StoredEnchantments:[{id:"minecraft:looting",lvl:1s}],display:{Name:'{"text":"약탈","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,looting__1:1b}}], Tags:["item-selector","basic-item_selector","looting"]}
+summon minecraft:armor_stand ~ ~ ~12 {ArmorItems:[{},{},{},{id:"minecraft:enchanted_book",Count:1b,tag:{StoredEnchantments:[{id:"minecraft:looting",lvl:1s}],display:{Name:'{"text":"약탈","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,looting:1b}}], Tags:["item-selector","basic-item_selector","looting"]}
 summon minecraft:armor_stand ~ ~ ~13 {ArmorItems:[{},{},{},{id:"minecraft:brick",Count:1b,tag:{display:{Name:'{"text":"벽돌","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,brick:1b}}], Tags:["item-selector","basic-item_selector","brick"]}
 summon minecraft:armor_stand ~ ~ ~14 {ArmorItems:[{},{},{},{id:"minecraft:nether_brick",Count:1b,tag:{display:{Name:'{"text":"네더 벽돌","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,nether_brick:1b}}], Tags:["item-selector","basic-item_selector","nether_brick"]}
 summon minecraft:armor_stand ~ ~ ~15 {ArmorItems:[{},{},{},{id:"minecraft:bucket",Count:1b,tag:{display:{Name:'{"text":"양동이","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,bucket:1b}}], Tags:["item-selector","basic-item_selector","bucket"]}
