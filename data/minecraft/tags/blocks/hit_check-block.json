@@ -1,6 +1,6 @@
 {
-    "values": [
-        "#minecraft:none_hitbox-block",
-        "#minecraft:slab_hitbox-block"
-    ]
+  "values": [
+    "#minecraft:none_hitbox-block",
+    "#minecraft:slab_hitbox-block"
+  ]
 }

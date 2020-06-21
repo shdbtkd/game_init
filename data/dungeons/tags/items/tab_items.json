@@ -1,7 +1,7 @@
 {
-    "values": [
-        "minecraft:map",
-        "minecraft:knowledge_book",
-        "minecraft:iron_sword"
-    ]
+  "values": [
+    "minecraft:map",
+    "minecraft:knowledge_book",
+    "minecraft:iron_sword"
+  ]
 }

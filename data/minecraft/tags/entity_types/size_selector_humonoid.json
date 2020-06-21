@@ -1,12 +1,12 @@
 {
-    "values":[
-        "minecraft:pillager",
-        "minecraft:vindicator",
-        "minecraft:evoker",
-        "minecraft:illusioner",
-        "minecraft:witch",
-        "minecraft:blaze",
-        "minecraft:creeper",
-        "#minecraft:skeletons"
-    ]
+  "values":[
+    "minecraft:pillager",
+    "minecraft:vindicator",
+    "minecraft:evoker",
+    "minecraft:illusioner",
+    "minecraft:witch",
+    "minecraft:blaze",
+    "minecraft:creeper",
+    "#minecraft:skeletons"
+  ]
 }

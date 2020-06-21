@@ -1,8 +1,8 @@
 {
-    "values": [
-        "minecraft:elder_guardian",
-        "minecraft:ravager",
-        "minecraft:ghast",
-        "minecraft:enderman"
-    ]
+  "values": [
+    "minecraft:elder_guardian",
+    "minecraft:ravager",
+    "minecraft:ghast",
+    "minecraft:enderman"
+  ]
 }

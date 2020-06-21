@@ -1,7 +1,7 @@
 {
-    "values":[
-        "#minecraft:zombies",
-        "minecraft:piglin",
-        "minecraft:hoglin"
-    ]
+  "values":[
+    "#minecraft:zombies",
+    "minecraft:piglin",
+    "minecraft:hoglin"
+  ]
 }

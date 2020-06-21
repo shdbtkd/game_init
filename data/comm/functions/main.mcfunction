@@ -13,7 +13,7 @@ execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=neare
 ##############
 
 function comm:game-start/class/class
-function comm:game-start/class/item
+function comm:game-start/class/event_actor
 
 function comm:game-start/items/items-main
 

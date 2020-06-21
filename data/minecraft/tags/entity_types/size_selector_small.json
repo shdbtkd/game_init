@@ -1,7 +1,7 @@
 {
-    "values": [
-        "#minecraft:spiders",
-        "minecraft:silverfish",
-        "minecraft:vex"
-    ]
+	"values": [
+		"#minecraft:spiders",
+		"minecraft:silverfish",
+		"minecraft:vex"
+	]
 }

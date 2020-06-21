@@ -96,3 +96,5 @@
 
 execute at @a[tag=event-now] as @e[tag=map-all,tag=event,sort=nearest,limit=1] if entity @s[tag=!active-event] run function comm:game-start/class/actevent-item
 
+execute as @e[tag=grind_display] at @s run function comm:game-start/class/event/enchant/grind/init
+execute as @e[tag=table_display] at @s run function comm:game-start/class/event/enchant/table/init

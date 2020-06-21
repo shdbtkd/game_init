@@ -1,0 +1,2 @@
+#data modify entity ad95a8a8-6524-49bb-91e1-285c5d45d8a6 Items prepend value { Slot: 19b, id: "minecraft:gray_stained_glass_pane", Count: 1b }
+execute unless data entity @s Items[{ Slot: 19b }] run data modify entity @s Items prepend value { Slot: 19b, id: "minecraft:gray_stained_glass_pane", Count: 1b, tag: { must_delet: 1b } }
