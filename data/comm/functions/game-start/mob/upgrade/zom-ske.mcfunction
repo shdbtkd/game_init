@@ -1,11 +1,10 @@
 tag @s add end-upgrade
 
-execute as @s[tag=!spawner,tag=!slime,type=!skeleton] if predicate pred:30 if score @p stage matches 2.. run data merge entity @s {Health:30f,ArmorItems:[{},{},{},{id:"minecraft:iron_helmet",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.maxHealth",Name:"generic.maxHealth",Amount:30,Operation:0,UUIDLeast:386153,UUIDMost:737543}]}}],Attributes:[{Name:generic.maxHealth,Base:30}]}
-execute as @s[tag=!spawner,type=skeleton] if predicate pred:30 if score @p stage matches 2.. run data merge entity @s {Health:20f,ArmorItems:[{},{},{},{id:"minecraft:iron_helmet",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.maxHealth",Name:"generic.maxHealth",Amount:20,Operation:0,UUIDLeast:386153,UUIDMost:737543}]}}],Attributes:[{Name:generic.maxHealth,Base:30}]}
-execute as @s if predicate pred:30 if score @p stage matches 2.. run data modify entity @s ArmorItems.[1] set value {id:"minecraft:iron_leggings",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.movementSpeed",Name:"generic.movementSpeed",Amount:0.05,Operation:0,UUIDLeast:405841,UUIDMost:732497,Slot:"legs"}]}}
+execute as @s[tag=!spawner,tag=!slime] if predicate pred:30 if score @p stage matches 2.. run function comm:game-start/mob/upgrade/helmet_health
+execute as @s if predicate pred:30 if score @p stage matches 2.. run data modify entity @s ArmorItems.[1] set value {id:"minecraft:iron_leggings",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.05,Operation:0,UUID:[I;2036277742,80429961,-1192161421,-1922418239],Slot:"legs"}]}}
 execute as @s if predicate pred:30 if score @p stage matches 2.. run data modify entity @s HandItems.[1] set value {id:"minecraft:totem_of_undying",Count:1b}
 
-execute as @s if predicate pred:30 run data modify entity @s ArmorItems.[2] set value {id:"minecraft:iron_chestplate",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.knockbackResistance",Name:"generic.knockbackResistance",Amount:1,Operation:0,UUIDLeast:872953,UUIDMost:490212,Slot:"chest"}]}}
-execute as @s if predicate pred:30 run data modify entity @s ArmorItems.[0] set value {id:"minecraft:iron_boots",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.movementSpeed",Name:"generic.movementSpeed",Amount:0.05,Operation:0,UUIDLeast:889340,UUIDMost:721429}]}}
+execute as @s if predicate pred:30 run data modify entity @s ArmorItems.[2] set value {id:"minecraft:iron_chestplate",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:10,Operation:0,UUID:[I;242421597,-472038928,-1230708819,-1910335300],Slot:"chest"}]}}
+execute as @s if predicate pred:30 run data modify entity @s ArmorItems.[0] set value {id:"minecraft:iron_boots",Count:1b,tag:{AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.05,Operation:0,UUID:[I;-222097021,2123713165,-1541286833,1255002062]}]}}
 
 execute as @s if entity @s[type=zombie] if predicate pred:30 run data modify entity @s HandItems.[0] set value {id:"minecraft:iron_sword",Count:1b}

@@ -24,6 +24,8 @@ scoreboard players add @a mine-p 0
 scoreboard players add @a pickup-potion 0
 scoreboard players add @a use-potion 0
 
+scoreboard players set helmet_health_addition upgede_health 10
+
 scoreboard players set @a rd1-emmer-remove 0
 scoreboard players set @a rd2-emmer-remove 0
 scoreboard players set @a rd3-emmer-remove 0

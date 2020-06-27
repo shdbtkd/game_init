@@ -91,6 +91,58 @@
               "count": 1
             }, {
               "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-1_type-straight-7\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-1_type-straight-8\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-1_type-straight-9\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-1_type-straight-10\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
               "tag": "{BlockEntityTag:{name:\"overworld:overworld-2_type-straight-1\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
             }
           ]
@@ -157,6 +209,58 @@
             }, {
               "function": "set_nbt",
               "tag": "{BlockEntityTag:{name:\"overworld:overworld-2_type-straight-6\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-2_type-straight-7\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-2_type-straight-8\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-2_type-straight-9\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
+            }
+          ]
+        }, {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:structure_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{name:\"overworld:overworld-2_type-straight-10\",posY:1,rotation:\"NONE\",mirror:\"NONE\",mode:\"LOAD\"}}"
             }
           ]
         }

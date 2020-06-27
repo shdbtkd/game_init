@@ -5,6 +5,7 @@ execute as @e[team=red,tag=!red-boss,type=#minecraft:size_selector_nolimit] stor
 execute as @e[team=red,tag=!red-boss,type=#minecraft:size_selector_common] at @s run function comm:game-start/mob/showhealth/common
 execute as @e[team=red,tag=!red-boss,type=#minecraft:size_selector_big] at @s run function comm:game-start/mob/showhealth/notsmall
 execute as @e[team=red,tag=!red-boss,type=#minecraft:size_selector_small] at @s run function comm:game-start/mob/showhealth/small
+# size checker
 execute as @e[team=red,tag=!red-boss,type=#minecraft:size_selector_nolimit,type=!phantom] at @s if score @s red-size matches 0..1 run function comm:game-start/mob/showhealth/small
 execute as @e[team=red,tag=!red-boss,type=#minecraft:size_selector_nolimit,type=!phantom] at @s if score @s red-size matches 2..4 run function comm:game-start/mob/showhealth/notsmall
 execute as @e[team=red,tag=!red-boss,type=#minecraft:size_selector_nolimit,type=!phantom] at @s if score @s red-size matches 5..6 run function comm:game-start/mob/showhealth/common

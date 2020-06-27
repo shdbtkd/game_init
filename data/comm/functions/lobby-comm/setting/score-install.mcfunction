@@ -213,3 +213,7 @@ scoreboard objectives add spawner-motion1 dummy
 scoreboard objectives add spawner-motion2 dummy
 
 scoreboard objectives add potal_info dummy
+
+scoreboard objectives add upgede_health dummy
+
+scoreboard objectives add talk_to_villager minecraft.custom:minecraft.talked_to_villager
