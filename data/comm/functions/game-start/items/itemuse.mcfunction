@@ -63,7 +63,8 @@
 
 	execute as @s at @e[tag=modify-head] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run replaceitem block ~ 21 ~ container.2 air
 	function comm:game-start/items/itemself
-	execute as @s run scoreboard players set @s use-potion 0
+	scoreboard players set @s use-potion 0
+	scoreboard players set @s pickup-potion 0
 
 ##############
 

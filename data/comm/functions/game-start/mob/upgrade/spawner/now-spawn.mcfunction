@@ -19,6 +19,7 @@ data remove entity @s ArmorItems[3].tag.storage.Motion
 tag @s add spawner
 
 execute if entity @s[type=skeleton] run summon minecraft:skeleton ~ ~ ~ {Team:"red",Tags:["spawner-target"]}
+execute if entity @s[type=husk] run summon minecraft:husk ~ ~ ~ {Team:"red",Tags:["spawner-target"]}
 execute if entity @s[type=zombie] run summon zombie ~ ~ ~ {Team:"red",Tags:["spawner-target"]}
 execute as @e[tag=spawner-target,limit=1,sort=nearest] run function comm:game-start/mob/upgrade/spawner/get-motion
 data modify entity @e[tag=spawner-target,limit=1,sort=nearest] {} merge from entity @s ArmorItems[3].tag.storage

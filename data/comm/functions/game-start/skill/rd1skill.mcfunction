@@ -7,6 +7,7 @@ execute at @e[tag=modify-head] if score @e[distance=..0,limit=1,sort=nearest] cl
 execute at @e[tag=modify-head] if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index if score @s emmer matches ..0 run replaceitem block ~ 15 ~ container.0 air
 #execute as @a[tag=rd1,scores={mine-p=..0}] as @s[scores={mine-c=..0}] if entity @s[scores={rd1-emmer-remove=1..}] run function comm:game-start/skill/attack/rd1
 
+execute at @s as @e[tag=rd1arrow,tag=!end-arrow] run tag @s add end-arrow
 
 
 

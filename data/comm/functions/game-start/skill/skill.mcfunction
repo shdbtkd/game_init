@@ -14,3 +14,5 @@ execute as @a[tag=nd1] at @s run function comm:game-start/skill/nd1skill
 execute as @a[tag=nd2] at @s run function comm:game-start/skill/nd2skill
 execute as @a[tag=nd3] at @s run function comm:game-start/skill/nd3skill
 
+execute as @a if score @s item_drop matches 1.. run function comm:game-start/skill/active_item/generic/checker
+execute as @a store result score @s active_inven if data entity @s Inventory[{ Slot: 6b, tag: { activeitem: 1b } }]

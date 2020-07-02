@@ -1,3 +1,4 @@
+setblock ~ ~-2 ~ minecraft:redstone_lamp
 
 #execute if entity @s[tag=lock] run summon minecraft:item_frame ~ ~ ~ {Tags:["lock-control","price"], Facing: 1b}
 execute if block ~1 ~ ~ #minecraft:air_block run function comm:game-start/mob/box/plus_x

@@ -10,6 +10,8 @@ execute as @a at @s if entity @s[scores={stage=0..}] run effect give @s minecraf
 
 execute if score started stage matches 0 run function comm:lobby-comm/ready/start
 
+# execute if predicate pred:
+
 #---------- used attribute modifiers ----------#
 #
 #           0-0-0-0-0 generic.boss-health_addition
@@ -18,9 +20,21 @@ execute if score started stage matches 0 run function comm:lobby-comm/ready/star
 
 #---------- todo list ----------#
 #
+#           장신구 아이템 만들기
+#
+#           장신구, 액티브 조합 기능 만들기
+#
+#           상점의 종류 추가
+#
 #           1, 2stage 너무 컨텐츠가 없는듯... 1stage로 줄일까..?
 #
+#           파밍에 메리트, 다양성이 없음
+#           - 상점, 상자, 통 << 에서 장신구, 액티브 나옴
+#           - 숨겨진 방
+#           - 제단
+#
 #           중간 보스, 챌린지룸 // 기능 구현
+#           - 보상은 액티브 아이템
 #
 #           포탈 열리는 기능
 #

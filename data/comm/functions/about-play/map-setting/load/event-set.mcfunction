@@ -3,6 +3,10 @@ execute if score @p stage matches 2 at @s run function comm:about-play/map-setti
 execute if score @p stage matches 3 at @s run function comm:about-play/map-setting/load/type/overworld/overworld_event
 execute if score @p stage matches 4 at @s run function comm:about-play/map-setting/load/type/desert/desert_event
 execute if score @p stage matches 5 at @s run function comm:about-play/map-setting/load/type/overworld/overworld_event
+execute if score @p stage matches 6 at @s run function comm:about-play/map-setting/load/type/overworld/overworld_event
+execute if score @p stage matches 7 at @s run function comm:about-play/map-setting/load/type/overworld/overworld_event
+execute if score @p stage matches 8 at @s run function comm:about-play/map-setting/load/type/overworld/overworld_event
+execute if score @p stage matches 9 at @s run function comm:about-play/map-setting/load/type/overworld/overworld_event
 
 #execute if score @p stage matches 2 as @s at @s if score @s stage-road_count matches 4 run function comm:about-play/map-setting/load/desert/desert_event-4_way
 #execute if score @p stage matches 2 as @s at @s if score @s stage-road_count matches 3 run function comm:about-play/map-setting/load/desert/desert_event-3_way

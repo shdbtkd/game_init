@@ -1,7 +1,8 @@
 kill @e[tag=modify-head]
 
 scoreboard players add @a stage 2
-execute if predicate pred:50 run scoreboard players add @a stage 1
+execute run scoreboard players add @a stage 1
+#execute if predicate pred:50 run scoreboard players add @a stage 1
 scoreboard players set next stage 3
 scoreboard players set start map_lod 1
 # scoreboard players set next stage 0
@@ -21,6 +22,8 @@ scoreboard players set @e[tag=rd3-itempos] class-index 3
 scoreboard players set @e[tag=nd1-itempos] class-index 4
 scoreboard players set @e[tag=nd2-itempos] class-index 5
 scoreboard players set @e[tag=nd3-itempos] class-index 6
+
+#schedule function comm:lobby-comm/ready/start_schedule 2t
 
 function comm:game-start/items/head-modify
 function comm:lobby-comm/setting/resetscore

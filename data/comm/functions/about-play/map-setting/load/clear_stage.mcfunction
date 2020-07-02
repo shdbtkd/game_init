@@ -3,6 +3,7 @@ setworldspawn 0 16 0
 kill @e[team=red]
 kill @e[type=minecraft:arrow]
 kill @e[tag=kill_self-stage_clear]
+kill @e[type=minecraft:item,tag=!select]
 scoreboard players set time stage 0
 scoreboard players set time map_lod 0
 

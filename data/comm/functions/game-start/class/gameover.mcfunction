@@ -1,3 +1,4 @@
+execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run data remove block ~ 21 ~ Items
 tp @a -1.0 39 -816.0
 title @a times 0 60 0
 title @a title ["",{"text":"GAME OVER!","color":"red"}]
@@ -20,12 +21,7 @@ scoreboard players set time stage 0
 scoreboard players set start map_lod 0
 function comm:about-play/map-setting/load/clear_stage
 execute as @e[type=minecraft:item] if data entity @s Item.tag{ basicitem: 1b } run kill @s
-# data merge block -3 11 -17 {Items:[{Slot:0b,id:"minecraft:black_concrete",Count:1b},{Slot:1b,id:"minecraft:black_concrete",Count:1b},{Slot:2b,id:"minecraft:black_concrete",Count:1b},{Slot:3b,id:"minecraft:black_concrete",Count:1b},{Slot:4b,id:"minecraft:black_concrete",Count:1b}]}
-# data merge block -3 11 -20 {Items:[{Slot:0b,id:"minecraft:black_concrete",Count:1b},{Slot:1b,id:"minecraft:black_concrete",Count:1b},{Slot:2b,id:"minecraft:black_concrete",Count:1b},{Slot:3b,id:"minecraft:black_concrete",Count:1b},{Slot:4b,id:"minecraft:black_concrete",Count:1b}]}
-# data merge block -3 11 -23 {Items:[{Slot:0b,id:"minecraft:black_concrete",Count:1b},{Slot:1b,id:"minecraft:black_concrete",Count:1b},{Slot:2b,id:"minecraft:black_concrete",Count:1b},{Slot:3b,id:"minecraft:black_concrete",Count:1b},{Slot:4b,id:"minecraft:black_concrete",Count:1b}]}
-# data merge block 0 11 -17 {Items:[{Slot:0b,id:"minecraft:black_concrete",Count:1b},{Slot:1b,id:"minecraft:black_concrete",Count:1b},{Slot:2b,id:"minecraft:black_concrete",Count:1b},{Slot:3b,id:"minecraft:black_concrete",Count:1b},{Slot:4b,id:"minecraft:black_concrete",Count:1b}]}
-# data merge block 0 11 -20 {Items:[{Slot:0b,id:"minecraft:black_concrete",Count:1b},{Slot:1b,id:"minecraft:black_concrete",Count:1b},{Slot:2b,id:"minecraft:black_concrete",Count:1b},{Slot:3b,id:"minecraft:black_concrete",Count:1b},{Slot:4b,id:"minecraft:black_concrete",Count:1b}]}
-# data merge block 0 11 -23 {Items:[{Slot:0b,id:"minecraft:black_concrete",Count:1b},{Slot:1b,id:"minecraft:black_concrete",Count:1b},{Slot:2b,id:"minecraft:black_concrete",Count:1b},{Slot:3b,id:"minecraft:black_concrete",Count:1b},{Slot:4b,id:"minecraft:black_concrete",Count:1b}]}
+kill @e[type=minecraft:item,tag=!select]
 scoreboard players set boss stage 0
 scoreboard players set boss map_lod 0
 scoreboard players set spawn boss-Jack-O 0

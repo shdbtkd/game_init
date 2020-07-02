@@ -21,6 +21,7 @@ execute if data entity @s Item.tag{nether_brick:1b} at @s run function comm:game
 execute if data entity @s Item.tag{flint:1b} at @s run function comm:game-start/items/item-get/generic/flint
 execute if data entity @s Item.tag{bucket:1b} at @s run function comm:game-start/items/item-get/generic/bucket
 execute if data entity @s Item.tag{redstone:1b} at @s run function comm:game-start/items/item-get/generic/redstone
+execute if data entity @s Item.tag{feather:1b} at @s run function comm:game-start/items/item-get/generic/feather
 #-------- generic --------#
 
 #-------- pet --------#

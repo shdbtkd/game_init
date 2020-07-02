@@ -13,3 +13,10 @@ data modify storage minecraft:armor.0 basic[].Slot set value 2b
 
 data modify storage minecraft:offhand basic[].Slot set value 1b
 data modify storage minecraft:weapon active[].Slot set value 0b
+
+data modify storage minecraft:weapon active[0].tag.basic_weapon set value 1b
+data modify storage minecraft:weapon active[1].tag.basic_weapon set value 1b
+data modify storage minecraft:weapon active[2].tag.basic_weapon set value 1b
+data modify storage minecraft:weapon active[3].tag.basic_weapon set value 1b
+data modify storage minecraft:weapon active[4].tag.basic_weapon set value 1b
+data modify storage minecraft:weapon active[5].tag.basic_weapon set value 1b

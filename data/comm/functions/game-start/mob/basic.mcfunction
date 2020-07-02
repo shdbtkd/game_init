@@ -1,13 +1,15 @@
 execute as @e[type=vex,team=!red] run function comm:game-start/mob/upgrade/vex
 execute as @e[tag=health_undefined] run function comm:game-start/mob/health_setter
 
+execute as @e[tag=barrelhere,scores={barrel_break=0..}] run function comm:game-start/mob/barrel/break_operator
+
 execute as @e[team=!] store result score @s hurt run data get entity @s HurtTime
 execute anchored eyes as @e[tag=!none-show] at @s if score @s hurt matches 7.. run particle minecraft:block redstone_block ^ ^ ^ 0.1 0 0.1 01 5
 execute anchored feet as @e[tag=!none-show] at @s if score @s hurt matches 7.. run particle minecraft:block redstone_block ^ ^ ^ 0.1 0 0.1 01 5
 
 execute as @e[tag=boxhere] at @s if block ~ ~-2 ~ minecraft:redstone_lamp[lit=true] run function comm:game-start/mob/box/open
 
-execute as @e[type=minecraft:creeper] at @s if data entity @s {Fuse: 1s} run function comm:game-start/items/tnt/boom/checking
+#execute as @e[type=minecraft:creeper] at @s if data entity @s {Fuse: 1s} run function comm:game-start/items/tnt/boom/checking
 
 execute if entity @e[team=red] run function comm:game-start/mob/mob
 execute as @e[tag=slime-storage] run scoreboard players reset @s slime-exist

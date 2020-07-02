@@ -11,6 +11,8 @@ tag @a remove dead
 execute at @e[tag=modify-head] run data modify block ~ 12 ~ Items set from block 8 12 -31 Items
 execute at @e[tag=modify-head] run data modify block ~ 19 ~ Items set from block 8 12 -29 Items
 
+scoreboard players set @a pickup-potion 0
+
 effect give @a instant_health 2 100 true
 scoreboard players set next stage 0
 scoreboard players set time stage 0

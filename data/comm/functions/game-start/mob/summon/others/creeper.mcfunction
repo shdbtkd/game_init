@@ -1,4 +1,4 @@
 
 summon minecraft:creeper ~ ~ ~ {Team:"red"}
 
-# give @p minecraft:command_block{ display:{ Name: '{"text":"zombie","bold":true,"italic":false}' }, BlockEntityTag: { Command:"execute positioned ~ 71 ~ run function comm:game-start/mob/summon/others/creeper"} }
+# give @p minecraft:command_block{ display:{ Name: '{"text":"creeper","bold":true,"italic":false}' }, BlockEntityTag: { Command:"execute positioned ~ 71 ~ run function comm:game-start/mob/summon/others/creeper"} }

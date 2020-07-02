@@ -1,8 +1,3 @@
-# summon item ~ ~ ~ {Tags:["item"],Item:{id:"minecraft:enchanted_golden_apple",Count:1b,tag:{display:{Name:'{"text":"빛나는 황금사과","color":"light_purple","bold":true,"italic":false}'},item:1b,hero:1b,showname:1b,basicitem:1b}}}
-# summon item ~ ~ ~ {Tags:["item","delay"],Item:{id:"minecraft:arrow",Count:1b,tag:{display:{Name:'{"text":"화살","color":"white","bold":true,"italic":false}'},item:1b,showname:1b,basicitem:1b,arrow__1:1b}}}
-
-# item index
-# execute as @a at @s store result score @s item-index if data entity @s Inventory[].tag{item:1b}
 
 ### 아이템 줍기 ###
     execute as @e[type=minecraft:item,nbt={Item: {tag: { item: 1b } }}] store result score @s pickup-delay run data get entity @s PickupDelay
@@ -17,12 +12,11 @@
     execute as @e[type=item,tag=!pickup-potion,scores={pickup-delay=..5}] if data entity @s Item.tag{potion: 1b} at @s run data merge entity @s {PickupDelay:-1,Age:-32768}
     execute as @e[type=item,tag=!pickup-potion,scores={pickup-delay=..-1}] if data entity @s Item.tag{potion: 1b} at @s store result score @s count-itemplayer if entity @a[distance=..0.5]
     
-    #execute as @e[type=item] if data entity @s Item.tag{item:1b,potion:1b} at @s unless entity @p[scores={pickup-potion=..0},distance=..0.5] run data merge entity @s {PickupDelay:-1,Age:-32768}
-    #execute as @e[type=item] if data entity @s Item.tag{item:1b,potion:1b} if data entity @s {PickupDelay:-1s} at @s if entity @p[scores={pickup-potion=..0},distance=..0.5] run data merge entity @s {PickupDelay:15,Age:-32768}
+    # 엑티브 아이템
 
-    # 체력회복
-    # execute as @e[type=item] if data entity @s Item.tag{item:1b,potion:1b} at @s unless entity @p[scores={pickup-potion=..0},distance=..0.5] run data merge entity @s {PickupDelay:-1,Age:-32768}
-    # execute as @e[type=item] if data entity @s Item.tag{item:1b,potion:1b} if data entity @s {PickupDelay:-1s} at @s if entity @p[scores={pickup-potion=..0},distance=..0.5] run data merge entity @s {PickupDelay:15,Age:-32768}
+    execute at @a as @e[type=item,tag=active_item,tag=!pickup-active,scores={pickup-delay=..-1},limit=1,sort=nearest,distance=..0.5] if data entity @s Item.tag{activeitem: 1b} at @s if score @s count-itemplayer matches 1 if score @p active_pickup matches ..0 run function comm:game-start/items/active-get
+    execute as @e[type=item,tag=active_item,tag=!pickup-active,scores={pickup-delay=..5}] if data entity @s Item.tag{activeitem: 1b} at @s run data merge entity @s {PickupDelay:-1,Age:-32768}
+    execute as @e[type=item,tag=active_item,tag=!pickup-active,scores={pickup-delay=..-1}] if data entity @s Item.tag{activeitem: 1b} at @s store result score @s count-itemplayer if entity @a[distance=..0.5]
 
 ################
 
@@ -45,32 +39,9 @@
 ################
 
 ### 포션 ###
-
-    execute as @a unless data entity @s[scores={pickup-potion=1..}] Inventory[].tag{potion:1b} run scoreboard players set @s pickup-potion 0
-    #execute as @a if data entity @s[scores={pickup-potion=1..}] Inventory[{id: "minecraft:potion"}].tag{potion:1b} run function comm:game-start/items/potion-replace
-    #execute as @a if data entity @s[scores={pickup-potion=1..}] Inventory[{id: "minecraft:splash_potion"}].tag{potion:1b} run function comm:game-start/items/potion-replace
-    #execute as @a if data entity @s[scores={pickup-potion=1..}] Inventory[{id: "minecraft:lingering_potion"}].tag{potion:1b} run function comm:game-start/items/potion-replace
-
+    # 버린거 채크
+    execute as @e[type= minecraft:item, nbt= {Item: { tag:  { potion: 1b, inventory: 1b } } }] if data entity @s Thrower at @s run function comm:game-start/items/potion/inventory/drop_check
 ###########
-
-### 화살 ###
-
-    
-
-###########
-
-### get ###
-
-    # execute as @a[tag=rd1] store result score @s item-index if data block 182 71 341 Items[].tag{item:1b,basicitem:1b}
-    # execute as @a[tag=rd1] store result score @s beforeitem-index if data block 182 71 341 Items[].tag{item:1b,basicitem:1b}
-
-###########
-
-# execute as @a at @s if data entity @e[type=item,limit=1,sort=nearest,distance=..5] Item.tag{item:1b,hero:1b} run say 1 
-
-# execute if data entity @s Inventory[{id:"minecraft:enchanted_golden_apple"}].tag.Enchantments[{id:"minecraft:vanishing_curse",lvl:1s}]
-# execute if data entity @s Inventory[{id:"minecraft:enchanted_golden_apple"}].tag.Enchantments[{id:"minecraft:binding_curse",lvl:1s}]
-# execute if data entity @s Inventory[{id:"minecraft:enchanted_golden_apple"}].tag.Enchantments[{id:"minecraft:binding_curse",lvl:1s},{id:"minecraft:vanishing_curse",lvl:1s}]
 
 ### item use ###
 

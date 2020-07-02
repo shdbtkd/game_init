@@ -1,0 +1,16 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:potion/others"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:potion/rare-rewardpotion"
+        }
+      ]
+    }
+  ]
+}

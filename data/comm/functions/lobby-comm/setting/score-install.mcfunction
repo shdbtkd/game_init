@@ -79,6 +79,7 @@ scoreboard objectives add brick dummy
 scoreboard objectives add nethrer_brick dummy
 scoreboard objectives add redstone dummy
 scoreboard objectives add bucket dummy
+scoreboard objectives add feather dummy
 
 scoreboard objectives add looting dummy
 scoreboard objectives add flame dummy
@@ -217,3 +218,10 @@ scoreboard objectives add potal_info dummy
 scoreboard objectives add upgede_health dummy
 
 scoreboard objectives add talk_to_villager minecraft.custom:minecraft.talked_to_villager
+
+scoreboard objectives add barrel_break dummy
+scoreboard objectives add item_drop minecraft.custom:minecraft.drop
+scoreboard objectives add active_item-id dummy
+
+scoreboard objectives add active_inven dummy
+scoreboard objectives add active_pickup dummy

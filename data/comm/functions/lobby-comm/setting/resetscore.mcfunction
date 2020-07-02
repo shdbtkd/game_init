@@ -23,6 +23,7 @@ scoreboard players add @a mine-c 0
 scoreboard players add @a mine-p 0
 scoreboard players add @a pickup-potion 0
 scoreboard players add @a use-potion 0
+scoreboard players set @a active_pickup 0
 
 scoreboard players set helmet_health_addition upgede_health 10
 
