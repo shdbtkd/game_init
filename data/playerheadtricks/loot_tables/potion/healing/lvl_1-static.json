@@ -1,0 +1,23 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }, {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"치유의 물약\",\"bold\":true,\"italic\":false}'},item:1b, potion:1b, showname:1b,Potion:\"minecraft:healing\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

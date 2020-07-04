@@ -126,6 +126,7 @@ scoreboard objectives add event-type dummy
 scoreboard objectives add item-index dummy
 scoreboard objectives add beforeitem-index dummy
 scoreboard objectives add attack-damage dummy
+scoreboard objectives add result-att_dmg dummy
 scoreboard objectives add resistance-point dummy
 scoreboard objectives add movement-speed dummy
 scoreboard objectives add armor-P dummy
@@ -225,3 +226,9 @@ scoreboard objectives add active_item-id dummy
 
 scoreboard objectives add active_inven dummy
 scoreboard objectives add active_pickup dummy
+scoreboard objectives add jewelry_pickup dummy
+scoreboard objectives add jewelry_inven dummy
+
+scoreboard objectives add item_container_0 dummy
+scoreboard objectives add item_container_1 dummy
+scoreboard objectives add item_container_2 dummy

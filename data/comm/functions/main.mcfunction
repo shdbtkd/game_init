@@ -1,3 +1,7 @@
+# --------------------------------------- #
+#   execute this command at every ticks
+# --------------------------------------- #
+
 execute as @a run function comm:about-play/arrow-setting/inventory/checker
 
 execute as @e[tag=price] at @s run function comm:game-start/mob/price/basic

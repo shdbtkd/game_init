@@ -1,0 +1,1 @@
+loot replace block ~ 19 ~ container.11 loot playerheadtricks:uuidtest

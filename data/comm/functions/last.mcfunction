@@ -1,3 +1,6 @@
+# --------------------------------------- #
+#   execute this command at every ticks
+# --------------------------------------- #
 
 
 execute if score start map_lod matches 1..14 run function comm:about-play/map-setting/stage-load

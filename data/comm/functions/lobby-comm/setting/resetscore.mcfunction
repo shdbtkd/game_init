@@ -15,6 +15,7 @@ scoreboard players set @a undying 0
 scoreboard players set @a p-tnt 1
 scoreboard players set @a max-ammo 3
 scoreboard players set @a attack-damage 0
+scoreboard players set @a result-att_dmg 0
 scoreboard players set @a movement-speed 0
 scoreboard players set @a armor-P 0
 scoreboard players set @a armor-T 0
@@ -24,6 +25,8 @@ scoreboard players add @a mine-p 0
 scoreboard players add @a pickup-potion 0
 scoreboard players add @a use-potion 0
 scoreboard players set @a active_pickup 0
+scoreboard players set @a jewelry_pickup 0
+scoreboard players set @a jewelry_inven 0
 
 scoreboard players set helmet_health_addition upgede_health 10
 
@@ -43,6 +46,7 @@ scoreboard players set @a[tag=nd1] class-index 4
 scoreboard players set @a[tag=nd2] class-index 5
 scoreboard players set @a[tag=nd3] class-index 6
 
+scoreboard players reset @a out
 scoreboard players reset vanish
 scoreboard players reset binding
 

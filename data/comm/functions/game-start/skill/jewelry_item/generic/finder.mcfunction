@@ -1,0 +1,2 @@
+function comm:game-start/skill/variable/thrower-getter
+execute at @a if score @s owner-UUID_0 = @e[type=minecraft:player,limit=1,sort=nearest] player-UUID_0 if score @s owner-UUID_1 = @e[type=minecraft:player,limit=1,sort=nearest] player-UUID_1 if score @s owner-UUID_2 = @e[type=minecraft:player,limit=1,sort=nearest] player-UUID_2 if score @s owner-UUID_3 = @e[type=minecraft:player,limit=1,sort=nearest] player-UUID_3 run function comm:game-start/skill/jewelry_item/generic/drop

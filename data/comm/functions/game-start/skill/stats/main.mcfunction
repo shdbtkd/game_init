@@ -1,0 +1,1 @@
+function comm:game-start/skill/stats/head

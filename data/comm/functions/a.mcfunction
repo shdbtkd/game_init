@@ -1,3 +1,7 @@
+# --------------------------------------- #
+#   execute this command at every ticks
+# --------------------------------------- #
+
 #
 execute if score @p stage matches ..0 run function comm:lobby-comm/lobby
 execute if score @p stage matches 1.. if score player-all stage matches 1.. run function comm:main

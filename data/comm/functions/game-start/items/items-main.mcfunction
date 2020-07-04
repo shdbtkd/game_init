@@ -18,6 +18,13 @@
     execute as @e[type=item,tag=active_item,tag=!pickup-active,scores={pickup-delay=..5}] if data entity @s Item.tag{activeitem: 1b} at @s run data merge entity @s {PickupDelay:-1,Age:-32768}
     execute as @e[type=item,tag=active_item,tag=!pickup-active,scores={pickup-delay=..-1}] if data entity @s Item.tag{activeitem: 1b} at @s store result score @s count-itemplayer if entity @a[distance=..0.5]
 
+    # 장신구 아이템
+
+    execute as @e[type=item,tag=!jewelry_item] if data entity @s Item.tag{ jewelry_item: 1b } run tag @s add jewelry_item
+    execute at @a as @e[type=item,tag=jewelry_item,tag=!pickup-jewelry,scores={pickup-delay=..-1},limit=1,sort=nearest,distance=..0.5] if data entity @s Item.tag{ jewelry_item: 1b } at @s if score @s count-itemplayer matches 1 if score @p jewelry_pickup matches ..0 run function comm:game-start/items/jewelry-get
+    execute as @e[type=item,tag=jewelry_item,tag=!pickup-jewelry,scores={pickup-delay=..5}] if data entity @s Item.tag{ jewelry_item: 1b } at @s run data merge entity @s {PickupDelay:-1,Age:-32768}
+    execute as @e[type=item,tag=jewelry_item,tag=!pickup-jewelry,scores={pickup-delay=..-1}] if data entity @s Item.tag{ jewelry_item: 1b } at @s store result score @s count-itemplayer if entity @a[distance=..0.5]
+
 ################
 
 ### count ####
@@ -38,9 +45,28 @@
 
 ################
 
+### TNT ###
+
+    execute as @a unless score @s p-tnt = @s inventory-tnt run clear @s minecraft:tnt
+    execute as @a unless score @s p-tnt = @s inventory-tnt run function comm:game-start/items/itemself
+    execute as @a[scores={p-tnt=1..}] unless data entity @s Inventory[{id:"minecraft:tnt"}] run function comm:game-start/items/itemself
+    execute as @a[scores={p-tnt=..0}] if data entity @s Inventory[{id:"minecraft:tnt"}] run function comm:game-start/items/itemself
+
+    execute as @a[scores={d-tnt=1..}] at @s unless predicate pred:sneak run function comm:game-start/items/tnt/summon
+    execute as @a[scores={d-tnt=1..}] at @s if predicate pred:sneak run function comm:game-start/items/tnt/drop
+
+###########
+
+
+
 ### 포션 ###
     # 버린거 채크
     execute as @e[type= minecraft:item, nbt= {Item: { tag:  { potion: 1b, inventory: 1b } } }] if data entity @s Thrower at @s run function comm:game-start/items/potion/inventory/drop_check
+    execute as @a if data entity @s Inventory[{id: "minecraft:glass_bottle"}] run function comm:game-start/items/itemself
+    execute as @a if data entity @s Inventory[{id: "minecraft:glass_bottle"}] run clear @a minecraft:glass_bottle
+
+    execute as @a[scores={use-potion=1..}] run function comm:game-start/items/itemuse
+    execute as @a unless score @s pickup-potion = @s inventory-potion run function comm:game-start/items/itemself
 ###########
 
 ### item use ###
@@ -53,38 +79,25 @@
     execute as @a[scores={stage=1..}] unless score @s emmer = @s inventory-ammo run function comm:game-start/items/itemself
     execute as @a[scores={emerald=1..}] unless data entity @s Inventory[{ Slot:7b, id: "minecraft:emerald" }] run function comm:game-start/items/itemself
     execute as @a[scores={emerald=..64}] unless score @s emerald = @s inventory-eme run function comm:game-start/items/itemself
-    execute as @a unless score @s p-tnt = @s inventory-tnt run function comm:game-start/items/itemself
-    execute as @a[scores={p-tnt=1..}] unless data entity @s Inventory[{id:"minecraft:tnt"}] run function comm:game-start/items/itemself
-    execute as @a[scores={p-tnt=..0}] if data entity @s Inventory[{id:"minecraft:tnt"}] run function comm:game-start/items/itemself
     
-    execute as @a if data entity @s Inventory[{id: "minecraft:glass_bottle"}] run function comm:game-start/items/itemself
-    clear @a minecraft:glass_bottle
-    execute as @a[scores={use-potion=1..}] run function comm:game-start/items/itemuse
-    execute as @a unless score @s pickup-potion = @s inventory-potion run function comm:game-start/items/itemself
+    
+    
+    
+    
+    
     execute as @e[tag=boom] at @s run function comm:game-start/items/tnt/boom/fuse
-    execute as @a[scores={d-tnt=1..}] at @s unless predicate pred:sneak run function comm:game-start/items/tnt/summon
-    execute as @a[scores={d-tnt=1..}] at @s if predicate pred:sneak run function comm:game-start/items/tnt/drop
+    
 
 ################
 
 
 ### stats ###
 
-    # execute if entity @a[scores={stage=..0}] at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run replaceitem block ~ 15 ~ container.5 stone_button 
-    # hp #
-    execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index store result block ~ 15 ~ Items[{Slot: 5b}].tag.AttributeModifiers[{ AttributeName: "generic.max_health" }].Amount int 1 run scoreboard players get @s max-hp
-    # dmg #
-    execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index store result block ~ 15 ~ Items[{Slot: 5b}].tag.AttributeModifiers[{ AttributeName: "generic.attack_damage" }].Amount int 0.1 run scoreboard players get @s attack-damage
-    # speed #
-    execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index store result block ~ 15 ~ Items[{Slot: 5b}].tag.AttributeModifiers[{ AttributeName: "generic.movement_speed" }].Amount float 0.005 run scoreboard players get @s movement-speed
-    # armor #
-    execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index store result block ~ 15 ~ Items[{Slot: 5b}].tag.AttributeModifiers[{ AttributeName: "generic.armor" }].Amount int 1 run scoreboard players get @s armor-P
-    # armor T #
-    execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index store result block ~ 15 ~ Items[{Slot: 5b}].tag.AttributeModifiers[{ AttributeName: "generic.armor_toughness" }].Amount int 1 run scoreboard players get @s armor-T
+    function comm:game-start/items/attribute/set
 
 ############
 
 
-
-
 function comm:game-start/items/potion/inventory/use-check
+
+function comm:game-start/items/containers/defind
