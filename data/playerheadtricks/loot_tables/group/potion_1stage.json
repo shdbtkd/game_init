@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:potion/absorption/lvl_1-dynamic"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:potion/healing/lvl_1-dynamic"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:potion/regeneral/lvl_1-10s-dynamic"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:potion/streng/lvl_1-30s-dynamic"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:potion/harm/lvl_1-dynamic"
+        }
+      ]
+    }
+  ]
+}

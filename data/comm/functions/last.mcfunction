@@ -4,6 +4,7 @@
 
 
 execute if score start map_lod matches 1..14 run function comm:about-play/map-setting/stage-load
+execute as @a store result score @s player_point run experience query @s points
 
 execute at @e[tag=out-rd1] as @a[distance=..1.5,gamemode=!spectator,limit=1,sort=nearest] if predicate pred:sneak run scoreboard players add rd1 s 1
 execute at @e[tag=out-rd2] as @a[distance=..1.5,gamemode=!spectator,limit=1,sort=nearest] if predicate pred:sneak run scoreboard players add rd2 s 1

@@ -136,6 +136,7 @@ scoreboard objectives add max-hp dummy
 
 #---------- 인첸트 ----------#
 scoreboard objectives add player_level level
+scoreboard objectives add player_point dummy
 scoreboard objectives add table-need_lvl dummy
 scoreboard objectives add table-show_lvl dummy
 scoreboard objectives add table-inventory dummy
@@ -183,6 +184,10 @@ scoreboard objectives add owner-UUID_1 dummy
 scoreboard objectives add owner-UUID_2 dummy
 scoreboard objectives add owner-UUID_3 dummy
 
+scoreboard objectives add arrow-motion_0 dummy
+scoreboard objectives add arrow-motion_1 dummy
+scoreboard objectives add arrow-motion_2 dummy
+
 scoreboard objectives add slime-exist dummy
 
 scoreboard objectives add boss-max_health dummy
@@ -226,9 +231,25 @@ scoreboard objectives add active_item-id dummy
 
 scoreboard objectives add active_inven dummy
 scoreboard objectives add active_pickup dummy
+scoreboard objectives add active_wait-save dummy
+scoreboard objectives add active_wait-tick dummy
+scoreboard objectives add active_wait-max dummy
+
 scoreboard objectives add jewelry_pickup dummy
 scoreboard objectives add jewelry_inven dummy
 
 scoreboard objectives add item_container_0 dummy
 scoreboard objectives add item_container_1 dummy
 scoreboard objectives add item_container_2 dummy
+
+scoreboard objectives add red_arrow_time dummy
+
+scoreboard objectives add red_arrow_pos_0 dummy
+scoreboard objectives add red_arrow_pos_1 dummy
+scoreboard objectives add red_arrow_pos_2 dummy
+
+scoreboard objectives add arrow_pickup minecraft.picked_up:minecraft.diamond_horse_armor
+
+scoreboard objectives add golden_sword dummy
+
+scoreboard objectives add head_checker dummy

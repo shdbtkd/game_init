@@ -1,0 +1,22 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:arrow/1_2"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:arrow/1_3"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:arrow/1_5"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:arrow/1_9"
+        }
+      ]
+    }
+  ]
+}

@@ -5,9 +5,9 @@
     execute as @s[scores={inven_tab-type=3}] run clear @s #dungeons:tab_items{ tab_type_3:1b }
 
     
-    execute as @s[scores={inven_tab-type=1}] run loot replace block ~ 21 ~ container.8 mine ~ 17 ~ stick{drop_contents:true}
-    execute as @s[scores={inven_tab-type=2}] run loot replace block ~ 21 ~ container.8 mine ~ 12 ~ stick{drop_contents:true}
-    execute as @s[scores={inven_tab-type=3}] run loot replace block ~ 21 ~ container.8 mine ~ 19 ~ stick{drop_contents:true}
+    execute as @s[scores={inven_tab-type=1}] run loot replace block ~ 29 ~ container.3 mine ~ 17 ~ stick{drop_contents:true}
+    execute as @s[scores={inven_tab-type=2}] run loot replace block ~ 29 ~ container.3 mine ~ 12 ~ stick{drop_contents:true}
+    execute as @s[scores={inven_tab-type=3}] run loot replace block ~ 29 ~ container.3 mine ~ 19 ~ stick{drop_contents:true}
 
 
     execute as @s[scores={inven_tab-type=1}] run loot replace entity @s inventory.0 mine ~ 17 ~ stick{drop_contents:true}

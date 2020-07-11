@@ -1,0 +1,1 @@
+# scoreboard players add @s result-att_dmg 30

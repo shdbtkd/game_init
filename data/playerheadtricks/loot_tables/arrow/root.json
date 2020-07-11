@@ -1,0 +1,28 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_horse_armor",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{ item: 1b, CustomModelData: 1 }"
+            }, {
+                "function": "set_name", "name": [
+                {
+                  "text": "화살",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

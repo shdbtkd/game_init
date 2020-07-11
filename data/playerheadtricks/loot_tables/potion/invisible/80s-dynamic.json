@@ -13,12 +13,12 @@
               "count":1 
             }, {
               "function": "minecraft:set_nbt",
-              "tag": "{item:1b, potion:0b, showname:1b, CustomPotionEffects: [{ Id: 10b, Amplifier: 1b, Duration: 100 }], CustomPotionColor: 16735972 }"
+              "tag": "{item:1b, potion:0b, showname:1b, CustomPotionEffects: [{ Id: 14b, Amplifier: 1b, Duration: 1600 }], CustomPotionColor: 9551359 }"
             }, {
               "function": "set_name",
               "name": [
                 {
-                  "text": "재생의 물약",
+                  "text": "투명화 물약",
                   "color": "white",
                   "bold": true,
                   "italic": false

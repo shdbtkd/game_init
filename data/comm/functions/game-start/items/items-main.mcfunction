@@ -1,4 +1,5 @@
 
+
 ### 아이템 줍기 ###
     execute as @e[type=minecraft:item,nbt={Item: {tag: { item: 1b } }}] store result score @s pickup-delay run data get entity @s PickupDelay
     # 아이템
@@ -50,20 +51,25 @@
     execute as @a unless score @s p-tnt = @s inventory-tnt run clear @s minecraft:tnt
     execute as @a unless score @s p-tnt = @s inventory-tnt run function comm:game-start/items/itemself
     execute as @a[scores={p-tnt=1..}] unless data entity @s Inventory[{id:"minecraft:tnt"}] run function comm:game-start/items/itemself
-    execute as @a[scores={p-tnt=..0}] if data entity @s Inventory[{id:"minecraft:tnt"}] run function comm:game-start/items/itemself
+    execute as @a[scores={p-tnt=..0}] if data entity @s Inventory[{ Slot: 2b }] run function comm:game-start/items/itemself
 
     execute as @a[scores={d-tnt=1..}] at @s unless predicate pred:sneak run function comm:game-start/items/tnt/summon
     execute as @a[scores={d-tnt=1..}] at @s if predicate pred:sneak run function comm:game-start/items/tnt/drop
 
 ###########
 
+### 슬롯 0 제거 ###
 
+    execute as @a unless data entity @s Inventory[{ Slot: 0b, tag: { basic_weapon: 1b } }] run replaceitem entity @s hotbar.0 air
+
+#################
 
 ### 포션 ###
     # 버린거 채크
     execute as @e[type= minecraft:item, nbt= {Item: { tag:  { potion: 1b, inventory: 1b } } }] if data entity @s Thrower at @s run function comm:game-start/items/potion/inventory/drop_check
     execute as @a if data entity @s Inventory[{id: "minecraft:glass_bottle"}] run function comm:game-start/items/itemself
     execute as @a if data entity @s Inventory[{id: "minecraft:glass_bottle"}] run clear @a minecraft:glass_bottle
+    execute as @a unless score @s pickup-potion matches 1.. if data entity @s Inventory[{ Slot: 3b }] run function comm:game-start/items/itemself
 
     execute as @a[scores={use-potion=1..}] run function comm:game-start/items/itemuse
     execute as @a unless score @s pickup-potion = @s inventory-potion run function comm:game-start/items/itemself
@@ -90,10 +96,11 @@
 
 ################
 
+execute as @a[scores={arrow_pickup=1..}] run function comm:game-start/items/arrow_pickup
 
 ### stats ###
 
-    function comm:game-start/items/attribute/set
+    # function comm:game-start/items/attribute/set
 
 ############
 

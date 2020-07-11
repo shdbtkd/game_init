@@ -1,0 +1,33 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { 
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count":1 
+            }, {
+              "function": "minecraft:set_nbt",
+              "tag": "{item:1b, potion:1b, showname:1b, CustomPotionEffects: [{ Id: 11b, Amplifier: 1b, Duration: 600 }], CustomPotionColor: 5134202 }"
+            }, {
+              "function": "set_name",
+              "name": [
+                {
+                  "text": "저항의 물약",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

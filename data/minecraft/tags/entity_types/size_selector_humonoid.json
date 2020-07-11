@@ -5,8 +5,15 @@
     "minecraft:evoker",
     "minecraft:illusioner",
     "minecraft:witch",
+
+    "minecraft:piglin",
+    "minecraft:hoglin",
+    "minecraft:zoglin",
+    "minecraft:zombified_piglin",
+
     "minecraft:blaze",
     "minecraft:creeper",
+
     "#minecraft:skeletons",
     "minecraft:zombie",
     "minecraft:drowned",

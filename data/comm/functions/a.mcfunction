@@ -16,6 +16,8 @@ execute if score started stage matches 0 run function comm:lobby-comm/ready/star
 
 # execute if predicate pred:
 
+# 238
+
 #---------- used attribute modifiers ----------#
 #
 #           0-0-0-0-0 generic.boss-health_addition
@@ -24,11 +26,14 @@ execute if score started stage matches 0 run function comm:lobby-comm/ready/star
 
 #---------- todo list ----------#
 #
-#           장신구 아이템 만들기
-#
 #           장신구, 액티브 조합 기능 만들기
 #
 #           상점의 종류 추가
+#
+#           가마솥
+#           - 효과 증폭
+#           - 시간 증폭
+#           - 갯수 증폭
 #
 #           1, 2stage 너무 컨텐츠가 없는듯... 1stage로 줄일까..?
 #
@@ -45,8 +50,6 @@ execute if score started stage matches 0 run function comm:lobby-comm/ready/star
 #           인첸트, 아이템 기부
 #
 #           소실저주, 귀속저주
-#
-#           강해질 수 있는 뭔가를 더 만들어야 함
 #
 #           비밀방
 #           - 제단 히로빈

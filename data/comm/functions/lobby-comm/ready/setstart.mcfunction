@@ -23,9 +23,7 @@ scoreboard players set @e[tag=nd1-itempos] class-index 4
 scoreboard players set @e[tag=nd2-itempos] class-index 5
 scoreboard players set @e[tag=nd3-itempos] class-index 6
 
+function comm:lobby-comm/ready/inven_set
+
 #schedule function comm:lobby-comm/ready/start_schedule 2t
 
-execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run function comm:game-start/items/head-modify
-function comm:lobby-comm/setting/resetscore
-function comm:lobby-comm/setting/weapon
-execute positioned -14 1 -1 run function comm:game-start/items/summon/selector/reset

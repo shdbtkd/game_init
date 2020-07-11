@@ -13,7 +13,7 @@
               "count": 1
             }, {
               "function": "set_nbt",
-              "tag": "{ item:1b, potion:0b, showname:1b, CustomPotionEffects: [{ Id: 22b, Amplifier: 1b, Duration: 199980, ShowParticles: 0b }], CustomPotionColor:16772961 }"
+              "tag": "{ item:1b, potion:0b, showname:1b, CustomPotionEffects: [{ Id: 22b, Amplifier: 1b, Duration: 199980, ShowParticles: 0b }], CustomPotionColor: 16772961 }"
             }, {
               "function": "set_name",
               "name": [

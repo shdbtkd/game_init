@@ -1,6 +1,9 @@
+clear @s
 data remove block ~ 27 ~ Items
 replaceitem block ~ 27 ~ container.3 stone_button
 #data modify block ~ 27 ~ Items[{ Slot: 3b }].tag.HideFlags set value 34
+
+data modify block ~ 27 ~ Items[{ Slot: 3b }].tag.head_item set value 1b
 
 data modify block ~ 27 ~ Items[{ Slot: 3b }].tag.AttributeModifiers append value { AttributeName: "generic.max_health", Name: "generic.max_health", Amount: 1, Operation: 0, UUID: [I;-1303136102,1894469080,-1621841755,1370004418 ], Slot:"head" }
 data modify block ~ 27 ~ Items[{ Slot: 3b }].tag.AttributeModifiers append value { AttributeName: "generic.attack_damage", Name: "generic.attack_damage", Amount: 1, Operation: 0, UUID: [I;909635418,616844120,-1993741716,-1188665181 ], Slot:"head" }

@@ -1,3 +1,4 @@
+execute if score time stage matches 100.. if score red stage matches ..0 as @s[tag=now-play,tag=!complete,tag=!now-end] run function comm:about-play/map-setting/play/unlock_sound
 
 execute if score time stage matches 100.. if score red stage matches ..0 as @s[tag=now-play,tag=!complete,tag=!now-end] run tag @s add complete
 execute if score time stage matches 100.. if score red stage matches ..0 as @s[tag=now-play,tag=complete,tag=!now-end] run scoreboard players set @s room_type 3

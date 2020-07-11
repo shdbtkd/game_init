@@ -1,0 +1,16 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:potion/absorption/lvl_1-static"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:potion/healing/lvl_1-static"
+        }
+      ]
+    }
+  ]
+}

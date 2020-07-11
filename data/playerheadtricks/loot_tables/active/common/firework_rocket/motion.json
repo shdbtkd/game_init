@@ -1,0 +1,22 @@
+{
+  "pools": [
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_axe",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

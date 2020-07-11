@@ -57,5 +57,5 @@ summon minecraft:armor_stand ~ ~ ~18 {ArmorItems:[{},{},{},{id:"minecraft:bone",
 summon minecraft:armor_stand ~ ~ ~19 { ArmorItems:[{},{},{}, { id: "minecraft:enchanted_book", Count: 1b, tag: { StoredEnchantments: [ { id: "minecraft:protection", lvl: 1s } ], display: { Name: '{"text":"보호","color":"white","bold":true,"italic":false}' }, item: 1b, showname: 1b, basicitem: 1b, protection: 1b, max_level: 100, basic-max_level: 4 } } ], Tags:["item-selector","basic-item_selector","protection"]}
 # summon minecraft:armor_stand ~ ~ ~19 {ArmorItems:[{},{},{},{id:"minecraft:diamond",Count:20b}], Tags:["item-selector","basic-item_selector","bucket"]}
 
-summon minecraft:armor_stand ~2 ~ ~ {ArmorItems:[{},{},{},{ id: "minecraft:firework_rocket", Count:1b, tag:{ display: { Name:'{"text":"폭죽 로켓","color":"white","bold":true,"italic":false}' }, item: 1b, showname: 1b, activeitem: 1b, firework_rocket: 1b } }], Tags: ["item-selector", "active-item_selector"] }
+summon minecraft:armor_stand ~2 ~ ~ {ArmorItems:[{},{},{},{ id: "minecraft:shears", Count:1b, tag:{ display: { Name:'{"text":"폭죽 로켓","color":"white","bold":true,"italic":false}' }, item: 1b, showname: 1b, activeitem: 1b, firework_rocket: 1b, CustomModelData: 1, cooldown: 100 } }], Tags: ["item-selector", "active-item_selector"] }
 

@@ -1,0 +1,33 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { 
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "set_count",
+              "count":1 
+            }, {
+              "function": "minecraft:set_nbt",
+              "tag": "{item:1b, potion:1b, showname:1b, CustomPotionEffects: [{ Id: 14b, Amplifier: 1b, Duration: 1600 }], CustomPotionColor: 9551359 }"
+            }, {
+              "function": "set_name",
+              "name": [
+                {
+                  "text": "투명화 물약",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

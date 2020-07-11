@@ -25,6 +25,7 @@
 #	- end		 	= stage 14	||| 8stage
 
 
+# scoreboard players set @a stage 9
 execute if score start map_lod matches ..1 run function comm:about-play/map-setting/load/clear_stage
 execute if score start map_lod matches 1.. run function comm:about-play/map-setting/load/generic_count
 
@@ -72,7 +73,7 @@ execute if score start map_lod matches 1 as @e[tag=map-all,tag=!event,tag=!boss,
 execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] at @s if predicate pred:50 run function comm:about-play/map-setting/load/stage/summon_event_boss
 execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] unless entity @e[tag=event_boss] at @s if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_challenge
 execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] unless entity @e[tag=challenge] at @s if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_event_boss
-execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] at @s if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_challenge/
+execute if score start map_lod matches 1 at @e[tag=center] as @e[tag=tester,sort=random,limit=1] at @s if predicate pred:30 run function comm:about-play/map-setting/load/stage/summon_challenge
 execute if score start map_lod matches 1 run kill @e[tag=tester]
 #			challenge
 #			boss, hide
@@ -148,6 +149,7 @@ execute if score start map_lod matches 13 as @e[tag=event,tag=!boss-event] at @s
 execute if score start map_lod matches 13 run scoreboard players set start map_lod 14
 
 # execute if score start map_lod matches 14 run spreadplayers 0.0 -816.0 2 1 false @a
+execute if score start map_lod matches 14 if score started stage matches 0 run function comm:lobby-comm/ready/inven_set
 execute if score start map_lod matches 14 if score started stage matches 0 run tp @a 0.0 80 -816.0
 execute if score start map_lod matches 14 if score started stage matches 1 run spreadplayers 0.0 -816.0 2 1 false @a
 execute if score start map_lod matches 14 if score started stage matches 0 run scoreboard players set started stage 1

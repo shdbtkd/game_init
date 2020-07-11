@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:potion/water/dynamic"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:potion/apple/basic"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:emerald/emerald-4"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:tnt/1_4"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:group/arrow_group"
+        }
+      ]
+    }
+  ]
+}

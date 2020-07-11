@@ -1,0 +1,22 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:group/potion_1stage"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:group/box_generic"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:potion/water/dynamic"
+        }, {
+          "type": "minecraft:loot_table",
+          "name": "playerheadtricks:group/arrow_group"
+        }
+      ]
+    }
+  ]
+}

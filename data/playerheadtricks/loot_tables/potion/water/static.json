@@ -1,4 +1,3 @@
-
 {
   "pools": [
     {
@@ -7,19 +6,20 @@
         {
           "type": "item",
           "weight": 1,
-          "name": "minecraft:golden_apple",
+          "name": "minecraft:potion",
           "functions": [
             {
               "function": "set_count",
               "count": 1
-            },{
+            }, {
               "function": "set_nbt",
-              "tag": "{item:1b, potion:1b, showname:1b, shopitem:1b}"
-            },{
-              "function": "set_name", "name": [
+              "tag": "{ item: 1b, potion: 1b, showname: 1b, Potion: \"minecraft:water\" }"
+            }, {
+              "function": "set_name",
+              "name": [
                 {
-                  "text": "황금사과",
-                  "color": "gold",
+                  "text": "물병",
+                  "color": "white",
                   "bold": true,
                   "italic": false
                 }

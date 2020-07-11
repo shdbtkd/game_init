@@ -4,3 +4,4 @@ execute as @e[tag=boxhere,distance=..0] run function comm:game-start/mob/box/pla
 
 # give @p minecraft:command_block{ display:{ Name: '{"text":"box","bold":true,"italic":false}' }, BlockEntityTag: { Command:"execute positioned ~ 71 ~ run function comm:game-start/mob/box/install_basic"} }
 # give @p minecraft:command_block{ display:{ Name: '{"text":"box 10%","bold":true,"italic":false}' }, BlockEntityTag: { Command:"execute if predicate pred:10 positioned ~ 71 ~ run function comm:game-start/mob/box/install_basic"} }
+# give @p minecraft:command_block{ display:{ Name: '{"text":"box 30%","bold":true,"italic":false}' }, BlockEntityTag: { Command:"execute if predicate pred:30 positioned ~ 71 ~ run function comm:game-start/mob/box/install_basic"} }

@@ -13,7 +13,17 @@
               "count": 1
             }, {
               "function": "set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"치유의 물약\",\"bold\":true,\"italic\":false}'},item:1b, potion:0b, showname:1b,Potion:\"minecraft:healing\"}"
+              "tag": "{ item: 1b, potion: 0b, showname: 1b, Potion: \"minecraft:healing\" }"
+            }, {
+              "function": "set_name",
+              "name": [
+                {
+                  "text": "치유의 물약",
+                  "color": "white",
+                  "bold": true,
+                  "italic": false
+                }
+              ]
             }
           ]
         }

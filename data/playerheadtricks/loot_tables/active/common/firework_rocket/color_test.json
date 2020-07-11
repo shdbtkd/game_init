@@ -1,0 +1,37 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:firework_rocket",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{ Colors:[I;16777215,16711680],  FadeColors:[I;16318249,16758070] }"
+            }
+          ]
+        }, {
+          "type": "minecraft:item",
+          "name": "minecraft:firework_rocket",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{ Colors:[I;16777215,1229055],  FadeColors:[I;16318249,1703858] }"
+            }
+          ]
+        }, {
+          "type": "minecraft:item",
+          "name": "minecraft:firework_rocket",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{ Colors:[I;16777215,9436974],FadeColors:[I;1703912,16730044] }"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

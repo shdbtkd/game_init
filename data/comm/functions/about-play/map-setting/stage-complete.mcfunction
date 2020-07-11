@@ -8,39 +8,46 @@ execute if entity @s[tag=!now-end] if score time stage matches 102 if score red 
 
 execute if entity @s[tag=boss] run tag @s add now-end
 
-execute if entity @s[tag=!now-end] if block ~ 71 ~ air run summon armor_stand ~ 71 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-execute if entity @s[tag=!now-end] if block ~ 71 ~ air run tag @s add now-end
+execute if entity @s[tag=!now-end] if predicate pred:10 run tag @s add fake-reward
+execute if entity @s[tag=!now-end,tag=!fake-reward] at @r run function comm:about-play/map-setting/reward/stage-reward
+execute if entity @s[tag=!now-end,tag=fake-reward] at @r run function comm:about-play/map-setting/reward/stage-fakereward
 
-execute if entity @s[tag=!now-end] if block ~ 71 ~5 air run summon armor_stand ~ 71 ~5 {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-execute if entity @s[tag=!now-end] if block ~ 71 ~5 air run tag @s add now-end
+# summon armor_stand ~ 71 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
+# execute as @e[tag=stage-reward] if predicate pred:10 run tag @s add fake
+# execute as @e[tag=stage-reward] run function comm:about-play/map-setting/space_check
 
-execute if entity @s[tag=!now-end] if block ~ 71 ~ air run summon armor_stand ~ 71 ~-5 {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-execute if entity @s[tag=!now-end] if block ~ 71 ~-5 air run tag @s add now-end
+# execute if entity @s[tag=!now-end] if block ~ 71 ~ air run summon armor_stand ~ 71 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
+# execute if entity @s[tag=!now-end] if block ~ 71 ~ air run tag @s add now-end
 
-execute if entity @s[tag=!now-end] if block ~ 71 ~ air run summon armor_stand ~5 71 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-execute if entity @s[tag=!now-end] if block ~5 71 ~ air run tag @s add now-end
+# execute if entity @s[tag=!now-end] if block ~ 71 ~5 air run summon armor_stand ~ 71 ~5 {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
+# execute if entity @s[tag=!now-end] if block ~ 71 ~5 air run tag @s add now-end
 
-execute if entity @s[tag=!now-end] if block ~ 71 ~ air run summon armor_stand ~-5 71 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-execute if entity @s[tag=!now-end] if block ~-5 71 ~ air run tag @s add now-end
+# execute if entity @s[tag=!now-end] if block ~ 71 ~ air run summon armor_stand ~ 71 ~-5 {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
+# execute if entity @s[tag=!now-end] if block ~ 71 ~-5 air run tag @s add now-end
 
-execute if entity @s[tag=!now-end] if block ~ 72 ~ air run summon armor_stand ~ 72 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-execute if entity @s[tag=!now-end] if block ~ 72 ~ air run tag @s add now-end
+# execute if entity @s[tag=!now-end] if block ~ 71 ~ air run summon armor_stand ~5 71 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
+# execute if entity @s[tag=!now-end] if block ~5 71 ~ air run tag @s add now-end
 
-execute if entity @s[tag=!now-end] if block ~ 72 ~5 air run summon armor_stand ~ 72 ~5 {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-execute if entity @s[tag=!now-end] if block ~ 72 ~5 air run tag @s add now-end
+# execute if entity @s[tag=!now-end] if block ~ 71 ~ air run summon armor_stand ~-5 71 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
+# execute if entity @s[tag=!now-end] if block ~-5 71 ~ air run tag @s add now-end
 
-execute if entity @s[tag=!now-end] if block ~ 72 ~-5 air run summon armor_stand ~ 72 ~-5 {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-execute if entity @s[tag=!now-end] if block ~ 72 ~-5 air run tag @s add now-end
+# execute if entity @s[tag=!now-end] if block ~ 72 ~ air run summon armor_stand ~ 72 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
+# execute if entity @s[tag=!now-end] if block ~ 72 ~ air run tag @s add now-end
 
-execute if entity @s[tag=!now-end] if block ~5 72 ~ air run summon armor_stand ~5 72 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-execute if entity @s[tag=!now-end] if block ~5 72 ~ air run tag @s add now-end
+# execute if entity @s[tag=!now-end] if block ~ 72 ~5 air run summon armor_stand ~ 72 ~5 {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
+# execute if entity @s[tag=!now-end] if block ~ 72 ~5 air run tag @s add now-end
 
-execute if entity @s[tag=!now-end] if block ~-5 72 ~ air run summon armor_stand ~-5 72 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
-execute if entity @s[tag=!now-end] if block ~-5 72 ~ air run tag @s add now-end
+# execute if entity @s[tag=!now-end] if block ~ 72 ~-5 air run summon armor_stand ~ 72 ~-5 {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
+# execute if entity @s[tag=!now-end] if block ~ 72 ~-5 air run tag @s add now-end
+
+# execute if entity @s[tag=!now-end] if block ~5 72 ~ air run summon armor_stand ~5 72 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
+# execute if entity @s[tag=!now-end] if block ~5 72 ~ air run tag @s add now-end
+
+# execute if entity @s[tag=!now-end] if block ~-5 72 ~ air run summon armor_stand ~-5 72 ~ {Tags:["stage-reward"],Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b}
+# execute if entity @s[tag=!now-end] if block ~-5 72 ~ air run tag @s add now-end
 
 
-execute if predicate pred:10 run tag @s add fake
-execute if entity @s[tag=!fake] as @e[tag=stage-reward] at @s run function comm:about-play/map-setting/reward/stage-reward
-execute if entity @s[tag=fake] as @e[tag=stage-reward] at @s run function comm:about-play/map-setting/reward/stage-fakereward
 
-execute if block ~ ~ ~ #minecraft:air_block if block ~ ~1 ~ #minecraft:air_block if block ~ ~2 ~ #minecraft:air_block if block ~ ~4 ~ #minecraft:air_block if block ~ ~5 ~ #minecraft:air_block 
+# execute at @r run function comm:about-play/map-setting/reward/stage-reward
+# execute if entity @s[tag=fake] as @e[tag=stage-reward] at @s run function comm:about-play/map-setting/reward/stage-fakereward
+

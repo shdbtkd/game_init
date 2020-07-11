@@ -1,0 +1,22 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:loot_table",
+            "name": "playerheadtricks:potion/absorption/lvl_2-static"
+          }, {
+            "type": "minecraft:loot_table",
+            "name": "playerheadtricks:potion/healing/lvl_2-static"
+          }, {
+            "type": "minecraft:loot_table",
+            "name": "playerheadtricks:potion/apple/basic"
+          }, {
+            "type": "minecraft:loot_table",
+            "name": "playerheadtricks:potion/regeneral/lvl_1-10s-static"
+          }
+        ]
+      }
+    ]
+  }

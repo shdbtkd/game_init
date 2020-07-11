@@ -1,4 +1,5 @@
 execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run data remove block ~ 21 ~ Items
+execute at @e[tag=modify-head] as @a if score @e[distance=..0,limit=1,sort=nearest] class-index = @s class-index run data remove block ~ 29 ~ Items
 tp @a -1.0 39 -816.0
 title @a times 0 60 0
 title @a title ["",{"text":"GAME OVER!","color":"red"}]
